@@ -1,7 +1,8 @@
 baseURL = 'https://superelgato.netlify.app/'
-languageCode = 'fr'
 theme = 'sc'
 title = 'Super chat'
+languageCode = 'fr-FR'
+publishDir = "public"
 
 [menu]
   [[menu.main]]
