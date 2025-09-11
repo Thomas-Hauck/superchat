@@ -1,0 +1,59 @@
+baseURL = 'https://superelgato.netlify.app/'
+theme = "sc"
+defaultContentLanguage = "fr"
+title = Super Chat'
+
+[menu]
+  [[menu.main]]
+    name = "Manifeste"
+    pre = "manifeste"
+    url = "/manifeste/"
+    title = "Se rendre sur la page Manifeste"
+    weight = 1
+  [[menu.main]]
+    name = "Services"
+    pre = "services"
+    url = "/services/"
+    title = "Se rendre sur la page Services"
+    weight = 2
+	[[menu.main]]
+    name = "Projets"
+    pre = "projets"
+    url = "/projets/"
+    title = "Se rendre sur la page Projets"
+    weight = 3
+  [[menu.main]]
+    name = "Journal"
+    pre = "journal"
+    url = "/journal/"
+    title = "Se rendre sur la page Projets"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+		pageRef= "/pages/contact"
+    url = "/contact/"
+    title = "Se rendre sur la page Contact"
+    weight = 5
+sectionPagesMenu = "main"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+# Plugins
+[params.plugins]
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "https://code.jquery.com/jquery-3.7.1.min.js"
+  [[params.plugins.js]]
+  URL = "https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+  [[params.plugins.js]]
+  URL = "https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"
+  [[params.plugins.js]]
+  URL = "/js/slick.min.js"
+  [[params.plugins.js]]
+  URL = "/js/script.js"
+  [[params.plugins.js]]
+  URL = "/js/cookie.js"
