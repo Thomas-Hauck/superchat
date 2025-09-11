@@ -1,4 +1,4 @@
-baseURL = 'https://superelgato.netlify.app/'
+baseURL = '/'
 theme = 'sc'
 title = 'Super chat'
 languageCode = 'fr-FR'
