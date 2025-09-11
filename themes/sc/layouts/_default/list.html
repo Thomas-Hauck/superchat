@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container-fluid">
+  <div class="row px-3">
+    <div class="col-lg-5">
+      {{ .Content }}
+    </div>
+    <div class="col-lg-5 offset-lg-2">
+      {{ range .Pages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,21 @@
+@use "vars";
+@use "mixin";
+header{
+	font-size: 6rem;
+	position: relative;
+	z-index: 101;
+	ul{
+		li{
+			a{
+				@include mixin.lien;
+				text-shadow: 2px 2px 0px #000000;
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-fill-color: white;
+				-webkit-text-stroke-color: black;
+				&:hover{
+					@include mixin.lienhover;
+				}
+			}
+		}
+	}
+}

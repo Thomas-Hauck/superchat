@@ -1,0 +1,9 @@
+@media print {
+  /* All your print styles go here */
+  #header-main ul,
+  #menu-footer,
+  #menu-main,
+  .no-print {
+    display: none !important;
+  }
+}

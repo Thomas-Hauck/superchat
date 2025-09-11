@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="container-fluid">
+  <div class="row px-3">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="slider center">
+          {{ range where site.RegularPages "Section" "projets" }}
+            <div class="card-custom">
+              <div class="card-slider__item">
+                <a href="{{ .RelPermalink }}" title="Consulter le projet&nbsp;: {{ .LinkTitle }}">
+                  {{ with .Params.couv }}
+                      <img src="{{ .img }}" role="img" class="no-print img-fluid br-16 mx-lg-4 mx-0" alt="{{ .alt }}"/>
+                  {{ end }} 
+                </a>
+              </div>
+              <h2 class="h5 text-center mt-2 text-uppercase mb-0"><a href="{{ .RelPermalink }}" title="Consulter le projet&nbsp;: {{ .LinkTitle }}">{{ .LinkTitle }}</a></h2>
+            </div> 
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

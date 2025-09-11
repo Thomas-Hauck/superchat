@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="container-fluid">
+  <div class="row px-3 mb-0">
+    <div class="col-lg-4 mb-5 mb-lg-0">
+      {{ with .Params.annee }}
+        <p class="year mb-0">{{.}}</p>
+      {{ end }}
+      {{ with .Params.client }}
+        <p class="client mb-0"><span class="text-compagnon-light">Client: </span>{{.}}</p>
+      {{ end }}
+      {{ with .Params.categorie_container}}
+        {{ with .categorie }}
+          <p class="categories mb-0"><span class="text-compagnon-light">Catégorie-s:</span>
+            {{ range . }}
+              <span class="list-cat">{{ .label }}</span>
+            {{ end }}
+          </p>
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="col-lg-6 offset-lg-2">
+      <h1 class="h3 text-uppercase">{{.Title}}</h1>
+      {{ with .Params.description }}
+      {{ . | safeHTML}}
+      {{ end }}
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt-3">
+  <div class="row px-3 mb-4">
+    <div class="col-lg-12">
+      <a class="text-compagnon-roman font-production back" href="/projets" title="retour à la page des projets">Retour</a>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  {{ .Content | safeHTML }}
+</div>
+{{ end }}

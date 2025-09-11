@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="container-fluid">
+  <div class="row px-3">
+    <div class="col-lg-4">
+      {{ with .Params.container_images}}
+      <div class="slider center">
+        {{ with .images }}
+          {{ range . }}
+            <img class="img-fluid mb-3 br-16" src="{{.img}}" alt="{{.alt}}"/>
+          {{ end }}
+        {{ end }}  
+      </div>
+      {{ end }}
+    </div>
+    <div class="col-lg-2 offset-lg-1 pe-5">
+      <div class="sticky-lg-top">
+        <div class="mentions">
+          {{ with .Params.annee }}
+            <p class="year mb-0">{{.}}</p>
+          {{ end }}
+          {{ with .Params.client }}
+            <p class="client mb-0"><span class="font-weight-medium">Client&nbsp;: </span>{{.}}</p>
+          {{ end }}
+          {{ with .Params.categorie_container}}
+            {{ with .categorie }}
+              <p class="categories mb-0"><span class="font-weight-medium">Catégorie-s&thinsp;:</span>
+                {{ range . }}
+                  <span class="list-cat">{{ .label }}</span>
+                {{ end }}
+              </p>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div> 
+    </div>
+    <div class="col-lg-5">
+      <div class="sticky-lg-top">
+        <h1 class="text-uppercase">{{ .Title }}</h1>
+        {{ .Content }}
+        <!-- {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}  -->
+      </div>
+    </div>
+{{ end }}
