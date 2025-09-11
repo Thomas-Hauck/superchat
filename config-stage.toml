@@ -1,5 +1,0 @@
-baseURL = "https://github.com/Thomas-Hauck/superchat.git"
-theme = "sc"
-defaultContentLanguage = "fr"
-title = "Staging Environment"
-publishDir = "docs"
