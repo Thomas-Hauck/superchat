@@ -1,8 +1,7 @@
-baseURL = 'https://superelgato.netlify.app/'
-theme = 'sc'
-title = 'Super chat'
+baseURL = "https://superelgato.netlify.app/"
+theme = "sc"
 languageCode = 'fr-FR'
-publishDir = "public"
+title = 'Fioriture Sans'
 
 [menu]
   [[menu.main]]
@@ -25,3 +24,7 @@ publishDir = "public"
     title = "Se rendre sur la page info"
     weight = 5
 sectionPagesMenu = "main"
+
+cleanDestinationDir = true
+[markup.goldmark.renderer]
+	unsafe = true

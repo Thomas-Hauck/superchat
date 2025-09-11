@@ -1,6 +1,5 @@
-baseURL = 'https://superelgato.netlify.app/'
-theme = 'sc'
-title = 'Super chat'
+baseURL = "https://superelgato.netlify.app/"
+theme = "sc"
 languageCode = 'fr-FR'
 publishDir = "public"
 
