@@ -1,0 +1,37 @@
+// colors
+$black: #000000 !default;
+$grey-light-ultra: #f8f8f8 !default;
+$grey-light: #727b77 !default;
+$grey-dark: #353535 !default;
+$white: #ffffff !default;
+
+// Links
+$link-color:                              $black !default;
+$link-decoration:                         none !default;
+$link-hover-color:                        $black  !default;
+$link-hover-decoration:                   underline !default;
+
+//border 
+$border-width:                15px !default;
+$border-color:                $black !default;
+
+//bg
+$bg-white:                              $white !default;
+
+// Typography
+$font-family-sans:	'antique-olive-condensed', sans-serif;
+
+
+$font-size-base:              4.666rem !default; // html= 62.5% = `10px` body est égal à 15px
+$font-size-xl:                2.7rem !default;
+$font-size-lg:                2.28rem !default;
+$font-size-sm:                1.32rem !default;
+
+$font-weight-regular: 400 !default;
+$font-weight-bold: 700 !default;
+
+$font-style-italic: italic !default;
+
+$text-uppercase : uppercase !default;
+//input
+$no-border: 0 ;

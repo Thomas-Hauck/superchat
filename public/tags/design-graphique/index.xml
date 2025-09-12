@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design graphique on Super Chat</title>
+    <link>https://superchat.amoskhachut.fr/tags/design-graphique/</link>
+    <description>Recent content in Design graphique on Super Chat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 30 Apr 2019 20:18:54 +0300</lastBuildDate>
+    <atom:link href="https://superchat.amoskhachut.fr/tags/design-graphique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 1</title>
+      <link>https://superchat.amoskhachut.fr/posts/post-1/</link>
+      <pubDate>Tue, 30 Apr 2019 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/posts/post-1/</guid>
+      <description>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&#xA;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea.</description>
+    </item>
+    <item>
+      <title>Journées Cinéma &amp; Psychiatrie</title>
+      <link>https://superchat.amoskhachut.fr/projets/jcpl/</link>
+      <pubDate>Fri, 30 Apr 2010 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/projets/jcpl/</guid>
+      <description> </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,229 @@
+@use "vars";
+@use "mixin";
+
+html{
+  font-size: 62.5%;
+}
+body {
+	font-family: vars.$font-family-sans;
+	font-size: 3.5rem;
+	font-weight: vars.$font-weight-regular;
+	color: vars.$black;
+	overflow-x : hidden;
+	line-height: 1.3;
+	position: relative;
+	min-height: 100vh;
+	background-color: #969696;
+	// background: rgb(249,167,255);
+	// background: linear-gradient(0deg, rgba(255,191,144,1) 0%, rgba(249,167,255,1) 100%) !important;
+
+}
+#bg-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 205px;
+	background: url("/assets/img/motif_1.png") no-repeat;
+	background-size: cover;
+	z-index: 100;
+}
+a{
+	text-decoration: vars.$link-decoration;
+	color: vars.$black;
+}
+
+ul{
+	list-style: none;
+}
+a{
+	color: vars.$link-color !important;
+	text-decoration: vars.$link-decoration !important;
+	&:hover{
+		color: vars.$link-hover-color !important;
+		text-decoration: vars.$link-hover-decoration !important;
+	}
+}
+header{
+	font-size: 6rem;
+	position: relative;
+	z-index: 101;
+	ul{
+		li{
+			a{
+				@include mixin.lien;
+				text-shadow: 2px 2px 0px #000000;
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-fill-color: vars.$white;
+				-webkit-text-stroke-color: vars.$black;
+				&:hover{
+						@include mixin.lienhover;
+				}
+			}
+		}
+	}
+}
+.single-chap{
+	p{
+		margin-bottom: 0;
+		a{
+			@include mixin.lien;
+			&:hover{
+				@include mixin.lienhover;
+
+			}  
+		}
+	}
+}
+    
+.content-img, h2{
+	font-size: 3rem !important;
+	line-height: 1.2;
+}
+h2{
+	font-weight: vars.$font-weight-bold;
+}
+.partie{
+	ul{
+		list-style-type: upper-roman;
+		padding-left: 4rem !important;
+	}
+	li{
+		a{
+			font-size: 1.97rem;
+			&:hover{
+					@include mixin.lienhover;
+			}
+		}
+		&.active{
+			color: rgb(251, 255, 0);
+			a{
+				font-weight: vars.$font-weight-bold ;
+				&:hover{
+						text-decoration: vars.$link-decoration !important;
+				}
+			}
+		}
+	}
+}
+.text-indent{
+	text-indent: 5rem; 
+}
+.single-txt{
+	h1{
+		font-weight: vars.$font-weight-bold ;
+		font-size: 3.5rem;
+	}
+	p{
+		font-size: 3.5rem;
+		&:last-child{
+			padding-bottom: 3rem;
+		}
+	}
+	.back{
+		font-size: 1.97rem;
+		@include mixin.lien;
+		&:hover{
+			@include mixin.lienhover;
+		} 
+	}
+	.date{
+		font-size: 1.97rem;
+	}
+}
+.pswp__button--zoom{
+    display: none !important;
+}
+
+.pswp{
+	--pswp-bg: linear-gradient(0deg, rgba(255,191,144,1) 0%, rgba(249,167,255,1) 100%) !important;
+	//--pswp-bg: #000;
+	--pswp-icon-color: vars.$black;
+}
+
+body.page-template-page-txt, body.single-txt{
+	p{
+		margin-bottom: 0 !important;
+		&:last-child{
+				padding-bottom: 3rem;
+		}
+	}
+	header{
+		ul{
+			li{
+				a.link-txt{
+					background: linear-gradient(to right, rgb(238, 255, 0) 4px, rgb(235, 36, 1) 4px, transparent 4px, transparent 4px) !important;
+					background-size: 8px 2px !important;
+					background-position: 0px 100% !important;
+					text-decoration: vars.$link-decoration !important;
+				} 
+			}
+		}
+	}
+}
+.border-radius{
+  border-radius: 6rem;
+}
+figure{
+	a{
+		img{
+				border-radius: 6rem;  
+		}
+	}
+}
+
+body.home{
+	header{
+		ul{
+			li{
+				a.link-home{
+					background: linear-gradient(to right, rgb(238, 255, 0) 4px, rgb(235, 36, 1) 4px, transparent 4px, transparent 4px) !important;
+					background-size: 8px 2px !important;
+					background-position: 0px 100% !important;
+					text-decoration: vars.$link-decoration !important;
+				} 
+			}
+		}
+	}
+}
+body.page-id-23{
+	header{
+		ul{
+			li{
+				a.link-infos{
+					background: linear-gradient(to right, rgb(238, 255, 0) 4px, rgb(235, 36, 1) 4px, transparent 4px, transparent 4px) !important;
+					background-size: 8px 2px !important;
+					background-position: 0px 100% !important;
+					text-decoration: vars.$link-decoration !important;
+				} 
+			}
+		}
+	}
+}
+#headerShop{
+	position: absolute;
+	right: -30px;
+	top: 51px;
+	.wc-block-mini-cart__badge {
+		background-color: #000;
+		color: #fff;
+	}
+	.wc-block-mini-cart__button, .wp-block-woocommerce-customer-account a{
+		font-size: 2.5rem !important;
+		padding: 0 .5em!important;
+	}
+	.is-layout-flex{
+		gap: 0 !important;
+	}
+}
+
+.wc-block-mini-cart__drawer{
+  font-size: 2.5rem !important;
+}
+.text-indent-custom{
+  text-indent: 7%;
+}
+
+hr{
+  opacity: 1 !important;
+}

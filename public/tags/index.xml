@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Super Chat</title>
+    <link>https://superchat.amoskhachut.fr/tags/</link>
+    <description>Recent content in Tags on Super Chat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Wed, 30 Apr 2025 20:18:54 +0300</lastBuildDate>
+    <atom:link href="https://superchat.amoskhachut.fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Communication</title>
+      <link>https://superchat.amoskhachut.fr/tags/communication/</link>
+      <pubDate>Wed, 30 Apr 2025 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/tags/communication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>blue</title>
+      <link>https://superchat.amoskhachut.fr/tags/blue/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>https://superchat.amoskhachut.fr/tags/blue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>green</title>
+      <link>https://superchat.amoskhachut.fr/tags/green/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>https://superchat.amoskhachut.fr/tags/green/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>red</title>
+      <link>https://superchat.amoskhachut.fr/tags/red/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>https://superchat.amoskhachut.fr/tags/red/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design graphique</title>
+      <link>https://superchat.amoskhachut.fr/tags/design-graphique/</link>
+      <pubDate>Tue, 30 Apr 2019 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/tags/design-graphique/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

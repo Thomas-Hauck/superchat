@@ -1,0 +1,14 @@
+@use "vars";
+@mixin lien {
+    background: linear-gradient(to right, currentColor 0, currentColor 4px, transparent 4px, transparent 8px);
+    background-repeat: repeat-x;
+    background-size: 8px 2px;
+    background-position: 0px 100%;
+}
+
+@mixin lienhover {
+    background: linear-gradient(to right, rgb(251, 255, 0) 4px, rgb(0, 0, 0) 0, transparent 4px, transparent 8px);
+    background-size: 8px 2px;
+    background-position: 0px 100%;
+    text-decoration: vars.$link-decoration !important;
+}

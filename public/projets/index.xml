@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projets on Super Chat</title>
+    <link>https://superchat.amoskhachut.fr/projets/</link>
+    <description>Recent content in Projets on Super Chat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate>
+    <atom:link href="https://superchat.amoskhachut.fr/projets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L’Arcadie</title>
+      <link>https://superchat.amoskhachut.fr/projets/arcadie/</link>
+      <pubDate>Wed, 30 Apr 2025 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/projets/arcadie/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Arcade84</title>
+      <link>https://superchat.amoskhachut.fr/projets/arcade84/</link>
+      <pubDate>Tue, 30 Apr 2024 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/projets/arcade84/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Association en lien avec la neurodiversité</title>
+      <link>https://superchat.amoskhachut.fr/projets/assoneuro/</link>
+      <pubDate>Mon, 30 Apr 2018 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/projets/assoneuro/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>WAWW</title>
+      <link>https://superchat.amoskhachut.fr/projets/waww/</link>
+      <pubDate>Mon, 30 Apr 2018 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/projets/waww/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Journées Cinéma &amp; Psychiatrie</title>
+      <link>https://superchat.amoskhachut.fr/projets/jcpl/</link>
+      <pubDate>Fri, 30 Apr 2010 20:18:54 +0300</pubDate>
+      <guid>https://superchat.amoskhachut.fr/projets/jcpl/</guid>
+      <description> </description>
+    </item>
+  </channel>
+</rss>
