@@ -1,28 +1,28 @@
 baseURL = "https://superchat.amoskhachut.fr/"
 theme = "sc"
 languageCode = 'fr-FR'
-title = 'Fioriture Sans'
+title = 'Super Chat'
 
 [menu]
   [[menu.main]]
-    name = "txt"
-    pre = "txt"
-    url = "/txt/"
-    title = "Se rendre sur la page txt"
+    name = "maison"
+    pre = "maison"
+    url = "/"
+    title = "Se rendre sur la page d’accueil"
     weight = 1
-	[[menu.main]]
-    name = "shop"
-    pre = "shop"
-    url = "/shop/"
-    title = "Se rendre sur la page Projets"
-    weight = 3
+  [[menu.main]]
+    name = "txt."
+    pre = "txt"
+    url = "/txt/txt-1/"
+    title = "Se rendre sur la page txt"
+    weight = 2
   [[menu.main]]
     name = "info"
     pre = "info"
 		pageRef= "/info"
     url = "/info/"
     title = "Se rendre sur la page info"
-    weight = 5
+    weight = 3
 sectionPagesMenu = "main"
 
 cleanDestinationDir = true

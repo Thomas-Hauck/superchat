@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container-xxl">
+	<div class="row g-5">
+		<div class="col-lg-4 partie">
+			<ul>
+				{{ $currentPage := . -}}
+				{{ range where site.RegularPages "Section" "txt" }}
+					<li {{ if eq $currentPage . }} class="active"{{end}}>
+							<a href="{{.Permalink}}">{{.Title}}</a>
+					</li>
+					{{ end }}
+			</ul>
+		</div>
+		<div class="col-lg-8 single-chap">
+			{{ .Content | safeHTML }}
+		</div>
+	</div>
+</div>
+{{ end }}

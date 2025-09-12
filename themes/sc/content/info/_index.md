@@ -5,15 +5,13 @@ metadescription: M. Mindkind est un studio de création graphique qui propose un
 ecoindex: 91&nbsp;/&nbsp;100 — A
 draft: false
 ---
-<h1 class="h3 text-uppercase">hello@mindkind.fr</h1>
-<p>M. Mindkind est un studio de création graphique qui propose un autre regard sur la santé mentale. À travers le design, l’édition, le digital et la communication visuelle, M. MINDKIND cherche à créer un pont entre les voix discrètes et la cité, faire entendre de manière visuelle ce que la société n'écoute pas toujours.</p>
-<p>Je m'appelle Thomas Hauck, usager des soins depuis l'enfance, je bénéficie encore aujourd'hui d'un accompagnement. J'ai un profond respect, une grande reconnaissance et une certaine admiration pour toutes les personnes qui travaillent au bien et mieux-être des publics qui vivent et ressentent le monde intensément et différemment.</p>
-
-<div class="row mt-4">
-	<div class="col-lg-12">
-		<div class="d-flex d-inline">
-			<a class="font-family-title text-uppercase me-3" href="/services">Comment M. Mindkind peut vous aider&nbsp;?</a>
-			<a class="font-family-title text-uppercase link-target" target="_blank" href="https://amoskhachut.fr">Mes autres projets</a>
-		</div>
+<div class="row g-5">
+	<div class="col-lg-6">
+	Amos Khachut est l’anagramme de Thomas Hauck (et pas de jeu de mot ici, c’est bien comme ça que je m’appelle).Plein de choses m’inspirent et m’accompagnent chaque jour ; à commencer par l’observation (des gens, des choses, plutôt insolites, du quotidien) la lecture (plutôt des livres avec des images) et l’écoute (plutôt de la musique et un peu les gens). J’aime mettre mes sens en éveil comme par exemple le toucher avec la gravure en taille d’épargne (linogravure) ou « taille douce » avec la gravure sur Tetrapak.Mon travail est ici assez brut du fait d’un certain manque de technique que j’essaye de compenser avec une approche singulière.
+	</div>
+	<div class="col-lg-6">
+	42, cours Dr. Long
+69003 Lyon
+contact(at)amoskhachut.fr
 	</div>
 </div>

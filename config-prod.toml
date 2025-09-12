@@ -7,7 +7,7 @@ publishDir = "public"
   [[menu.main]]
     name = "txt"
     pre = "txt"
-    url = "/txt/"
+    url = "/txt/txt-1/"
     title = "Se rendre sur la page txt"
     weight = 1
 	[[menu.main]]

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="container-xxl">
+  <section class="row">
+    <div class="col-lg-4 partie">
+
+        {{ range where site.RegularPages "Section" "txt" }}
+        <li>
+            <a href="{{.Permalink}}">{{.Title}}</a>
+        </li>
+        {{ end }}
+    </div>
+  
+    <div class="col-lg-8">
+    </div>
+  </sectuon>
+</div>
+{{ end }}

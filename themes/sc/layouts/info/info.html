@@ -1,11 +1,5 @@
 {{ define "main" }}
-<div class="container-fluid">
-  <div class="row px-3">
-    <div class="col-lg-3 offset-lg-2">
-     <img class="img-fluid br-16 no-print img-credits mt-3 mt-lg-5 mb-lg-0 mb-5" alt="" role="presentation" src="/assets/img/carte_info.svg"/>
-    </div>
-    <div class="col-lg-5 offset-lg-1">
-    {{ .Content | safeHTML}}
-    <!-- {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}  -->
-    </div>
+<div class="container-xxl">
+  {{ .Content | safeHTML}}
+</div>
 {{ end }}

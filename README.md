@@ -1,3 +1,3 @@
-# graphic-typo-2025
-Portfolio graphisme et typo fin 2024
+# superchat
+Super Chat création visuelle Amos Khachur
 Site créé avec Hugo et Netlify
