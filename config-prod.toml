@@ -1,6 +1,6 @@
 baseURL = "https://superchat.amoskhachut.fr/"
 theme = "sc"
-languageCode = 'fr-FR'
+defaultContentLanguage = "fr"
 publishDir = "public"
 
 [menu]
