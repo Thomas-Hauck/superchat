@@ -1,0 +1,41 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+publish_mode: editorial_workflow
+
+# Configuration automatique des commits
+commit_messages:
+  create: 'Create {{collection}} "{{slug}}"'
+  update: 'Update {{collection}} "{{slug}}"'
+  delete: 'Delete {{collection}} "{{slug}}"'
+  uploadMedia: 'Upload "{{path}}"'
+  deleteMedia: 'Delete "{{path}}"'
+
+# collections
+collections:
+  - name: 'txt'
+    label: 'txt.'
+    folder: 'themes/sc/content/txt'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: "poeme" # Used in routes, e.g., /admin/collections/blog
+    label: "Poemes" # Used in the UI
+    folder: "themes/sc/content/poeme" 
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layouts", name: "layouts", widget: "hidden", default: "expertises" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Année", name: "annee", widget: "string" }
+      - { label: "Back URL", name: "back_url", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
