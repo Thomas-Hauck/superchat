@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: vieilleturne.webp
+alt: lingravure d’une vieille bâtisse normande
 annee: 2023
 ---
 Linogravure
