@@ -3,11 +3,10 @@
   <section id="gallery" class="row">
   {{ range where site.RegularPages "Section" "img" }}
     <div class="col-lg-4 col-12 p-5">
-      {{ with .Params.image }}
-      <a data-pswp-width="900" class="border-radius" data-pswp-height="1273" target="_blank" href="{{ .image_link }}">
-        <img src="{{ .image_link }}" class="img-fluid border-radius mb-3" alt="{{ .alt }}"/>
+      <a data-pswp-width="900" class="border-radius" data-pswp-height="1273" target="_blank" href="img/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}">
+        <img src="img/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}" class="img-fluid border-radius mb-3" alt="{{ with .Params.alt }}{{ .}}{{ end }}"/>
       </a>
-        {{ end }}
+       
       <div class="content-img text-center">
         <h2 class="mb-0">{{ .Title }}</h2>
         {{ with .Params.annee }}
