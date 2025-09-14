@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: portfolio-motifs.webp
+alt: Livre fait maison avec des motifs colorés abstraits
 annee: 2022
 ---
 Feutre promarker
