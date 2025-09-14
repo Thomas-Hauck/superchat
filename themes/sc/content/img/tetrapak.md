@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: tetrapak.webp
+alt: taille-douce sur tetrapak et machine à pâtes
 annee: 2024
 ---
 taille-douce sur tetrapak et machine à pâtes
