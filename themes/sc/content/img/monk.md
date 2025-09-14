@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: TheloniousMonk.webp
+alt: illsustration en noir et blanc de Thelonious Monk
 annee: 2022
 ---
 Crayon noir
