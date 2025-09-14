@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: superchat.webp
+alt: Illustration avec le texte super chat au feutre
 annee: 2022
 ---
 Feutre
