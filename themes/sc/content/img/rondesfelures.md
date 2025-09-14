@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: rondesfelures.webp
+alt: Linogravure abstraite
 annee: 2023
 ---
 Linogravure, crayon et acrylique
