@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: modele-image.webp
+alt: Gig animé d’une fenêtre ouverte
 annee: 2020
 ---
 Gif
