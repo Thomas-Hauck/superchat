@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: portfolio.webp
+alt: illustration digitale d’un trio jazz
 annee: 2023
 ---
 Digital
