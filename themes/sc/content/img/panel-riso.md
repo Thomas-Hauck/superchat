@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: panel.webp
+alt: risographie 2 tons, jaune et violet
 annee: 2025
 ---
 risographie
