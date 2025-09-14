@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: truc-1.webp
+alt: illustrations au crayon et stabilo
 annee: 2021
 ---
 Feutre
