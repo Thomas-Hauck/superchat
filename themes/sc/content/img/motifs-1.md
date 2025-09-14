@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: lino.webp
+alt: linogravure d’un motif abstrait
 annee: 2020
 ---
 Linogravure
