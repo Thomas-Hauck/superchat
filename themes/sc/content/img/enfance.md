@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: enfant.webp
+alt: Peinture brut abstraite avec des couleurs vives et fluo
 annee: 2022
 ---
 Linogravure
