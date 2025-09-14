@@ -54,5 +54,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Alt Image", name: "alt", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - { label: "Année", name: "annee", widget: "string" }
