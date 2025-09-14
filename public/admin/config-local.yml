@@ -38,8 +38,8 @@ collections:
     folder: "themes/sc/content/img"
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    media_folder: 'themes/sc/content/img/images'
-    public_folder: 'themes/sc/content/img/inages'
+    media_folder: ''
+    public_folder: ''
     editor:
       preview: true
     fields:
