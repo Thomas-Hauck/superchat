@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: vanupied.webp
+alt: illustration auto-portrait crayon couleur
 annee: 2022
 ---
 Crayons couleur
