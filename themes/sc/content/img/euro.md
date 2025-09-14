@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: footaball.webp
+alt: illustration au stabilio fluo jaune et rose d’un footballeur
 annee: 2021
 ---
 Stabilo
