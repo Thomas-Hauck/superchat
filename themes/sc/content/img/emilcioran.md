@@ -6,6 +6,7 @@ image:
   alt: Visuel représentant une gravure réalisée via la technique d'impression en
     creux tetrapak.
 thumbnail: emilCioranLinogravure.webp
+alt: Gravure réalisée via la technique d'impression en creux tetrapak
 annee: 2022
 ---
 Linogravure
