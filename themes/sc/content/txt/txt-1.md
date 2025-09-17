@@ -1,5 +1,5 @@
 ---
-title: Le lycanthrope et la vieille dame.
+title: Le lycanthrope et la vieille dame
 date: 2025-03-29T20:06:54+03:00
 ---
 <p>Le cri apprivoisé du lycanthrope réveille les oreilles sensibles à la douceur du soir venu.  Quand la rue est redevenue calme c’est là que le <a href="/poeme/spleen/">spleen du 13e abruti</a> fait son retour. L’homme loup ouvre les yeux et entend la sourde élégie de la vieille dame qui lui rappelle que le temps de sa <a href="/poeme/fenetre/">fenêtre</a> semble bien plus clément que le sien.</p>
