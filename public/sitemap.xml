@@ -11,9 +11,6 @@
     <loc>https://superchat.amoskhachut.fr/tags/</loc>
     <lastmod>2025-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/txt/</loc>
-    <lastmod>2025-03-29T20:06:54+03:00</lastmod>
-  </url><url>
     <loc>https://superchat.amoskhachut.fr/img/</loc>
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
@@ -24,6 +21,9 @@
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
     <loc>https://superchat.amoskhachut.fr/img/panel-riso/</loc>
+    <lastmod>2025-03-29T20:06:54+03:00</lastmod>
+  </url><url>
+    <loc>https://superchat.amoskhachut.fr/txt/</loc>
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
     <loc>https://superchat.amoskhachut.fr/img/tetrapak/</loc>
@@ -71,10 +71,10 @@
     <loc>https://superchat.amoskhachut.fr/projets/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/ginsberg/</loc>
-    <lastmod>2022-12-29T20:06:54+03:00</lastmod>
-  </url><url>
     <loc>https://superchat.amoskhachut.fr/img/emilcioran/</loc>
+    <lastmod>2022-12-29T20:06:00+01:00</lastmod>
+  </url><url>
+    <loc>https://superchat.amoskhachut.fr/img/ginsberg/</loc>
     <lastmod>2022-12-29T20:06:54+03:00</lastmod>
   </url><url>
     <loc>https://superchat.amoskhachut.fr/poeme/califourchon/</loc>
