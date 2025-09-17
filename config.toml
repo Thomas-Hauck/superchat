@@ -17,12 +17,18 @@ title = 'Super Chat'
     title = "Se rendre sur la page txt"
     weight = 2
   [[menu.main]]
+    name = "shop"
+    pre = "shop"
+    url = "/shop/"
+    title = "Se rendre sur la page Projets"
+    weight = 3
+  [[menu.main]]
     name = "info"
     pre = "info"
 		pageRef= "/info"
     url = "/info/"
     title = "Se rendre sur la page info"
-    weight = 3
+    weight = 4
 sectionPagesMenu = "main"
 
 cleanDestinationDir = true
