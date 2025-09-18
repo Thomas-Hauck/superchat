@@ -9,5 +9,5 @@ size: 21 × 29.7 cm
 Risographie 2 couleurs\
 (Imprimée par Quintal atelier)
 
-Papier Munken 150gr\
-40 exemplaires signés
+<p class=date>Papier Munken 150gr</p>
+<p class=date>40 exemplaires signés</p>
