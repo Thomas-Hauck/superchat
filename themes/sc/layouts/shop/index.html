@@ -1,18 +1,13 @@
 {{ define "main" }}
 <div class="container-xxl">
   <section id="gallery" class="row">
-  {{ range where site.RegularPages "Section" "img" }}
+  {{ range where site.RegularPages "Section" "shop" }}
     <div class="col-lg-4 col-12 p-5">
-      <a data-pswp-width="900" class="border-radius" data-pswp-height="1273" target="_blank" href="img/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}">
-        <img src="img/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}" class="img-fluid border-radius mb-3" alt="{{ with .Params.alt }}{{ .}}{{ end }}"/>
+      <a data-pswp-width="900" class="border-radius" href="{{ .Permalink}}">
+        <img src="/shop/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}" class="img-fluid border-radius mb-3" alt="{{ with .Params.alt }}{{ .}}{{ end }}"/>
       </a>
-       
       <div class="content-img text-center">
         <h2 class="mb-0">{{ .Title }}</h2>
-        {{ with .Params.annee }}
-          <p class="mb-0">{{.}}</p>
-        {{ end }}
-        <p class="mb-0">{{.Content | safeHTML}}</p>
       </div>
       
     </div>
