@@ -7,4 +7,7 @@ prix: "8,00€ "
 size: 21 × 29.7 cm
 ---
 Risographie 2 couleurs\
-Imprimée par Quintal atelier
+(Imprimée par Quintal atelier)
+
+Papier Munken 150gr\
+40 exemplaires signés
