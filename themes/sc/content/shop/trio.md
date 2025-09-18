@@ -5,6 +5,11 @@ thumbnail: trio_bassiste.webp
 alt: Trio. Illustration d’un contrebassiste
 prix: 3,00€
 size: 18 × 13 cm
+images:
+  - image: trio_piano.webp
+    alt_gallery: Illustration main
+  - image: trio_batterie.webp
+    alt_gallery: Illustration batterie
 ---
 Impression offset 4 couleurs
 
