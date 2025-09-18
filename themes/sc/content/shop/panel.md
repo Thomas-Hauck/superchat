@@ -5,11 +5,7 @@ thumbnail: panel.webp
 alt: Risographie 2 couleurs
 prix: "8,00€ "
 size: 21 × 29.7 cm
-images:
-  - image: arcadiens.webp
-    alt_gallery: test bbbbbb
-  - image: arcadiens.webp
-    alt_gallery: test
+images: []
 ---
 Risographie 2 couleurs\
 (Imprimée par Quintal atelier)
