@@ -75,3 +75,10 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Prix", name: "prix", widget: "string" }
       - {label: "Size", name: "size", widget: "string" }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: Image, name: image, widget: image, required: false}
+          - { label: Alt, name: alt_gallery, widget: string, required: false}
+  

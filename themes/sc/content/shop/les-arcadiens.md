@@ -5,8 +5,7 @@ thumbnail: arcadiens.webp
 alt: Risographie 4 couleurs représentant des échassiers
 prix: 15,00€
 size: 21 × 29.7 cm
-images:
-  - panel.webp
+
 ---
 Risographie 4 couleurs\
 (Imprimée par Quintal atelier)
