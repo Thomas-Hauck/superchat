@@ -1,7 +1,8 @@
 local_backend: true
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  name: github
+  repo: thomas-hauck/superchat
+  branch: feature/shop
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 publish_mode: editorial_workflow
