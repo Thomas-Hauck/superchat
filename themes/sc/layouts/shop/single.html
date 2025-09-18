@@ -2,14 +2,19 @@
 <div class="container-xxl single-txt">
 	<div class="row g-5">
 		<div class="col-lg-4 partie">
-            <img src="/shop/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}" class="img-fluid border-radius mb-3" alt="{{ with .Params.alt }}{{ .}}{{ end }}"/>
+      <img src="/shop/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}" class="img-fluid border-radius mb-3" alt="{{ with .Params.alt }}{{ .}}{{ end }}"/>
 		</div>
-		<div class="col-lg-8">
-            <h1 class="mt-3">{{.Title}}</h1>
-		{{ with .Params.prix }}
-          <p class="date mb-5">{{.}}</p>
-        {{ end }}
+		<div class="col-lg-6 offset-lg-2">
+			<a class="back mt-3" href="/shop" target="_self">retour shop</a>
+      <h1 class="mt-3 mb-3">{{.Title}}</h1>
+			{{ with .Params.size }}
+				<p class="border-top-custom date pt-3 mt-3 mb-5">{{.}}</p>
+			{{ end }}
 			{{ .Content | safeHTML }}
+			{{ with .Params.prix }}
+        <p class="border-top-custom pt-5 mt-5 mb-3">{{.}}</p>
+      {{ end }}
+			<a class="btn-global" href="#" title="ajouter au panier">Ajouter au panier</a>
 		</div>
 	</div>
 </div>
