@@ -1,5 +1,5 @@
 ---
-title: Emil Ciorans
+title: Emil Cioran
 date: 2022-12-29T20:06:00.000+01:00
 image:
   image_link: /img/images/emilCioranLinogravure.webp
