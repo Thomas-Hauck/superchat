@@ -1,8 +1,8 @@
 {{ if .IsHome }}
 {{ "<!-- JS Plugins -->" | safeHTML }}
-{{ range .Site.Params.pluginshome.js}}
-    <script src="{{ .URL | absURL }}"></script>
-{{ end }}
+  {{ range .Site.Params.pluginshome.js}}
+      <script src="{{ .URL | absURL }}"></script>
+  {{ end }}
 <script type="module">
 import PhotoSwipeLightbox from '../assets/js/photoswipe/dist/photoswipe-lightbox.esm.js';
 const lightbox = new PhotoSwipeLightbox({
@@ -12,4 +12,19 @@ const lightbox = new PhotoSwipeLightbox({
 });
 lightbox.init();
 </script>
+{{end}}
+{{ if eq .Section "shop" }}
+  {{ if (isset .Params "size") }} 
+    <script type="module">
+      import PhotoSwipeLightbox from '/assets/js/photoswipe/dist/photoswipe-lightbox.esm.js';
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        bgOpacity: 1,
+        pswpModule: () => import('/assets/js/photoswipe/dist/photoswipe.esm.js')
+      });
+      lightbox.init();
+      </script>
+  {{ end }}
+  
 {{end}}
