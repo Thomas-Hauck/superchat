@@ -6,4 +6,8 @@ alt: Trio. Illustration d’un contrebassiste
 prix: 3,00€
 size: "180"
 ---
-test
+Impression offset 4 couleurs
+
+
+<p class="date mb-0">Papier Offset 400 g/m²</p>
+<p class="date mb-3">10 exemplaires</p>
