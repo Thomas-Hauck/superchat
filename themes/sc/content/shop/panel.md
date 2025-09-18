@@ -7,7 +7,7 @@ prix: "8,00€ "
 size: 21 × 29.7 cm
 images:
   - image: arcadiens.webp
-    alt_gallery: test
+    alt_gallery: test bbbbbb
   - image: arcadiens.webp
     alt_gallery: test
 ---
