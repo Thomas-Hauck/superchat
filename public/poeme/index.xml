@@ -2,95 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poemes on Super Chat</title>
-    <link>https://superchat.amoskhachut.fr/poeme/</link>
+    <link>http://localhost:1313/poeme/</link>
     <description>Recent content in Poemes on Super Chat</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Tue, 29 Nov 2022 20:06:54 +0300</lastBuildDate>
-    <atom:link href="https://superchat.amoskhachut.fr/poeme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/poeme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>À califourchon</title>
-      <link>https://superchat.amoskhachut.fr/poeme/califourchon/</link>
+      <link>http://localhost:1313/poeme/califourchon/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/califourchon/</guid>
-      <description>Les mots en ballade,&#xA;À califourchon sur mon ailleurs&#xA;Je rêve de Brooklyn. Comme d’une Maryline en basket.&#xA;La balade des mots,&#xA;À califourchon sur les notes&#xA;Je rêve de rencontres musicales. De velours bleus.&#xA;À califourchon sur ma vie,&#xA;Devrais-je la laisser filer&#xA;Pour enfin la vivre&#xA;En basket et musique.</description>
+      <guid>http://localhost:1313/poeme/califourchon/</guid>
+      <description>&lt;p&gt;Les mots en ballade,&lt;br&gt;&#xA;À califourchon sur mon ailleurs&lt;br&gt;&#xA;Je rêve de Brooklyn.&#xA;Comme d’une Maryline en basket.&lt;/p&gt;&#xA;&lt;p&gt;La balade des mots,&lt;br&gt;&#xA;À califourchon sur les notes&lt;br&gt;&#xA;Je rêve de rencontres musicales.&#xA;De velours bleus.&lt;/p&gt;&#xA;&lt;p&gt;À califourchon sur ma vie,&lt;br&gt;&#xA;Devrais-je la laisser filer&lt;br&gt;&#xA;Pour enfin la vivre&lt;br&gt;&#xA;En basket et musique.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Averbal</title>
-      <link>https://superchat.amoskhachut.fr/poeme/averbale/</link>
+      <link>http://localhost:1313/poeme/averbale/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/averbale/</guid>
-      <description>Sans personne,&#xA;Solitude triste.&#xA;Avec vous,&#xA;Solitude ensoleillée.&#xA;Sans vous pas de refuge,&#xA;La musique bien plus belle.&#xA;Avec vous dans la peau,&#xA;Et la musique dans les têtes.&#xA;Un cœur sans verbe,&#xA;À tous les temps&#xA;Et un regard dans le présent.&#xA;Déjà dans vos bouches&#xA;Un cœur verbal&#xA;Bien trop présent&#xA;Pour l’homme du futur&#xA;Sans passé.&#xA;Le bruit des mots compliqués&#xA;Loin derrière.&#xA;Le silence pour un temps,</description>
+      <guid>http://localhost:1313/poeme/averbale/</guid>
+      <description>&lt;p&gt;Sans personne,&lt;br&gt;&#xA;Solitude triste.&lt;br&gt;&#xA;Avec vous,&lt;br&gt;&#xA;Solitude ensoleillée.&lt;br&gt;&#xA;Sans vous pas de refuge,&lt;br&gt;&#xA;La musique bien plus belle.&lt;br&gt;&#xA;Avec vous dans la peau,&lt;br&gt;&#xA;Et la musique dans les têtes.&lt;/p&gt;&#xA;&lt;p&gt;Un cœur sans verbe,&lt;br&gt;&#xA;À tous les temps&lt;br&gt;&#xA;Et un regard dans le présent.&lt;br&gt;&#xA;Déjà dans vos bouches&lt;br&gt;&#xA;Un cœur verbal&lt;br&gt;&#xA;Bien trop présent&lt;br&gt;&#xA;Pour l’homme du futur&lt;br&gt;&#xA;Sans passé.&lt;/p&gt;&#xA;&lt;p&gt;Le bruit des mots compliqués&lt;br&gt;&#xA;Loin derrière.&lt;br&gt;&#xA;Le silence pour un temps,&lt;br&gt;&#xA;Salvateur dimanche.&lt;br&gt;&#xA;Vos sourires dans les poches,&lt;br&gt;&#xA;Mots en suspens.&lt;br&gt;&#xA;La solitude ensoleillée&lt;br&gt;&#xA;D’un jour par semaine.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chambre</title>
-      <link>https://superchat.amoskhachut.fr/poeme/chambre/</link>
+      <link>http://localhost:1313/poeme/chambre/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/chambre/</guid>
-      <description>Idées défraîchies qui perlent&#xA;Le mur des souvenirs instants Madeleine qui déferle&#xA;L’air debout se tient clairvoyant.&#xA;Un violet sur trois roues si fier&#xA;Lutte avec les voyelles&#xA;Chambre, fief des combats d’hier&#xA;Musique en sentinelle.&#xA;Endroit à nul autre pareil&#xA;le temps est un ami du lieu&#xA;Réalité y sommeille&#xA;Et on s’y passe bien de Dieu.&#xA;Les limbes cèdent leur place&#xA;Esquisses des âmes perdues&#xA;Qui dans une volte-face</description>
+      <guid>http://localhost:1313/poeme/chambre/</guid>
+      <description>&lt;p&gt;Idées défraîchies qui perlent&lt;br&gt;&#xA;Le mur des souvenirs instants &lt;br&gt;&#xA;Madeleine qui déferle&lt;br&gt;&#xA;L’air debout se tient clairvoyant.&lt;/p&gt;&#xA;&lt;p&gt;Un violet sur trois roues si fier&lt;br&gt;&#xA;Lutte avec les voyelles&lt;br&gt;&#xA;Chambre, fief des combats d’hier&lt;br&gt;&#xA;Musique en sentinelle.&lt;/p&gt;&#xA;&lt;p&gt;Endroit à nul autre pareil&lt;br&gt;&#xA;le temps est un ami du lieu&lt;br&gt;&#xA;Réalité y sommeille&lt;br&gt;&#xA;Et on s’y passe bien de Dieu.&lt;/p&gt;&#xA;&lt;p&gt;Les limbes cèdent leur place&lt;br&gt;&#xA;Esquisses des âmes perdues&lt;br&gt;&#xA;Qui dans une volte-face&lt;br&gt;&#xA;Remercient le temps suspendu.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Discret</title>
-      <link>https://superchat.amoskhachut.fr/poeme/discret/</link>
+      <link>http://localhost:1313/poeme/discret/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/discret/</guid>
-      <description>Sans la folie des uns&#xA;je n’aurais jamais pu faire mon kangourou&#xA;Inaperçu&#xA;Sans les ondes radioélectriques&#xA;je n’aurais jamais su écouter&#xA;Inaperçu&#xA;Sans la terreur des autres&#xA;je n’aurais jamais goûté à la douceur de la solitude&#xA;Inaperçu&#xA;Sans les textes religieux&#xA;je n’aurais jamais vu l’Orient&#xA;Inaperçu&#xA;Sans le Cantique des Cantiques&#xA;je n’aurais jamais découvert la poésie&#xA;Inaperçu&#xA;Sans ma mère&#xA;je n’aurais jamais su attendre&#xA;Inaperçu</description>
+      <guid>http://localhost:1313/poeme/discret/</guid>
+      <description>&lt;p&gt;Sans la folie des uns&lt;br&gt;&#xA;je n’aurais jamais pu faire mon kangourou&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans les ondes radioélectriques&lt;br&gt;&#xA;je n’aurais jamais su écouter&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans la terreur des autres&lt;br&gt;&#xA;je n’aurais jamais goûté à la douceur de la solitude&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans les textes religieux&lt;br&gt;&#xA;je n’aurais jamais vu l’Orient&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans le Cantique des Cantiques&lt;br&gt;&#xA;je n’aurais jamais découvert la poésie&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans ma mère&lt;br&gt;&#xA;je n’aurais jamais su attendre&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fard</title>
-      <link>https://superchat.amoskhachut.fr/poeme/fard/</link>
+      <link>http://localhost:1313/poeme/fard/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/fard/</guid>
-      <description>Quand l’aube quitte son lit,&#xA;Des regards pressés s’éveillent,&#xA;La rue se farde lentement&#xA;Arborant son sourire moite de la veille.&#xA;A l’heure des parias,&#xA;Les murs se font lecture,&#xA;Catalyseur des oisifs&#xA;Les mots se font volatiles.</description>
+      <guid>http://localhost:1313/poeme/fard/</guid>
+      <description>&lt;p&gt;Quand l’aube quitte son lit,&lt;br&gt;&#xA;Des regards pressés s’éveillent,&lt;br&gt;&#xA;La rue se farde lentement&lt;br&gt;&#xA;Arborant son sourire moite de la veille.&lt;/p&gt;&#xA;&lt;p&gt;A l’heure des parias,&lt;br&gt;&#xA;Les murs se font lecture,&lt;br&gt;&#xA;Catalyseur des oisifs&lt;br&gt;&#xA;Les mots se font volatiles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fenêtre</title>
-      <link>https://superchat.amoskhachut.fr/poeme/fenetre/</link>
+      <link>http://localhost:1313/poeme/fenetre/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/fenetre/</guid>
-      <description>De la fenêtre, feuilles virevoltantes&#xA;D’un printemps en dernière de couverture&#xA;Comme la une d’une bimbo septante&#xA;Les lignes s’effacent vers un doux futur.&#xA;Le temps se glisse dans les verts interstices&#xA;Des histoires racontées d’une fenêtre&#xA;Ouverte à la page du long solstice&#xA;Des âmes aimantes qui traînent leurs guêtres.&#xA;Quand les lignes s’assemblent pour forniquer&#xA;Les lettres sont noires comme la musique&#xA;D’un si joli gris presque typographique</description>
+      <guid>http://localhost:1313/poeme/fenetre/</guid>
+      <description>&lt;p&gt;De la fenêtre, feuilles virevoltantes&lt;br&gt;&#xA;D’un printemps en dernière de couverture&lt;br&gt;&#xA;Comme la une d’une bimbo septante&lt;br&gt;&#xA;Les lignes s’effacent vers un doux futur.&lt;/p&gt;&#xA;&lt;p&gt;Le temps se glisse dans les verts interstices&lt;br&gt;&#xA;Des histoires racontées d’une fenêtre&lt;br&gt;&#xA;Ouverte à la page du long solstice&lt;br&gt;&#xA;Des âmes aimantes qui traînent leurs guêtres.&lt;/p&gt;&#xA;&lt;p&gt;Quand les lignes s’assemblent pour forniquer&lt;br&gt;&#xA;Les lettres sont noires comme la musique&lt;br&gt;&#xA;D’un si joli gris presque typographique&lt;br&gt;&#xA;Qui ne souhaite pas être domestiqué.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Langage de la parure</title>
-      <link>https://superchat.amoskhachut.fr/poeme/langage/</link>
+      <link>http://localhost:1313/poeme/langage/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/langage/</guid>
-      <description>Des mots doux comme le miel,&#xA;Pas tout à fait cache-misère&#xA;Pour le va-nu-pieds du désert.&#xA;Qui ne connait pas le langage de la parure&#xA;Car son écriture est faite de bigarrure&#xA;Loin des maudits cœurs pleins de fiel.</description>
+      <guid>http://localhost:1313/poeme/langage/</guid>
+      <description>&lt;p&gt;Des mots doux comme le miel,&lt;br&gt;&#xA;Pas tout à fait cache-misère&lt;br&gt;&#xA;Pour le va-nu-pieds du désert.&lt;br&gt;&#xA;Qui ne connait pas le langage de la parure&lt;br&gt;&#xA;Car son écriture est faite de bigarrure&lt;br&gt;&#xA;Loin des maudits cœurs pleins de fiel.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Langue</title>
-      <link>https://superchat.amoskhachut.fr/poeme/langue/</link>
+      <link>http://localhost:1313/poeme/langue/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/langue/</guid>
-      <description>Harmonieuses rencontres&#xA;De belles courbes labiales&#xA;Comme une bouche émasculée&#xA;De sons assourdissants.&#xA;Dominical dental&#xA;Fabuleuse langue,&#xA;Saveurs des signes.&#xA;Joueur de fifre tarabiscoté&#xA;De l’aube à la nuit tombante&#xA;Les signes inaudibles&#xA;Finissent par laisser glisser&#xA;Leurs habits&#xA;Antique nudité&#xA;Bestiale langue&#xA;Du bien-être.</description>
+      <guid>http://localhost:1313/poeme/langue/</guid>
+      <description>&lt;p&gt;Harmonieuses rencontres&lt;br&gt;&#xA;De belles courbes labiales&lt;br&gt;&#xA;Comme une bouche émasculée&lt;br&gt;&#xA;De sons assourdissants.&lt;br&gt;&#xA;Dominical dental&lt;br&gt;&#xA;Fabuleuse langue,&lt;br&gt;&#xA;Saveurs des signes.&lt;br&gt;&#xA;Joueur de fifre tarabiscoté&lt;br&gt;&#xA;De l’aube à la nuit tombante&lt;br&gt;&#xA;Les signes inaudibles&lt;br&gt;&#xA;Finissent par laisser glisser&lt;br&gt;&#xA;Leurs habits&lt;br&gt;&#xA;Antique nudité&lt;br&gt;&#xA;Bestiale langue&lt;br&gt;&#xA;Du bien-être.&lt;/p&gt;</description>
     </item>
     <item>
       <title>QI</title>
-      <link>https://superchat.amoskhachut.fr/poeme/qi/</link>
+      <link>http://localhost:1313/poeme/qi/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/qi/</guid>
-      <description>Je un qi en dessous du niveau de la mer&#xA;ma bêtise atteint, elle, des sommets.&#xA;Je tutoie la médiocrité, une amie certainement.&#xA;les intelligents m’ennuient profondément&#xA;comme une nonne dans un couvent&#xA;Je vouvoie le savoir qui se fait discret.&#xA;J’ai mange et mangé les mots comme un tricot&#xA;pour le plaisir des déguisements&#xA;salvateur Je&#xA;caché dans le placard&#xA;Or Ni Car&#xA;Dikdouk conformiste&#xA;et ces crayons qui ne m’appartiennent pas</description>
+      <guid>http://localhost:1313/poeme/qi/</guid>
+      <description>&lt;p&gt;Je un qi en dessous du niveau de la mer&lt;br&gt;&#xA;ma bêtise atteint, elle, des sommets.&lt;br&gt;&#xA;Je tutoie la médiocrité, une amie certainement.&lt;br&gt;&#xA;les intelligents m’ennuient profondément&lt;br&gt;&#xA;comme une nonne dans un couvent&lt;br&gt;&#xA;Je vouvoie le savoir qui se fait discret.&lt;br&gt;&#xA;J’ai mange et mangé les mots comme un tricot&lt;br&gt;&#xA;pour le plaisir des déguisements&lt;br&gt;&#xA;salvateur Je&lt;br&gt;&#xA;caché dans le placard&lt;br&gt;&#xA;Or Ni Car&lt;br&gt;&#xA;Dikdouk conformiste&lt;br&gt;&#xA;et ces crayons qui ne m’appartiennent pas&lt;br&gt;&#xA;le sens de la propriété s’est perdu là-bas&lt;br&gt;&#xA;Ici je vis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reflet</title>
-      <link>https://superchat.amoskhachut.fr/poeme/reflet/</link>
+      <link>http://localhost:1313/poeme/reflet/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/reflet/</guid>
-      <description>Profils taquins&#xA;Rien ne ressemble plus à soi&#xA;Que l’autre&#xA;Le miroir est un tricheur&#xA;Un estompeur du souvenir&#xA;Il rend flou&#xA;Regards en arrière&#xA;Souvenirs d’un violet sur 2 roues&#xA;Seule certitude&#xA;Les mots présents&#xA;Pour symboliser le néant&#xA;Des choses passées&#xA;L’observation&#xA;Rend-t-elle les choses floues ?&#xA;Ou est-ce le contraire ?&#xA;Elgato le flou flou&#xA;Un rien naîf&#xA;Un rien minou&#xA;Reflets édulcorodés</description>
+      <guid>http://localhost:1313/poeme/reflet/</guid>
+      <description>&lt;p&gt;Profils taquins&lt;br&gt;&#xA;Rien ne ressemble plus à soi&lt;br&gt;&#xA;Que l’autre&lt;/p&gt;&#xA;&lt;p&gt;Le miroir est un tricheur&lt;br&gt;&#xA;Un estompeur du souvenir&lt;br&gt;&#xA;Il rend flou&lt;/p&gt;&#xA;&lt;p&gt;Regards en arrière&lt;br&gt;&#xA;Souvenirs d’un violet sur 2 roues&lt;br&gt;&#xA;Seule certitude&lt;/p&gt;&#xA;&lt;p&gt;Les mots présents&lt;br&gt;&#xA;Pour symboliser le néant&lt;br&gt;&#xA;Des choses passées&lt;/p&gt;&#xA;&lt;p&gt;L’observation&lt;br&gt;&#xA;Rend-t-elle les choses floues ?&lt;br&gt;&#xA;Ou est-ce le contraire ?&lt;/p&gt;&#xA;&lt;p&gt;Elgato le flou flou&lt;br&gt;&#xA;Un rien naîf&lt;br&gt;&#xA;Un rien minou&lt;br&gt;&#xA;Reflets édulcorodés&lt;/p&gt;</description>
     </item>
     <item>
       <title>Spleen du 13e abruti</title>
-      <link>https://superchat.amoskhachut.fr/poeme/spleen/</link>
+      <link>http://localhost:1313/poeme/spleen/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/spleen/</guid>
-      <description>Tes yeux dessinent les vallons de mon ignorance.&#xA;Torpeur mordue, j’enlace le présent doucement,&#xA;Pour les jours froids habités par la criante absence&#xA;De ton regard qui disparait dans un bruissement.&#xA;Mes pensées sont comme la pluie septentrionale.&#xA;Le souvenir dans mes poches de tes chaudes mains,&#xA;Me ramène sur les rives méridionales.&#xA;Où les jours roses laissent entrevoir un demain.&#xA;Tes beaux cheveux noirs sont comme un torrent au galop.</description>
+      <guid>http://localhost:1313/poeme/spleen/</guid>
+      <description>&lt;p&gt;Tes yeux dessinent les vallons de mon ignorance.&lt;br&gt;&#xA;Torpeur mordue, j’enlace le présent doucement,&lt;br&gt;&#xA;Pour les jours froids habités par la criante absence&lt;br&gt;&#xA;De ton regard qui disparait dans un bruissement.&lt;/p&gt;&#xA;&lt;p&gt;Mes pensées sont comme la pluie septentrionale.&lt;br&gt;&#xA;Le souvenir dans mes poches de tes chaudes mains,&lt;br&gt;&#xA;Me ramène sur les rives méridionales.&lt;br&gt;&#xA;Où les jours roses laissent entrevoir un demain.&lt;/p&gt;&#xA;&lt;p&gt;Tes beaux cheveux noirs sont comme un torrent au galop.&lt;br&gt;&#xA;Indomptable idylle de la fin du premier jour,&lt;br&gt;&#xA;S’effaçant comme les bras de celle de Milo.&lt;br&gt;&#xA;On en devine beauté pour demain et toujours.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Thélonious Monk</title>
-      <link>https://superchat.amoskhachut.fr/poeme/monk/</link>
+      <link>http://localhost:1313/poeme/monk/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/monk/</guid>
-      <description>J’aurais tant aimé être bien né artiste,&#xA;Jouant avec brio les usages de ce monde&#xA;Telle la belle langue de Thélonious Monk.&#xA;Je suis tout aussi bien né drôle d’autiste,&#xA;Abhorrant les certitudes de ce monde&#xA;Telle la célèbre logique d’Adrian Monk.&#xA;Né dans ce bizarre monde sans armure,&#xA;Je n’ai perdu que mes batailles bruns cheveux,&#xA;Et découvert que je suis fort comme un château.&#xA;Les mots plus jamais ne se feront murmures,</description>
+      <guid>http://localhost:1313/poeme/monk/</guid>
+      <description>&lt;p&gt;J’aurais tant aimé être bien né artiste,&lt;br&gt;&#xA;Jouant avec brio les usages de ce monde&lt;br&gt;&#xA;Telle la belle langue de Thélonious Monk.&lt;br&gt;&#xA;Je suis tout aussi bien né drôle d’autiste,&lt;br&gt;&#xA;Abhorrant les certitudes de ce monde&lt;br&gt;&#xA;Telle la célèbre logique d’Adrian Monk.&lt;/p&gt;&#xA;&lt;p&gt;Né dans ce bizarre monde sans armure,&lt;br&gt;&#xA;Je n’ai perdu que mes batailles bruns cheveux,&lt;br&gt;&#xA;Et découvert que je suis fort comme un château.&lt;br&gt;&#xA;Les mots plus jamais ne se feront murmures,&lt;br&gt;&#xA;Salvateurs et serviteurs chevaleresques,&lt;br&gt;&#xA;Ils s’habillent comme des jardins ancestraux.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

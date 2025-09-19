@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Design graphique on Super Chat</title>
-    <link>https://superchat.amoskhachut.fr/tags/design-graphique/</link>
-    <description>Recent content in Design graphique on Super Chat</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Design Graphique on Super Chat</title>
+    <link>http://localhost:1313/tags/design-graphique/</link>
+    <description>Recent content in Design Graphique on Super Chat</description>
+    <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Tue, 30 Apr 2019 20:18:54 +0300</lastBuildDate>
-    <atom:link href="https://superchat.amoskhachut.fr/tags/design-graphique/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/design-graphique/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Post 1</title>
-      <link>https://superchat.amoskhachut.fr/posts/post-1/</link>
+      <link>http://localhost:1313/posts/post-1/</link>
       <pubDate>Tue, 30 Apr 2019 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/posts/post-1/</guid>
-      <description>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&#xA;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea.</description>
+      <guid>http://localhost:1313/posts/post-1/</guid>
+      <description>&lt;p&gt;Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&lt;/p&gt;&#xA;&lt;p&gt;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Journées Cinéma &amp; Psychiatrie</title>
-      <link>https://superchat.amoskhachut.fr/projets/jcpl/</link>
+      <link>http://localhost:1313/projets/jcpl/</link>
       <pubDate>Fri, 30 Apr 2010 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/projets/jcpl/</guid>
-      <description> </description>
+      <guid>http://localhost:1313/projets/jcpl/</guid>
+      <description>&lt;div class=&#34;row px-3&#34;&gt;&#xA;  &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl_4.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 14es Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl-web.webp&#34; alt=&#34;visuel représentant un oridnateur portable posé au sol avec la page d’accueil du site des JCPL (Journées Cinéma &amp; Pyschiatrie)&#34;/&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;col-lg-7&#34;&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-6 mb-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl_3.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 13es Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 14es Journées Cinéma &amp; Psychiatrie de Lyon, version non-retenue&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl-12.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 12es Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl_1.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 1Oes Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6 mt-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/logo-jcpl.webp&#34; alt=&#34;visuel représentan le logo des Journées Cinéma &amp; Psychiatrie, version couleur&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6 mt-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/logo-jcpl-nb.webp&#34; alt=&#34;visuel représentan le logo des Journées Cinéma &amp; Psychiatrie, version positive noire&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6 mt-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/logo-jcpl-ng.webp&#34; alt=&#34;visuel représentan le logo des Journées Cinéma &amp; Psychiatrie, version niveau de gris&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

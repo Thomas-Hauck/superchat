@@ -73,8 +73,10 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Alt Image", name: "alt", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Prix", name: "prix", widget: "string" }
+      - {label: "Prix", name: "price", widget: "number", value_type: "float", min: 0, step: 0.01}
+      - {label: "Stock", name: "stock", widget: "number", default: 0}
       - {label: "Size", name: "size", widget: "string" }
+      - {label: "Actif", name: "active", widget: "boolean", default: true}
       - label: "Images"
         name: "images"
         widget: "list"

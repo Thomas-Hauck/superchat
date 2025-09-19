@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Super Chat</title>
-    <link>https://superchat.amoskhachut.fr/txt/</link>
-    <description>Recent content on Super Chat</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Txts on Super Chat</title>
+    <link>http://localhost:1313/txt/</link>
+    <description>Recent content in Txts on Super Chat</description>
+    <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Sat, 29 Mar 2025 20:06:54 +0300</lastBuildDate>
-    <atom:link href="https://superchat.amoskhachut.fr/txt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/txt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Le lycanthrope et la vieille dame</title>
-      <link>https://superchat.amoskhachut.fr/txt/txt-1/</link>
+      <link>http://localhost:1313/txt/txt-1/</link>
       <pubDate>Sat, 29 Mar 2025 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/txt/txt-1/</guid>
-      <description>Le cri apprivoisé du lycanthrope réveille les oreilles sensibles à la douceur du soir venu. Quand la rue est redevenue calme c’est là que le spleen du 13e abruti fait son retour. L’homme loup ouvre les yeux et entend la sourde élégie de la vieille dame qui lui rappelle que le temps de sa fenêtre semble bien plus clément que le sien.&#xA;Le temps est un drôle d’endroit, c’est un peu comme une chambre vide du présent où des vestiges de l’adolescence trônent crânement et les souvenirs poussent aussi vite que le printemps.</description>
+      <guid>http://localhost:1313/txt/txt-1/</guid>
+      <description>&lt;p&gt;Le cri apprivoisé du lycanthrope réveille les oreilles sensibles à la douceur du soir venu.  Quand la rue est redevenue calme c’est là que le &lt;a href=&#34;http://localhost:1313/poeme/spleen/&#34;&gt;spleen du 13e abruti&lt;/a&gt; fait son retour. L’homme loup ouvre les yeux et entend la sourde élégie de la vieille dame qui lui rappelle que le temps de sa &lt;a href=&#34;http://localhost:1313/poeme/fenetre/&#34;&gt;fenêtre&lt;/a&gt; semble bien plus clément que le sien.&lt;/p&gt;&#xA;&lt;p class=&#34;text-indent&#34;&gt;Le temps est un drôle d’endroit, c’est un peu comme une &lt;a href=&#34;http://localhost:1313/poeme/chambre/&#34;&gt;chambre&lt;/a&gt; vide du présent où des vestiges de l’adolescence trônent crânement et les souvenirs poussent aussi vite que le printemps. &lt;a href=&#34;http://localhost:1313/poeme/califourchon/&#34;&gt;À califourchon&lt;/a&gt; sur la route des projections, l’homme loup, dans sa bulle, se plaît à imaginer le monde. Un monde naïf rempli de papillons bleus et de fleur roses car l’homme loup est fleur bleue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Le lycanthrope et les chimpanzés</title>
-      <link>https://superchat.amoskhachut.fr/txt/txt-2/</link>
+      <link>http://localhost:1313/txt/txt-2/</link>
       <pubDate>Sat, 29 Mar 2025 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/txt/txt-2/</guid>
-      <description>Le lycanthrope aurait tant aimé jouer avec brio les usages de ce monde telle la belle langue de Thélonious Monk.&#xA;Les savants/salauds de chimpanzés sont nés avec les usages, pour lui tout est apprentissage. Pauvre homme loup… Que nenni ! L’homme loup a des ressources dont celle de ne jamais renoncer, plier peut-être mais jamais ne rompt, c’est un loup roseau égyptien. S’il est vrai que les chimpanzés sont des petits salauds ils n’en restent pas moins admirables, courageux, besogneux et tellement drôles.</description>
+      <guid>http://localhost:1313/txt/txt-2/</guid>
+      <description>&lt;p&gt;Le lycanthrope aurait tant aimé jouer avec brio les usages de ce monde telle la belle langue de &lt;a href=&#34;http://localhost:1313/poeme/monk/&#34;&gt;Thélonious Monk&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Les savants/salauds de chimpanzés sont nés avec les usages, pour lui tout est apprentissage. Pauvre homme loup… Que nenni  ! L’homme loup a des ressources dont celle de ne jamais renoncer, plier peut-être mais jamais ne rompt, c’est un loup roseau égyptien. S’il est vrai que les chimpanzés sont des petits salauds ils n’en restent pas moins admirables, courageux, besogneux et tellement drôles.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,7 +1,8 @@
 local_backend: true
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  name: github
+  repo: thomas-hauck/superchat
+  branch: feature/shop
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 publish_mode: editorial_workflow
@@ -57,3 +58,29 @@ collections:
       - {label: "Alt Image", name: "alt", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - { label: "Année", name: "annee", widget: "string" }
+  - label: "Shop"
+    name: "shop"
+    folder: "themes/sc/content/shop"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: 'images'
+    public_folder: ''
+    editor:
+      preview: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Alt Image", name: "alt", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Prix", name: "price", widget: "number", value_type: "float", min: 0, step: 0.01}
+      - {label: "Stock", name: "stock", widget: "number", default: 0}
+      - {label: "Size", name: "size", widget: "string" }
+      - {label: "Actif", name: "active", widget: "boolean", default: true}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: Image, name: image, widget: image, required: false}
+          - { label: Alt, name: alt_gallery, widget: string, required: false}
+  

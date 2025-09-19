@@ -2,284 +2,312 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Super Chat</title>
-    <link>https://superchat.amoskhachut.fr/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Super Chat</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate>
-    <atom:link href="https://superchat.amoskhachut.fr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Sep 2025 15:46:00 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trio</title>
+      <link>http://localhost:1313/shop/trio/</link>
+      <pubDate>Thu, 18 Sep 2025 15:46:00 +0200</pubDate>
+      <guid>http://localhost:1313/shop/trio/</guid>
+      <description>&lt;p&gt;Impression offset 4 couleurs&lt;/p&gt;&#xA;&lt;p class=&#34;date mb-0&#34;&gt;Papier Offset 400 g/m²&lt;/p&gt;&#xA;&lt;p class=&#34;date mb-3&#34;&gt;10 exemplaires&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Les arcadiens</title>
+      <link>http://localhost:1313/shop/les-arcadiens/</link>
+      <pubDate>Thu, 18 Sep 2025 11:50:00 +0200</pubDate>
+      <guid>http://localhost:1313/shop/les-arcadiens/</guid>
+      <description>&lt;p&gt;Risographie 4 couleurs&lt;br&gt;&#xA;(Imprimée par Quintal atelier)&lt;/p&gt;&#xA;&lt;p class=&#34;date mb-0&#34;&gt;Papier Munken Polar Rough 300gr&lt;/p&gt;&#xA;&lt;p class=&#34;date mb-3&#34;&gt;40 exemplaires signés&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Panel</title>
+      <link>http://localhost:1313/shop/panel/</link>
+      <pubDate>Thu, 18 Sep 2025 09:38:00 +0200</pubDate>
+      <guid>http://localhost:1313/shop/panel/</guid>
+      <description>&lt;p&gt;Risographie 2 couleurs&lt;br&gt;&#xA;(Imprimée par Quintal atelier)&lt;/p&gt;&#xA;&lt;p class=&#34;date mb-0&#34;&gt;Papier Munken 150gr&lt;/p&gt;&#xA;&lt;p class=&#34;date mb-3&#34;&gt;40 exemplaires signés&lt;/p&gt;</description>
+    </item>
     <item>
       <title>L’Arcadie</title>
-      <link>https://superchat.amoskhachut.fr/projets/arcadie/</link>
+      <link>http://localhost:1313/projets/arcadie/</link>
       <pubDate>Wed, 30 Apr 2025 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/projets/arcadie/</guid>
-      <description> </description>
+      <guid>http://localhost:1313/projets/arcadie/</guid>
+      <description>&lt;div class=&#34;row px-3&#34;&gt;&#xA;  &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-laptop_1.webp&#34; alt=&#34;visuel repésentant un ordinateur portable avec la page d’accueil du site de l’Arcadie posé sur une chaise de style vintage&#34;/&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-12 mb-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-cv.webp&#34; alt=&#34;visuel repésentant une pile de cartes de visite avec logo de l’Arcadie&#34;&gt;  &#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-12&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-flyer.webp&#34; alt=&#34;visuel représentant un flyer pour les permanences de l’été 2025 avec les dates&#34;&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-9 offset-lg-3&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-fiche.webp&#34; alt=&#34;visuel représentant des fiches pour l&#39;atelier de pair-aidance&#34;&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-8&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-post.webp&#34; alt=&#34;visuel représentant des exemples de publications LinkedIn&#34;&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;col-lg-7&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-smartphone.webp&#34; alt=&#34;visuel représentant 3 écrans du site web au format de l&#39;iphone 12 pour illustrer le côté responsive du site web&#34;&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-7&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-charte.webp&#34; alt=&#34;visuel représentant la couverture de la charte graphique de l’arcadie sur fond bleu avec un héron et des yeux BD et le texte Charte graphique&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-logo.webp&#34; alt=&#34;visuel représentant les différentes variantes du logo de l’Arcadie (positif, négatif et sur fonds colorés)&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;col-lg-12&#34;&gt;&#xA;      &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-bandeau.webp&#34; alt=&#34;visuel représentant une bandeau pour la plateforme notions&#34;/&gt;&#xA;      &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-bandeau-1.webp&#34; alt=&#34;visuel représentant une bandeau pour la plateforme notions&#34;/&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-4 text-center&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-profil-720.gif&#34; alt=&#34;gif arcadie et héron avec des yeux bd animés&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-8&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcadie-riso.webp&#34; alt=&#34;visuel représentant une affiche A4 d&#39;une risographie colorée avec des hérons&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Le lycanthrope et la vieille dame</title>
-      <link>https://superchat.amoskhachut.fr/txt/txt-1/</link>
+      <link>http://localhost:1313/txt/txt-1/</link>
       <pubDate>Sat, 29 Mar 2025 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/txt/txt-1/</guid>
-      <description>Le cri apprivoisé du lycanthrope réveille les oreilles sensibles à la douceur du soir venu. Quand la rue est redevenue calme c’est là que le spleen du 13e abruti fait son retour. L’homme loup ouvre les yeux et entend la sourde élégie de la vieille dame qui lui rappelle que le temps de sa fenêtre semble bien plus clément que le sien.&#xA;Le temps est un drôle d’endroit, c’est un peu comme une chambre vide du présent où des vestiges de l’adolescence trônent crânement et les souvenirs poussent aussi vite que le printemps.</description>
+      <guid>http://localhost:1313/txt/txt-1/</guid>
+      <description>&lt;p&gt;Le cri apprivoisé du lycanthrope réveille les oreilles sensibles à la douceur du soir venu.  Quand la rue est redevenue calme c’est là que le &lt;a href=&#34;http://localhost:1313/poeme/spleen/&#34;&gt;spleen du 13e abruti&lt;/a&gt; fait son retour. L’homme loup ouvre les yeux et entend la sourde élégie de la vieille dame qui lui rappelle que le temps de sa &lt;a href=&#34;http://localhost:1313/poeme/fenetre/&#34;&gt;fenêtre&lt;/a&gt; semble bien plus clément que le sien.&lt;/p&gt;&#xA;&lt;p class=&#34;text-indent&#34;&gt;Le temps est un drôle d’endroit, c’est un peu comme une &lt;a href=&#34;http://localhost:1313/poeme/chambre/&#34;&gt;chambre&lt;/a&gt; vide du présent où des vestiges de l’adolescence trônent crânement et les souvenirs poussent aussi vite que le printemps. &lt;a href=&#34;http://localhost:1313/poeme/califourchon/&#34;&gt;À califourchon&lt;/a&gt; sur la route des projections, l’homme loup, dans sa bulle, se plaît à imaginer le monde. Un monde naïf rempli de papillons bleus et de fleur roses car l’homme loup est fleur bleue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Le lycanthrope et les chimpanzés</title>
-      <link>https://superchat.amoskhachut.fr/txt/txt-2/</link>
+      <link>http://localhost:1313/txt/txt-2/</link>
       <pubDate>Sat, 29 Mar 2025 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/txt/txt-2/</guid>
-      <description>Le lycanthrope aurait tant aimé jouer avec brio les usages de ce monde telle la belle langue de Thélonious Monk.&#xA;Les savants/salauds de chimpanzés sont nés avec les usages, pour lui tout est apprentissage. Pauvre homme loup… Que nenni ! L’homme loup a des ressources dont celle de ne jamais renoncer, plier peut-être mais jamais ne rompt, c’est un loup roseau égyptien. S’il est vrai que les chimpanzés sont des petits salauds ils n’en restent pas moins admirables, courageux, besogneux et tellement drôles.</description>
+      <guid>http://localhost:1313/txt/txt-2/</guid>
+      <description>&lt;p&gt;Le lycanthrope aurait tant aimé jouer avec brio les usages de ce monde telle la belle langue de &lt;a href=&#34;http://localhost:1313/poeme/monk/&#34;&gt;Thélonious Monk&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Les savants/salauds de chimpanzés sont nés avec les usages, pour lui tout est apprentissage. Pauvre homme loup… Que nenni  ! L’homme loup a des ressources dont celle de ne jamais renoncer, plier peut-être mais jamais ne rompt, c’est un loup roseau égyptien. S’il est vrai que les chimpanzés sont des petits salauds ils n’en restent pas moins admirables, courageux, besogneux et tellement drôles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Panel Graffiti</title>
-      <link>https://superchat.amoskhachut.fr/img/panel-riso/</link>
+      <link>http://localhost:1313/img/panel-riso/</link>
       <pubDate>Sat, 29 Mar 2025 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/panel-riso/</guid>
-      <description>risographie</description>
+      <guid>http://localhost:1313/img/panel-riso/</guid>
+      <description>&lt;p&gt;risographie&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tetrapak #2</title>
-      <link>https://superchat.amoskhachut.fr/img/tetrapak/</link>
+      <link>http://localhost:1313/img/tetrapak/</link>
       <pubDate>Wed, 29 May 2024 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/tetrapak/</guid>
-      <description>taille-douce sur tetrapak et machine à pâtes</description>
+      <guid>http://localhost:1313/img/tetrapak/</guid>
+      <description>&lt;p&gt;taille-douce sur tetrapak et machine à pâtes&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arcade84</title>
-      <link>https://superchat.amoskhachut.fr/projets/arcade84/</link>
+      <link>http://localhost:1313/projets/arcade84/</link>
       <pubDate>Tue, 30 Apr 2024 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/projets/arcade84/</guid>
-      <description> </description>
+      <guid>http://localhost:1313/projets/arcade84/</guid>
+      <description>&lt;div class=&#34;row px-3&#34;&gt;&#xA;  &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-cv.webp&#34; alt=&#34;visuel représentant une carte de visite posée au sol. Le logo représente une arcade (dans le sens de batiment commercial) avec une porte&#34;/&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade-mockup.webp&#34; alt=&#34;visuel représentant un téléphone portable tenu d’une main avec en fond la page d’accueil du site de l’Arcade84&#34;/&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-ra.webp&#34; alt=&#34;visuel représentant une pile de livrets (au nombre de 3) du rapport d’activité de l’Arcade84&#34;/&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-illus.webp&#34; alt=&#34;visuel représentant plusiers illustrations pour le site web de l’Arcade84&#34;/&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;col-lg-7&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-laptop.webp&#34; alt=&#34;visuel représentant un ordinateur portable avec en fond la page d’accueil du site web de l’Arcade84&#34;&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-laptop_2.webp&#34; alt=&#34;visuel représentant la page d’accueil du site web de l’Arcade84&#34;&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-laptop_1.webp&#34; alt=&#34;visuel représentant la page Notre engagement du site web de l’Arcade84&#34;&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-8 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-laptop_3.webp&#34; alt=&#34;visuel représentant la page Actualités du site web de l’Arcade84&#34;&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-8&#34;&gt;&#xA;          &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-smartphone.webp&#34; alt=&#34;visuel représentant 3 écrans au format téléphone des pages du site web de l’Arcade84&#34;&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;        &lt;div class=&#34;bg-white br-8&#34;&gt;&#xA;          &lt;img class=&#34;img-fluid  mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84Logo_siteweb.gif&#34; alt=&#34;visuel représentant le logo animé de l’Arcade84 au format gif. On voit la porte s&#39;envoler et former un héron&#34;&gt;&#xA;        &lt;/div&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-8&#34;&gt;&#xA;          &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-charte.webp&#34; alt=&#34;visuel représentant des pages intérieures de la charte graphique (sur la couleur) et la page de couverture&#34;&gt;&#xA;      &lt;/div&gt;&#xA;       &lt;div class=&#34;col-lg-10&#34;&gt;&#xA;          &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/arcade84-affiche40ans.webp&#34; alt=&#34;visuel représentant une affiche tenue par 2 mains. Cette affiche colorée représente un gâteau d’anniversaire pour les 40 ans de l’Arcade84&#34;&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Tetrapak #1</title>
-      <link>https://superchat.amoskhachut.fr/img/tetrapak-1/</link>
+      <link>http://localhost:1313/img/tetrapak-1/</link>
       <pubDate>Fri, 29 Mar 2024 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/tetrapak-1/</guid>
-      <description>taille-douce sur tetrapak et machine à pâtes</description>
+      <guid>http://localhost:1313/img/tetrapak-1/</guid>
+      <description>&lt;p&gt;taille-douce sur tetrapak et machine à pâtes&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Rondes fêluresss</title>
-      <link>https://superchat.amoskhachut.fr/img/rondesfelures/</link>
+      <title>Rondes fêlures</title>
+      <link>http://localhost:1313/img/rondesfelures/</link>
       <pubDate>Fri, 29 Dec 2023 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/rondesfelures/</guid>
-      <description>Linogravure, crayon et acrylique</description>
+      <guid>http://localhost:1313/img/rondesfelures/</guid>
+      <description>&lt;p&gt;Linogravure, crayon et acrylique&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vieille turne</title>
-      <link>https://superchat.amoskhachut.fr/img/vieilleturne/</link>
+      <link>http://localhost:1313/img/vieilleturne/</link>
       <pubDate>Sun, 29 Oct 2023 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/vieilleturne/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/vieilleturne/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
     </item>
     <item>
       <title>Trio</title>
-      <link>https://superchat.amoskhachut.fr/img/trio/</link>
+      <link>http://localhost:1313/img/trio/</link>
       <pubDate>Wed, 29 Mar 2023 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/trio/</guid>
-      <description>Digital</description>
+      <guid>http://localhost:1313/img/trio/</guid>
+      <description>&lt;p&gt;Digital&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 3</title>
-      <link>https://superchat.amoskhachut.fr/posts/post-3/</link>
+      <link>http://localhost:1313/posts/post-3/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>https://superchat.amoskhachut.fr/posts/post-3/</guid>
-      <description>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum.</description>
+      <guid>http://localhost:1313/posts/post-3/</guid>
+      <description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 2</title>
-      <link>https://superchat.amoskhachut.fr/posts/post-2/</link>
+      <link>http://localhost:1313/posts/post-2/</link>
       <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
-      <guid>https://superchat.amoskhachut.fr/posts/post-2/</guid>
-      <description>Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&#xA;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia.</description>
+      <guid>http://localhost:1313/posts/post-2/</guid>
+      <description>&lt;p&gt;Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&lt;/p&gt;&#xA;&lt;p&gt;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emil Ciorans</title>
+      <link>http://localhost:1313/img/emilcioran/</link>
+      <pubDate>Thu, 29 Dec 2022 20:06:00 +0100</pubDate>
+      <guid>http://localhost:1313/img/emilcioran/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
     </item>
     <item>
       <title>Allen Ginsberg</title>
-      <link>https://superchat.amoskhachut.fr/img/ginsberg/</link>
+      <link>http://localhost:1313/img/ginsberg/</link>
       <pubDate>Thu, 29 Dec 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/ginsberg/</guid>
-      <description>Linogravure &amp;amp; stabilo</description>
-    </item>
-    <item>
-      <title>Emil Cioran</title>
-      <link>https://superchat.amoskhachut.fr/img/emilcioran/</link>
-      <pubDate>Thu, 29 Dec 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/emilcioran/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/ginsberg/</guid>
+      <description>&lt;p&gt;Linogravure &amp;amp; stabilo&lt;/p&gt;</description>
     </item>
     <item>
       <title>À califourchon</title>
-      <link>https://superchat.amoskhachut.fr/poeme/califourchon/</link>
+      <link>http://localhost:1313/poeme/califourchon/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/califourchon/</guid>
-      <description>Les mots en ballade,&#xA;À califourchon sur mon ailleurs&#xA;Je rêve de Brooklyn. Comme d’une Maryline en basket.&#xA;La balade des mots,&#xA;À califourchon sur les notes&#xA;Je rêve de rencontres musicales. De velours bleus.&#xA;À califourchon sur ma vie,&#xA;Devrais-je la laisser filer&#xA;Pour enfin la vivre&#xA;En basket et musique.</description>
+      <guid>http://localhost:1313/poeme/califourchon/</guid>
+      <description>&lt;p&gt;Les mots en ballade,&lt;br&gt;&#xA;À califourchon sur mon ailleurs&lt;br&gt;&#xA;Je rêve de Brooklyn.&#xA;Comme d’une Maryline en basket.&lt;/p&gt;&#xA;&lt;p&gt;La balade des mots,&lt;br&gt;&#xA;À califourchon sur les notes&lt;br&gt;&#xA;Je rêve de rencontres musicales.&#xA;De velours bleus.&lt;/p&gt;&#xA;&lt;p&gt;À califourchon sur ma vie,&lt;br&gt;&#xA;Devrais-je la laisser filer&lt;br&gt;&#xA;Pour enfin la vivre&lt;br&gt;&#xA;En basket et musique.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Averbal</title>
-      <link>https://superchat.amoskhachut.fr/poeme/averbale/</link>
+      <link>http://localhost:1313/poeme/averbale/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/averbale/</guid>
-      <description>Sans personne,&#xA;Solitude triste.&#xA;Avec vous,&#xA;Solitude ensoleillée.&#xA;Sans vous pas de refuge,&#xA;La musique bien plus belle.&#xA;Avec vous dans la peau,&#xA;Et la musique dans les têtes.&#xA;Un cœur sans verbe,&#xA;À tous les temps&#xA;Et un regard dans le présent.&#xA;Déjà dans vos bouches&#xA;Un cœur verbal&#xA;Bien trop présent&#xA;Pour l’homme du futur&#xA;Sans passé.&#xA;Le bruit des mots compliqués&#xA;Loin derrière.&#xA;Le silence pour un temps,</description>
+      <guid>http://localhost:1313/poeme/averbale/</guid>
+      <description>&lt;p&gt;Sans personne,&lt;br&gt;&#xA;Solitude triste.&lt;br&gt;&#xA;Avec vous,&lt;br&gt;&#xA;Solitude ensoleillée.&lt;br&gt;&#xA;Sans vous pas de refuge,&lt;br&gt;&#xA;La musique bien plus belle.&lt;br&gt;&#xA;Avec vous dans la peau,&lt;br&gt;&#xA;Et la musique dans les têtes.&lt;/p&gt;&#xA;&lt;p&gt;Un cœur sans verbe,&lt;br&gt;&#xA;À tous les temps&lt;br&gt;&#xA;Et un regard dans le présent.&lt;br&gt;&#xA;Déjà dans vos bouches&lt;br&gt;&#xA;Un cœur verbal&lt;br&gt;&#xA;Bien trop présent&lt;br&gt;&#xA;Pour l’homme du futur&lt;br&gt;&#xA;Sans passé.&lt;/p&gt;&#xA;&lt;p&gt;Le bruit des mots compliqués&lt;br&gt;&#xA;Loin derrière.&lt;br&gt;&#xA;Le silence pour un temps,&lt;br&gt;&#xA;Salvateur dimanche.&lt;br&gt;&#xA;Vos sourires dans les poches,&lt;br&gt;&#xA;Mots en suspens.&lt;br&gt;&#xA;La solitude ensoleillée&lt;br&gt;&#xA;D’un jour par semaine.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chambre</title>
-      <link>https://superchat.amoskhachut.fr/poeme/chambre/</link>
+      <link>http://localhost:1313/poeme/chambre/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/chambre/</guid>
-      <description>Idées défraîchies qui perlent&#xA;Le mur des souvenirs instants Madeleine qui déferle&#xA;L’air debout se tient clairvoyant.&#xA;Un violet sur trois roues si fier&#xA;Lutte avec les voyelles&#xA;Chambre, fief des combats d’hier&#xA;Musique en sentinelle.&#xA;Endroit à nul autre pareil&#xA;le temps est un ami du lieu&#xA;Réalité y sommeille&#xA;Et on s’y passe bien de Dieu.&#xA;Les limbes cèdent leur place&#xA;Esquisses des âmes perdues&#xA;Qui dans une volte-face</description>
+      <guid>http://localhost:1313/poeme/chambre/</guid>
+      <description>&lt;p&gt;Idées défraîchies qui perlent&lt;br&gt;&#xA;Le mur des souvenirs instants &lt;br&gt;&#xA;Madeleine qui déferle&lt;br&gt;&#xA;L’air debout se tient clairvoyant.&lt;/p&gt;&#xA;&lt;p&gt;Un violet sur trois roues si fier&lt;br&gt;&#xA;Lutte avec les voyelles&lt;br&gt;&#xA;Chambre, fief des combats d’hier&lt;br&gt;&#xA;Musique en sentinelle.&lt;/p&gt;&#xA;&lt;p&gt;Endroit à nul autre pareil&lt;br&gt;&#xA;le temps est un ami du lieu&lt;br&gt;&#xA;Réalité y sommeille&lt;br&gt;&#xA;Et on s’y passe bien de Dieu.&lt;/p&gt;&#xA;&lt;p&gt;Les limbes cèdent leur place&lt;br&gt;&#xA;Esquisses des âmes perdues&lt;br&gt;&#xA;Qui dans une volte-face&lt;br&gt;&#xA;Remercient le temps suspendu.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Discret</title>
-      <link>https://superchat.amoskhachut.fr/poeme/discret/</link>
+      <link>http://localhost:1313/poeme/discret/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/discret/</guid>
-      <description>Sans la folie des uns&#xA;je n’aurais jamais pu faire mon kangourou&#xA;Inaperçu&#xA;Sans les ondes radioélectriques&#xA;je n’aurais jamais su écouter&#xA;Inaperçu&#xA;Sans la terreur des autres&#xA;je n’aurais jamais goûté à la douceur de la solitude&#xA;Inaperçu&#xA;Sans les textes religieux&#xA;je n’aurais jamais vu l’Orient&#xA;Inaperçu&#xA;Sans le Cantique des Cantiques&#xA;je n’aurais jamais découvert la poésie&#xA;Inaperçu&#xA;Sans ma mère&#xA;je n’aurais jamais su attendre&#xA;Inaperçu</description>
+      <guid>http://localhost:1313/poeme/discret/</guid>
+      <description>&lt;p&gt;Sans la folie des uns&lt;br&gt;&#xA;je n’aurais jamais pu faire mon kangourou&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans les ondes radioélectriques&lt;br&gt;&#xA;je n’aurais jamais su écouter&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans la terreur des autres&lt;br&gt;&#xA;je n’aurais jamais goûté à la douceur de la solitude&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans les textes religieux&lt;br&gt;&#xA;je n’aurais jamais vu l’Orient&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans le Cantique des Cantiques&lt;br&gt;&#xA;je n’aurais jamais découvert la poésie&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;&#xA;&lt;p&gt;Sans ma mère&lt;br&gt;&#xA;je n’aurais jamais su attendre&lt;br&gt;&#xA;Inaperçu&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enfance</title>
-      <link>https://superchat.amoskhachut.fr/img/enfance/</link>
+      <link>http://localhost:1313/img/enfance/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/enfance/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/enfance/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fard</title>
-      <link>https://superchat.amoskhachut.fr/poeme/fard/</link>
+      <link>http://localhost:1313/poeme/fard/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/fard/</guid>
-      <description>Quand l’aube quitte son lit,&#xA;Des regards pressés s’éveillent,&#xA;La rue se farde lentement&#xA;Arborant son sourire moite de la veille.&#xA;A l’heure des parias,&#xA;Les murs se font lecture,&#xA;Catalyseur des oisifs&#xA;Les mots se font volatiles.</description>
+      <guid>http://localhost:1313/poeme/fard/</guid>
+      <description>&lt;p&gt;Quand l’aube quitte son lit,&lt;br&gt;&#xA;Des regards pressés s’éveillent,&lt;br&gt;&#xA;La rue se farde lentement&lt;br&gt;&#xA;Arborant son sourire moite de la veille.&lt;/p&gt;&#xA;&lt;p&gt;A l’heure des parias,&lt;br&gt;&#xA;Les murs se font lecture,&lt;br&gt;&#xA;Catalyseur des oisifs&lt;br&gt;&#xA;Les mots se font volatiles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fenêtre</title>
-      <link>https://superchat.amoskhachut.fr/poeme/fenetre/</link>
+      <link>http://localhost:1313/poeme/fenetre/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/fenetre/</guid>
-      <description>De la fenêtre, feuilles virevoltantes&#xA;D’un printemps en dernière de couverture&#xA;Comme la une d’une bimbo septante&#xA;Les lignes s’effacent vers un doux futur.&#xA;Le temps se glisse dans les verts interstices&#xA;Des histoires racontées d’une fenêtre&#xA;Ouverte à la page du long solstice&#xA;Des âmes aimantes qui traînent leurs guêtres.&#xA;Quand les lignes s’assemblent pour forniquer&#xA;Les lettres sont noires comme la musique&#xA;D’un si joli gris presque typographique</description>
+      <guid>http://localhost:1313/poeme/fenetre/</guid>
+      <description>&lt;p&gt;De la fenêtre, feuilles virevoltantes&lt;br&gt;&#xA;D’un printemps en dernière de couverture&lt;br&gt;&#xA;Comme la une d’une bimbo septante&lt;br&gt;&#xA;Les lignes s’effacent vers un doux futur.&lt;/p&gt;&#xA;&lt;p&gt;Le temps se glisse dans les verts interstices&lt;br&gt;&#xA;Des histoires racontées d’une fenêtre&lt;br&gt;&#xA;Ouverte à la page du long solstice&lt;br&gt;&#xA;Des âmes aimantes qui traînent leurs guêtres.&lt;/p&gt;&#xA;&lt;p&gt;Quand les lignes s’assemblent pour forniquer&lt;br&gt;&#xA;Les lettres sont noires comme la musique&lt;br&gt;&#xA;D’un si joli gris presque typographique&lt;br&gt;&#xA;Qui ne souhaite pas être domestiqué.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Langage de la parure</title>
-      <link>https://superchat.amoskhachut.fr/poeme/langage/</link>
+      <link>http://localhost:1313/poeme/langage/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/langage/</guid>
-      <description>Des mots doux comme le miel,&#xA;Pas tout à fait cache-misère&#xA;Pour le va-nu-pieds du désert.&#xA;Qui ne connait pas le langage de la parure&#xA;Car son écriture est faite de bigarrure&#xA;Loin des maudits cœurs pleins de fiel.</description>
+      <guid>http://localhost:1313/poeme/langage/</guid>
+      <description>&lt;p&gt;Des mots doux comme le miel,&lt;br&gt;&#xA;Pas tout à fait cache-misère&lt;br&gt;&#xA;Pour le va-nu-pieds du désert.&lt;br&gt;&#xA;Qui ne connait pas le langage de la parure&lt;br&gt;&#xA;Car son écriture est faite de bigarrure&lt;br&gt;&#xA;Loin des maudits cœurs pleins de fiel.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Langue</title>
-      <link>https://superchat.amoskhachut.fr/poeme/langue/</link>
+      <link>http://localhost:1313/poeme/langue/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/langue/</guid>
-      <description>Harmonieuses rencontres&#xA;De belles courbes labiales&#xA;Comme une bouche émasculée&#xA;De sons assourdissants.&#xA;Dominical dental&#xA;Fabuleuse langue,&#xA;Saveurs des signes.&#xA;Joueur de fifre tarabiscoté&#xA;De l’aube à la nuit tombante&#xA;Les signes inaudibles&#xA;Finissent par laisser glisser&#xA;Leurs habits&#xA;Antique nudité&#xA;Bestiale langue&#xA;Du bien-être.</description>
+      <guid>http://localhost:1313/poeme/langue/</guid>
+      <description>&lt;p&gt;Harmonieuses rencontres&lt;br&gt;&#xA;De belles courbes labiales&lt;br&gt;&#xA;Comme une bouche émasculée&lt;br&gt;&#xA;De sons assourdissants.&lt;br&gt;&#xA;Dominical dental&lt;br&gt;&#xA;Fabuleuse langue,&lt;br&gt;&#xA;Saveurs des signes.&lt;br&gt;&#xA;Joueur de fifre tarabiscoté&lt;br&gt;&#xA;De l’aube à la nuit tombante&lt;br&gt;&#xA;Les signes inaudibles&lt;br&gt;&#xA;Finissent par laisser glisser&lt;br&gt;&#xA;Leurs habits&lt;br&gt;&#xA;Antique nudité&lt;br&gt;&#xA;Bestiale langue&lt;br&gt;&#xA;Du bien-être.&lt;/p&gt;</description>
     </item>
     <item>
       <title>QI</title>
-      <link>https://superchat.amoskhachut.fr/poeme/qi/</link>
+      <link>http://localhost:1313/poeme/qi/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/qi/</guid>
-      <description>Je un qi en dessous du niveau de la mer&#xA;ma bêtise atteint, elle, des sommets.&#xA;Je tutoie la médiocrité, une amie certainement.&#xA;les intelligents m’ennuient profondément&#xA;comme une nonne dans un couvent&#xA;Je vouvoie le savoir qui se fait discret.&#xA;J’ai mange et mangé les mots comme un tricot&#xA;pour le plaisir des déguisements&#xA;salvateur Je&#xA;caché dans le placard&#xA;Or Ni Car&#xA;Dikdouk conformiste&#xA;et ces crayons qui ne m’appartiennent pas</description>
+      <guid>http://localhost:1313/poeme/qi/</guid>
+      <description>&lt;p&gt;Je un qi en dessous du niveau de la mer&lt;br&gt;&#xA;ma bêtise atteint, elle, des sommets.&lt;br&gt;&#xA;Je tutoie la médiocrité, une amie certainement.&lt;br&gt;&#xA;les intelligents m’ennuient profondément&lt;br&gt;&#xA;comme une nonne dans un couvent&lt;br&gt;&#xA;Je vouvoie le savoir qui se fait discret.&lt;br&gt;&#xA;J’ai mange et mangé les mots comme un tricot&lt;br&gt;&#xA;pour le plaisir des déguisements&lt;br&gt;&#xA;salvateur Je&lt;br&gt;&#xA;caché dans le placard&lt;br&gt;&#xA;Or Ni Car&lt;br&gt;&#xA;Dikdouk conformiste&lt;br&gt;&#xA;et ces crayons qui ne m’appartiennent pas&lt;br&gt;&#xA;le sens de la propriété s’est perdu là-bas&lt;br&gt;&#xA;Ici je vis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reflet</title>
-      <link>https://superchat.amoskhachut.fr/poeme/reflet/</link>
+      <link>http://localhost:1313/poeme/reflet/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/reflet/</guid>
-      <description>Profils taquins&#xA;Rien ne ressemble plus à soi&#xA;Que l’autre&#xA;Le miroir est un tricheur&#xA;Un estompeur du souvenir&#xA;Il rend flou&#xA;Regards en arrière&#xA;Souvenirs d’un violet sur 2 roues&#xA;Seule certitude&#xA;Les mots présents&#xA;Pour symboliser le néant&#xA;Des choses passées&#xA;L’observation&#xA;Rend-t-elle les choses floues ?&#xA;Ou est-ce le contraire ?&#xA;Elgato le flou flou&#xA;Un rien naîf&#xA;Un rien minou&#xA;Reflets édulcorodés</description>
+      <guid>http://localhost:1313/poeme/reflet/</guid>
+      <description>&lt;p&gt;Profils taquins&lt;br&gt;&#xA;Rien ne ressemble plus à soi&lt;br&gt;&#xA;Que l’autre&lt;/p&gt;&#xA;&lt;p&gt;Le miroir est un tricheur&lt;br&gt;&#xA;Un estompeur du souvenir&lt;br&gt;&#xA;Il rend flou&lt;/p&gt;&#xA;&lt;p&gt;Regards en arrière&lt;br&gt;&#xA;Souvenirs d’un violet sur 2 roues&lt;br&gt;&#xA;Seule certitude&lt;/p&gt;&#xA;&lt;p&gt;Les mots présents&lt;br&gt;&#xA;Pour symboliser le néant&lt;br&gt;&#xA;Des choses passées&lt;/p&gt;&#xA;&lt;p&gt;L’observation&lt;br&gt;&#xA;Rend-t-elle les choses floues ?&lt;br&gt;&#xA;Ou est-ce le contraire ?&lt;/p&gt;&#xA;&lt;p&gt;Elgato le flou flou&lt;br&gt;&#xA;Un rien naîf&lt;br&gt;&#xA;Un rien minou&lt;br&gt;&#xA;Reflets édulcorodés&lt;/p&gt;</description>
     </item>
     <item>
       <title>Spleen du 13e abruti</title>
-      <link>https://superchat.amoskhachut.fr/poeme/spleen/</link>
+      <link>http://localhost:1313/poeme/spleen/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/spleen/</guid>
-      <description>Tes yeux dessinent les vallons de mon ignorance.&#xA;Torpeur mordue, j’enlace le présent doucement,&#xA;Pour les jours froids habités par la criante absence&#xA;De ton regard qui disparait dans un bruissement.&#xA;Mes pensées sont comme la pluie septentrionale.&#xA;Le souvenir dans mes poches de tes chaudes mains,&#xA;Me ramène sur les rives méridionales.&#xA;Où les jours roses laissent entrevoir un demain.&#xA;Tes beaux cheveux noirs sont comme un torrent au galop.</description>
+      <guid>http://localhost:1313/poeme/spleen/</guid>
+      <description>&lt;p&gt;Tes yeux dessinent les vallons de mon ignorance.&lt;br&gt;&#xA;Torpeur mordue, j’enlace le présent doucement,&lt;br&gt;&#xA;Pour les jours froids habités par la criante absence&lt;br&gt;&#xA;De ton regard qui disparait dans un bruissement.&lt;/p&gt;&#xA;&lt;p&gt;Mes pensées sont comme la pluie septentrionale.&lt;br&gt;&#xA;Le souvenir dans mes poches de tes chaudes mains,&lt;br&gt;&#xA;Me ramène sur les rives méridionales.&lt;br&gt;&#xA;Où les jours roses laissent entrevoir un demain.&lt;/p&gt;&#xA;&lt;p&gt;Tes beaux cheveux noirs sont comme un torrent au galop.&lt;br&gt;&#xA;Indomptable idylle de la fin du premier jour,&lt;br&gt;&#xA;S’effaçant comme les bras de celle de Milo.&lt;br&gt;&#xA;On en devine beauté pour demain et toujours.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Thélonious Monk</title>
-      <link>https://superchat.amoskhachut.fr/poeme/monk/</link>
+      <link>http://localhost:1313/poeme/monk/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/poeme/monk/</guid>
-      <description>J’aurais tant aimé être bien né artiste,&#xA;Jouant avec brio les usages de ce monde&#xA;Telle la belle langue de Thélonious Monk.&#xA;Je suis tout aussi bien né drôle d’autiste,&#xA;Abhorrant les certitudes de ce monde&#xA;Telle la célèbre logique d’Adrian Monk.&#xA;Né dans ce bizarre monde sans armure,&#xA;Je n’ai perdu que mes batailles bruns cheveux,&#xA;Et découvert que je suis fort comme un château.&#xA;Les mots plus jamais ne se feront murmures,</description>
+      <guid>http://localhost:1313/poeme/monk/</guid>
+      <description>&lt;p&gt;J’aurais tant aimé être bien né artiste,&lt;br&gt;&#xA;Jouant avec brio les usages de ce monde&lt;br&gt;&#xA;Telle la belle langue de Thélonious Monk.&lt;br&gt;&#xA;Je suis tout aussi bien né drôle d’autiste,&lt;br&gt;&#xA;Abhorrant les certitudes de ce monde&lt;br&gt;&#xA;Telle la célèbre logique d’Adrian Monk.&lt;/p&gt;&#xA;&lt;p&gt;Né dans ce bizarre monde sans armure,&lt;br&gt;&#xA;Je n’ai perdu que mes batailles bruns cheveux,&lt;br&gt;&#xA;Et découvert que je suis fort comme un château.&lt;br&gt;&#xA;Les mots plus jamais ne se feront murmures,&lt;br&gt;&#xA;Salvateurs et serviteurs chevaleresques,&lt;br&gt;&#xA;Ils s’habillent comme des jardins ancestraux.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Livret Motifs #1</title>
-      <link>https://superchat.amoskhachut.fr/img/motifs/</link>
+      <link>http://localhost:1313/img/motifs/</link>
       <pubDate>Sat, 29 Oct 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/motifs/</guid>
-      <description>Feutre promarker Reliure japonaise</description>
+      <guid>http://localhost:1313/img/motifs/</guid>
+      <description>&lt;p&gt;Feutre promarker&#xA;Reliure japonaise&lt;/p&gt;</description>
     </item>
     <item>
       <title>Thelonious Monk</title>
-      <link>https://superchat.amoskhachut.fr/img/monk/</link>
+      <link>http://localhost:1313/img/monk/</link>
       <pubDate>Thu, 29 Sep 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/monk/</guid>
-      <description>Crayon noir</description>
+      <guid>http://localhost:1313/img/monk/</guid>
+      <description>&lt;p&gt;Crayon noir&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vanupied</title>
-      <link>https://superchat.amoskhachut.fr/img/vanupied/</link>
+      <link>http://localhost:1313/img/vanupied/</link>
       <pubDate>Mon, 29 Aug 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/vanupied/</guid>
-      <description>Crayons couleur</description>
+      <guid>http://localhost:1313/img/vanupied/</guid>
+      <description>&lt;p&gt;Crayons couleur&lt;/p&gt;</description>
     </item>
     <item>
       <title>Super Elgato</title>
-      <link>https://superchat.amoskhachut.fr/img/superelgato/</link>
+      <link>http://localhost:1313/img/superelgato/</link>
       <pubDate>Fri, 29 Jul 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/superelgato/</guid>
-      <description>Feutre</description>
+      <guid>http://localhost:1313/img/superelgato/</guid>
+      <description>&lt;p&gt;Feutre&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fluo</title>
-      <link>https://superchat.amoskhachut.fr/img/fluo/</link>
+      <link>http://localhost:1313/img/fluo/</link>
       <pubDate>Wed, 29 Dec 2021 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/fluo/</guid>
-      <description>Feutre</description>
+      <guid>http://localhost:1313/img/fluo/</guid>
+      <description>&lt;p&gt;Feutre&lt;/p&gt;</description>
     </item>
     <item>
       <title>Euro 2020</title>
-      <link>https://superchat.amoskhachut.fr/img/euro/</link>
+      <link>http://localhost:1313/img/euro/</link>
       <pubDate>Mon, 29 Nov 2021 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/euro/</guid>
-      <description>Stabilo</description>
+      <guid>http://localhost:1313/img/euro/</guid>
+      <description>&lt;p&gt;Stabilo&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fenêtre</title>
-      <link>https://superchat.amoskhachut.fr/img/fenetre/</link>
+      <link>http://localhost:1313/img/fenetre/</link>
       <pubDate>Tue, 29 Dec 2020 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/fenetre/</guid>
-      <description>Gif</description>
+      <guid>http://localhost:1313/img/fenetre/</guid>
+      <description>&lt;p&gt;Gif&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 1</title>
-      <link>https://superchat.amoskhachut.fr/posts/post-1/</link>
+      <link>http://localhost:1313/posts/post-1/</link>
       <pubDate>Tue, 30 Apr 2019 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/posts/post-1/</guid>
-      <description>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&#xA;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea.</description>
+      <guid>http://localhost:1313/posts/post-1/</guid>
+      <description>&lt;p&gt;Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&lt;/p&gt;&#xA;&lt;p&gt;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Association en lien avec la neurodiversité</title>
-      <link>https://superchat.amoskhachut.fr/projets/assoneuro/</link>
+      <link>http://localhost:1313/projets/assoneuro/</link>
       <pubDate>Mon, 30 Apr 2018 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/projets/assoneuro/</guid>
-      <description> </description>
+      <guid>http://localhost:1313/projets/assoneuro/</guid>
+      <description>&lt;div class=&#34;row px-3&#34;&gt;&#xA;  &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/neuroasso_1.webp&#34; alt=&#34;Illustration sur fond rose d‘une paume de main avec le mot «ensemble» écrit dessus avec un soleil entre l&#39;index et le pouce.&#34;/&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/neuroasso.webp&#34; alt=&#34;illustration représentant 5 personnes bras-dessus bras dessous avec le texte «L&#39;intelligence plurielle est parmi nous, partout !&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;col-lg-4&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/neuroasso_2.webp&#34; alt=&#34;illustration représentant un jeune homme couché à la lisière d&#39;une forêt écrivant dans le ciel «Faire de la différence une force».&#34;&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;row px-3&#34;&gt;&#xA;  &lt;div class=&#34;col-lg-6&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/neuroasso_3.webp&#34; alt=&#34;visuel représentant un mockup d&#39;une 1re et dernière de couverture d&#39;une brochure.&#34;&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>WAWW</title>
-      <link>https://superchat.amoskhachut.fr/projets/waww/</link>
+      <link>http://localhost:1313/projets/waww/</link>
       <pubDate>Mon, 30 Apr 2018 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/projets/waww/</guid>
-      <description> </description>
+      <guid>http://localhost:1313/projets/waww/</guid>
+      <description>&lt;div class=&#34;row px-3&#34;&gt;&#xA;  &lt;div class=&#34;col-lg-7&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/waww-siteweb.webp&#34; alt=&#34;visule représentant un ordinateur portable avec la page d&#39;accueil du Blog «Les mondes merveilleux des blog-trotters de l&#39;autisme».&#34;&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/waww.webp&#34; alt=&#34;visuel représentant l&#39;acronyme WAWW «signifiant What A Wonderful World». Il s&#39;agit d&#39;un logo.&#34;/&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Journées Cinéma &amp; Psychiatrie</title>
-      <link>https://superchat.amoskhachut.fr/projets/jcpl/</link>
+      <link>http://localhost:1313/projets/jcpl/</link>
       <pubDate>Fri, 30 Apr 2010 20:18:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/projets/jcpl/</guid>
-      <description> </description>
+      <guid>http://localhost:1313/projets/jcpl/</guid>
+      <description>&lt;div class=&#34;row px-3&#34;&gt;&#xA;  &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl_4.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 14es Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;    &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl-web.webp&#34; alt=&#34;visuel représentant un oridnateur portable posé au sol avec la page d’accueil du site des JCPL (Journées Cinéma &amp; Pyschiatrie)&#34;/&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;col-lg-7&#34;&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-6 mb-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl_3.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 13es Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 14es Journées Cinéma &amp; Psychiatrie de Lyon, version non-retenue&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16 mb-4&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl-12.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 12es Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-5&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/jcpl_1.webp&#34; alt=&#34;visuel représentant l&#39;affiche des 1Oes Journées Cinéma &amp; Psychiatrie de Lyon&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6 mt-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/logo-jcpl.webp&#34; alt=&#34;visuel représentan le logo des Journées Cinéma &amp; Psychiatrie, version couleur&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6 mt-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/logo-jcpl-nb.webp&#34; alt=&#34;visuel représentan le logo des Journées Cinéma &amp; Psychiatrie, version positive noire&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;col-lg-6 mt-4&#34;&gt;&#xA;        &lt;img class=&#34;img-fluid br-16&#34; role=&#34;img&#34; src=&#34;http://localhost:1313/projets/images/logo-jcpl-ng.webp&#34; alt=&#34;visuel représentan le logo des Journées Cinéma &amp; Psychiatrie, version niveau de gris&#34;/&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Motifs</title>
-      <link>https://superchat.amoskhachut.fr/img/motifs-1/</link>
+      <link>http://localhost:1313/img/motifs-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/motifs-1/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/motifs-1/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Paiement réussi</title>
+      <link>http://localhost:1313/success/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/success/</guid>
+      <description>&lt;p&gt;Merci pour votre achat ! Votre paiement a été traité avec succès.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,11 @@
 backend:
   name: proxy
   proxy_url: http://localhost:8081/api/v1
-  branch: main # Branch to update (optional; defaults to master)
+  branch: feature/shop # Branch to update (optional; defaults to master)
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 publish_mode: editorial_workflow
+
 
 # collections
 collections:
@@ -49,3 +50,20 @@ collections:
       - {label: "Alt Image", name: "alt", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - { label: "Année", name: "annee", widget: "string" }
+  - label: "Shop"
+    name: "shop"
+    folder: "themes/sc/content/shop"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: 'images'
+    public_folder: ''
+    editor:
+      preview: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Alt Image", name: "alt", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Prix", name: "prix", widget: "string" }
+      - {label: "Size", name: "size", widget: "string" }

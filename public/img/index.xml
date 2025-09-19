@@ -2,130 +2,130 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Imgs on Super Chat</title>
-    <link>https://superchat.amoskhachut.fr/img/</link>
+    <link>http://localhost:1313/img/</link>
     <description>Recent content in Imgs on Super Chat</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Sat, 29 Mar 2025 20:06:54 +0300</lastBuildDate>
-    <atom:link href="https://superchat.amoskhachut.fr/img/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/img/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Panel Graffiti</title>
-      <link>https://superchat.amoskhachut.fr/img/panel-riso/</link>
+      <link>http://localhost:1313/img/panel-riso/</link>
       <pubDate>Sat, 29 Mar 2025 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/panel-riso/</guid>
-      <description>risographie</description>
+      <guid>http://localhost:1313/img/panel-riso/</guid>
+      <description>&lt;p&gt;risographie&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tetrapak #2</title>
-      <link>https://superchat.amoskhachut.fr/img/tetrapak/</link>
+      <link>http://localhost:1313/img/tetrapak/</link>
       <pubDate>Wed, 29 May 2024 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/tetrapak/</guid>
-      <description>taille-douce sur tetrapak et machine à pâtes</description>
+      <guid>http://localhost:1313/img/tetrapak/</guid>
+      <description>&lt;p&gt;taille-douce sur tetrapak et machine à pâtes&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tetrapak #1</title>
-      <link>https://superchat.amoskhachut.fr/img/tetrapak-1/</link>
+      <link>http://localhost:1313/img/tetrapak-1/</link>
       <pubDate>Fri, 29 Mar 2024 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/tetrapak-1/</guid>
-      <description>taille-douce sur tetrapak et machine à pâtes</description>
+      <guid>http://localhost:1313/img/tetrapak-1/</guid>
+      <description>&lt;p&gt;taille-douce sur tetrapak et machine à pâtes&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Rondes fêluresss</title>
-      <link>https://superchat.amoskhachut.fr/img/rondesfelures/</link>
+      <title>Rondes fêlures</title>
+      <link>http://localhost:1313/img/rondesfelures/</link>
       <pubDate>Fri, 29 Dec 2023 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/rondesfelures/</guid>
-      <description>Linogravure, crayon et acrylique</description>
+      <guid>http://localhost:1313/img/rondesfelures/</guid>
+      <description>&lt;p&gt;Linogravure, crayon et acrylique&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vieille turne</title>
-      <link>https://superchat.amoskhachut.fr/img/vieilleturne/</link>
+      <link>http://localhost:1313/img/vieilleturne/</link>
       <pubDate>Sun, 29 Oct 2023 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/vieilleturne/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/vieilleturne/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
     </item>
     <item>
       <title>Trio</title>
-      <link>https://superchat.amoskhachut.fr/img/trio/</link>
+      <link>http://localhost:1313/img/trio/</link>
       <pubDate>Wed, 29 Mar 2023 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/trio/</guid>
-      <description>Digital</description>
+      <guid>http://localhost:1313/img/trio/</guid>
+      <description>&lt;p&gt;Digital&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emil Ciorans</title>
+      <link>http://localhost:1313/img/emilcioran/</link>
+      <pubDate>Thu, 29 Dec 2022 20:06:00 +0100</pubDate>
+      <guid>http://localhost:1313/img/emilcioran/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
     </item>
     <item>
       <title>Allen Ginsberg</title>
-      <link>https://superchat.amoskhachut.fr/img/ginsberg/</link>
+      <link>http://localhost:1313/img/ginsberg/</link>
       <pubDate>Thu, 29 Dec 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/ginsberg/</guid>
-      <description>Linogravure &amp;amp; stabilo</description>
-    </item>
-    <item>
-      <title>Emil Cioran</title>
-      <link>https://superchat.amoskhachut.fr/img/emilcioran/</link>
-      <pubDate>Thu, 29 Dec 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/emilcioran/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/ginsberg/</guid>
+      <description>&lt;p&gt;Linogravure &amp;amp; stabilo&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enfance</title>
-      <link>https://superchat.amoskhachut.fr/img/enfance/</link>
+      <link>http://localhost:1313/img/enfance/</link>
       <pubDate>Tue, 29 Nov 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/enfance/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/enfance/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
     </item>
     <item>
       <title>Livret Motifs #1</title>
-      <link>https://superchat.amoskhachut.fr/img/motifs/</link>
+      <link>http://localhost:1313/img/motifs/</link>
       <pubDate>Sat, 29 Oct 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/motifs/</guid>
-      <description>Feutre promarker Reliure japonaise</description>
+      <guid>http://localhost:1313/img/motifs/</guid>
+      <description>&lt;p&gt;Feutre promarker&#xA;Reliure japonaise&lt;/p&gt;</description>
     </item>
     <item>
       <title>Thelonious Monk</title>
-      <link>https://superchat.amoskhachut.fr/img/monk/</link>
+      <link>http://localhost:1313/img/monk/</link>
       <pubDate>Thu, 29 Sep 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/monk/</guid>
-      <description>Crayon noir</description>
+      <guid>http://localhost:1313/img/monk/</guid>
+      <description>&lt;p&gt;Crayon noir&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vanupied</title>
-      <link>https://superchat.amoskhachut.fr/img/vanupied/</link>
+      <link>http://localhost:1313/img/vanupied/</link>
       <pubDate>Mon, 29 Aug 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/vanupied/</guid>
-      <description>Crayons couleur</description>
+      <guid>http://localhost:1313/img/vanupied/</guid>
+      <description>&lt;p&gt;Crayons couleur&lt;/p&gt;</description>
     </item>
     <item>
       <title>Super Elgato</title>
-      <link>https://superchat.amoskhachut.fr/img/superelgato/</link>
+      <link>http://localhost:1313/img/superelgato/</link>
       <pubDate>Fri, 29 Jul 2022 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/superelgato/</guid>
-      <description>Feutre</description>
+      <guid>http://localhost:1313/img/superelgato/</guid>
+      <description>&lt;p&gt;Feutre&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fluo</title>
-      <link>https://superchat.amoskhachut.fr/img/fluo/</link>
+      <link>http://localhost:1313/img/fluo/</link>
       <pubDate>Wed, 29 Dec 2021 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/fluo/</guid>
-      <description>Feutre</description>
+      <guid>http://localhost:1313/img/fluo/</guid>
+      <description>&lt;p&gt;Feutre&lt;/p&gt;</description>
     </item>
     <item>
       <title>Euro 2020</title>
-      <link>https://superchat.amoskhachut.fr/img/euro/</link>
+      <link>http://localhost:1313/img/euro/</link>
       <pubDate>Mon, 29 Nov 2021 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/euro/</guid>
-      <description>Stabilo</description>
+      <guid>http://localhost:1313/img/euro/</guid>
+      <description>&lt;p&gt;Stabilo&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fenêtre</title>
-      <link>https://superchat.amoskhachut.fr/img/fenetre/</link>
+      <link>http://localhost:1313/img/fenetre/</link>
       <pubDate>Tue, 29 Dec 2020 20:06:54 +0300</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/fenetre/</guid>
-      <description>Gif</description>
+      <guid>http://localhost:1313/img/fenetre/</guid>
+      <description>&lt;p&gt;Gif&lt;/p&gt;</description>
     </item>
     <item>
       <title>Motifs</title>
-      <link>https://superchat.amoskhachut.fr/img/motifs-1/</link>
+      <link>http://localhost:1313/img/motifs-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://superchat.amoskhachut.fr/img/motifs-1/</guid>
-      <description>Linogravure</description>
+      <guid>http://localhost:1313/img/motifs-1/</guid>
+      <description>&lt;p&gt;Linogravure&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

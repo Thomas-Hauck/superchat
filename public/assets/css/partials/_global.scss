@@ -228,3 +228,17 @@ body.page-id-23{
 hr{
   opacity: 1 !important;
 }
+
+.border-top-custom{
+	border-top: 1px dashed #000 !important;
+}
+
+.btn-global{
+	background-color: vars.$black !important;
+	color: vars.$white !important;
+	padding: 3px 16px !important;
+	&:hover{
+		color: vars.$grey-light !important;
+		text-decoration: none !important;
+	}
+}

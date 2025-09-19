@@ -2,161 +2,175 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://superchat.amoskhachut.fr/tags/communication/</loc>
+    <loc>http://localhost:1313/shop/trio/</loc>
+    <lastmod>2025-09-18T15:46:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/shop/les-arcadiens/</loc>
+    <lastmod>2025-09-18T11:50:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/shop/panel/</loc>
+    <lastmod>2025-09-18T09:38:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/communication/</loc>
     <lastmod>2025-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/projets/arcadie/</loc>
+    <loc>http://localhost:1313/projets/arcadie/</loc>
     <lastmod>2025-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/txt/</loc>
+    <loc>http://localhost:1313/img/</loc>
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/</loc>
+    <loc>http://localhost:1313/txt/txt-1/</loc>
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/txt/txt-1/</loc>
+    <loc>http://localhost:1313/txt/txt-2/</loc>
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/txt/txt-2/</loc>
+    <loc>http://localhost:1313/img/panel-riso/</loc>
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/panel-riso/</loc>
+    <loc>http://localhost:1313/txt/</loc>
     <lastmod>2025-03-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/tetrapak/</loc>
+    <loc>http://localhost:1313/img/tetrapak/</loc>
     <lastmod>2024-05-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/projets/arcade84/</loc>
+    <loc>http://localhost:1313/projets/arcade84/</loc>
     <lastmod>2024-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/tetrapak-1/</loc>
+    <loc>http://localhost:1313/img/tetrapak-1/</loc>
     <lastmod>2024-03-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/rondesfelures/</loc>
+    <loc>http://localhost:1313/img/rondesfelures/</loc>
     <lastmod>2023-12-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/vieilleturne/</loc>
+    <loc>http://localhost:1313/img/vieilleturne/</loc>
     <lastmod>2023-10-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/trio/</loc>
+    <loc>http://localhost:1313/img/trio/</loc>
     <lastmod>2023-03-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/tags/blue/</loc>
+    <loc>http://localhost:1313/tags/blue/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/tags/green/</loc>
+    <loc>http://localhost:1313/tags/green/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/posts/post-3/</loc>
+    <loc>http://localhost:1313/posts/post-3/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/tags/red/</loc>
+    <loc>http://localhost:1313/tags/red/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/posts/post-2/</loc>
+    <loc>http://localhost:1313/posts/post-2/</loc>
     <lastmod>2023-02-15T10:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/info/</loc>
+    <loc>http://localhost:1313/info/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/projets/</loc>
+    <loc>http://localhost:1313/projets/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/ginsberg/</loc>
+    <loc>http://localhost:1313/shop/</loc>
+    <lastmod>2023-01-01T08:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/img/emilcioran/</loc>
+    <lastmod>2022-12-29T20:06:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/img/ginsberg/</loc>
     <lastmod>2022-12-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/emilcioran/</loc>
-    <lastmod>2022-12-29T20:06:54+03:00</lastmod>
-  </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/califourchon/</loc>
+    <loc>http://localhost:1313/poeme/califourchon/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/averbale/</loc>
+    <loc>http://localhost:1313/poeme/averbale/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/chambre/</loc>
+    <loc>http://localhost:1313/poeme/chambre/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/discret/</loc>
+    <loc>http://localhost:1313/poeme/discret/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/enfance/</loc>
+    <loc>http://localhost:1313/img/enfance/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/fard/</loc>
+    <loc>http://localhost:1313/poeme/fard/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/fenetre/</loc>
+    <loc>http://localhost:1313/poeme/fenetre/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/langage/</loc>
+    <loc>http://localhost:1313/poeme/langage/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/langue/</loc>
+    <loc>http://localhost:1313/poeme/langue/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/</loc>
+    <loc>http://localhost:1313/poeme/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/qi/</loc>
+    <loc>http://localhost:1313/poeme/qi/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/reflet/</loc>
+    <loc>http://localhost:1313/poeme/reflet/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/spleen/</loc>
+    <loc>http://localhost:1313/poeme/spleen/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/poeme/monk/</loc>
+    <loc>http://localhost:1313/poeme/monk/</loc>
     <lastmod>2022-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/motifs/</loc>
+    <loc>http://localhost:1313/img/motifs/</loc>
     <lastmod>2022-10-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/monk/</loc>
+    <loc>http://localhost:1313/img/monk/</loc>
     <lastmod>2022-09-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/vanupied/</loc>
+    <loc>http://localhost:1313/img/vanupied/</loc>
     <lastmod>2022-08-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/superelgato/</loc>
+    <loc>http://localhost:1313/img/superelgato/</loc>
     <lastmod>2022-07-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/fluo/</loc>
+    <loc>http://localhost:1313/img/fluo/</loc>
     <lastmod>2021-12-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/euro/</loc>
+    <loc>http://localhost:1313/img/euro/</loc>
     <lastmod>2021-11-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/fenetre/</loc>
+    <loc>http://localhost:1313/img/fenetre/</loc>
     <lastmod>2020-12-29T20:06:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/tags/design-graphique/</loc>
+    <loc>http://localhost:1313/tags/design-graphique/</loc>
     <lastmod>2019-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/posts/post-1/</loc>
+    <loc>http://localhost:1313/posts/post-1/</loc>
     <lastmod>2019-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/projets/assoneuro/</loc>
+    <loc>http://localhost:1313/projets/assoneuro/</loc>
     <lastmod>2018-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/projets/waww/</loc>
+    <loc>http://localhost:1313/projets/waww/</loc>
     <lastmod>2018-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/projets/jcpl/</loc>
+    <loc>http://localhost:1313/projets/jcpl/</loc>
     <lastmod>2010-04-30T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://superchat.amoskhachut.fr/img/motifs-1/</loc>
+    <loc>http://localhost:1313/img/motifs-1/</loc>
+  </url><url>
+    <loc>http://localhost:1313/success/</loc>
   </url>
 </urlset>
