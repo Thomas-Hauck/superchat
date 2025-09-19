@@ -3,8 +3,11 @@ title: Panel
 date: 2025-09-18T09:38:00.000+02:00
 thumbnail: panel.webp
 alt: Risographie 2 couleurs
-prix: "8,00€ "
+price: 8
+stock: 30
 size: 21 × 29.7 cm
+active: true
+prix: "8,00€ "
 images: []
 ---
 Risographie 2 couleurs\
