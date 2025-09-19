@@ -34,3 +34,8 @@ sectionPagesMenu = "main"
 cleanDestinationDir = true
 [markup.goldmark.renderer]
 	unsafe = true
+
+[params]
+  [params.stripe]
+    publicKey = "pk_test_51S8xYcGdayjRDTP3Thriuxb3LIrZTGWiGKFvoV1XT0b7vdpWE5Yooba2Xkxx8vWvOWrm0d04iwgxIid7KzWF9Ndz004svsy5ob"
+    currency = "eur"
