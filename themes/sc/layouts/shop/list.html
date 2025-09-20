@@ -3,7 +3,7 @@
   <section id="gallery" class="row">
   {{ range where site.RegularPages "Section" "shop" }}
     <div class="col-lg-4 col-12 p-5">
-      <a data-pswp-width="900" class="border-radius" href="{{ .Permalink}}">
+      <a data-pswp-width="900" class="border-radius" href="{{ .Permalink }}">
         <img src="/shop/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}" class="img-fluid border-radius mb-3" alt="{{ with .Params.alt }}{{ .}}{{ end }}"/>
       </a>
       <div class="content-img text-center">
