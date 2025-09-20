@@ -2,6 +2,10 @@
   publish = "public"
   command = "hugo --gc --minify"
 
+[build.environment]
+  HUGO_VERSION = "0.121.2"   # set to the version you use locally
+  HUGO_ENABLEGITINFO = "true"  # optional, if you rely on .GitInfo
+
 [context.production.environment]
   HUGO_VERSION = "0.121.2"
   HUGO_ENV = "production"
