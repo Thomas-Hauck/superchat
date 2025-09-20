@@ -7,6 +7,8 @@ price: 3
 stock: 10
 size: 18 × 13 cm
 active: true
+stripe_price_id: "3"
+currency: EUR
 prix: 3,00€
 images:
   - image: trio_piano.webp
