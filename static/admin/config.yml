@@ -82,6 +82,8 @@ collections:
       - {label: "Stock", name: "stock", widget: "number", default: 0}
       - {label: "Size", name: "size", widget: "string" }
       - {label: "Actif", name: "active", widget: "boolean", default: true}
+      - {label: "Prix Stripe ID", name: "stripe_price_id", widget: "string", required: false }
+      - { label: "Devise", name: "currency", widget: "select", options: ["EUR", "USD"] }
       - label: "Images"
         name: "images"
         widget: "list"

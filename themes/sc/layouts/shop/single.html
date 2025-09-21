@@ -28,9 +28,96 @@
 			{{ with .Params.price }}
         		<p class="price border-top-custom pt-5 mt-5 mb-3">{{.}}€</p>
       		{{ end }}
+		 {{ if .Params.stripe_price_id }}
+          <div class="purchase-section">
+            <div class="quantity-selector">
+              <label for="quantity">Quantité :</label>
+              <select id="quantity" name="quantity">
+                {{ range seq 1 10 }}
+                  <option value="{{ . }}">{{ . }}</option>
+                {{ end }}
+              </select>
+            </div>
+            
+            <button 
+              id="checkout-button" 
+              class="btn-global"
+              data-price-id="{{ .Params.stripe_price_id }}"
+              data-product-name="{{ .Title }}"
+            >
+              Acheter maintenant
+            </button>
+          </div>
+        {{ else }}
+          <p class="not-available">Produit temporairement indisponible</p>
+        {{ end }}
+			<p class="price">{{ .Params.price }}{{ if .Params.currency }} {{ .Params.currency }}{{ end }}</p>
 				<a href="/checkout?shop={{ .File.BaseFileName }}" class="btn-global">Ajouter au panier</a>
 			</div>
 		</div>
 	</div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.getElementById('checkout-button');
+  
+  if (button) {
+    button.addEventListener('click', async function(e) {
+      console.log('🛒 Clic sur acheter');
+      
+      const priceId = e.target.dataset.priceId;
+      const productName = e.target.dataset.productName;
+      
+      console.log('📦 Price ID:', priceId);
+      
+      if (!priceId) {
+        alert('Erreur: Produit non configuré');
+        return;
+      }
+      
+      button.disabled = true;
+      button.textContent = 'Redirection...';
+      
+      try {
+        const response = await fetch('/.netlify/functions/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            priceId: priceId,
+            quantity: 1,
+            successUrl: window.location.origin + '/success?product=' + encodeURIComponent(productName),
+            cancelUrl: window.location.href
+          })
+        });
+        
+        console.log('📡 Response status:', response.status);
+        
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('❌ Erreur HTTP:', errorText);
+          throw new Error(`HTTP ${response.status}: ${errorText}`);
+        }
+        
+        const data = await response.json();
+        console.log('📦 Data:', data);
+        
+        if (data.url) {
+          console.log('✅ Redirection vers Stripe');
+          window.location.href = data.url;
+        } else {
+          throw new Error('Pas d\'URL de paiement reçue');
+        }
+        
+      } catch (error) {
+        console.error('🚨 Erreur:', error);
+        alert('Erreur: ' + error.message);
+        button.disabled = false;
+        button.textContent = 'Acheter maintenant';
+      }
+    });
+  }
+});
+</script>
 {{ end }}

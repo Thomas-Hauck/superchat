@@ -6,6 +6,19 @@
   HUGO_VERSION = "0.121.2"   # set to the version you use locally
   HUGO_ENABLEGITINFO = "true"  # optional, if you rely on .GitInfo
 
+[dev]
+  command = "hugo server -p 1314 --bind 127.0.0.1"
+  targetPort = 1314
+  autoLaunch = false
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[functions]
+  directory = "netlify/functions"
+
 [context.production.environment]
   HUGO_VERSION = "0.121.2"
   HUGO_ENV = "production"

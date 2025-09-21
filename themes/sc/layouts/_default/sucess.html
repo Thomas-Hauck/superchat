@@ -1,0 +1,70 @@
+{{ define "main" }}
+<div class="success-page">
+  <div class="container">
+    <div class="success-content">
+      <div class="success-icon">✅</div>
+      <h1>Merci pour votre commande !</h1>
+      <p>Votre paiement a été traité avec succès.</p>
+      
+      <div class="order-info">
+        <p>Vous recevrez bientôt un email de confirmation avec les détails de votre commande.</p>
+        <p>Si vous avez des questions, n'hésitez pas à nous contacter.</p>
+      </div>
+      
+      <div class="actions">
+        <a href="/shop" class="btn btn-primary">Continuer mes achats</a>
+        <a href="/" class="btn btn-outline">Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.success-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.success-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.order-info {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.actions {
+  margin-top: 2rem;
+}
+
+.actions .btn {
+  margin: 0 0.5rem;
+}
+</style>
+
+<script>
+// Récupérer le nom du produit depuis l'URL
+const urlParams = new URLSearchParams(window.location.search);
+const productName = urlParams.get('product');
+
+if (productName) {
+  const orderInfo = document.querySelector('.order-info');
+  orderInfo.innerHTML = `
+    <h3>Produit commandé : ${decodeURIComponent(productName)}</h3>
+    <p>Vous recevrez bientôt un email de confirmation avec les détails de votre commande.</p>
+    <p>Si vous avez des questions, n'hésitez pas à nous contacter.</p>
+  `;
+}
+</script>
+{{ end }}

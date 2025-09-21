@@ -2,11 +2,15 @@
   "name": "hugo-stripe-shop",
   "version": "1.0.0",
   "scripts": {
-    "build": "hugo --gc --minify",
-    "dev": "hugo server"
+    "build": "hugo",
+    "dev": "hugo server",
+    "netlify-dev": "netlify dev",
+    "sync-stripe": "node scripts/sync-stripe.js",
+    "sync-stripe-prod": "NETLIFY_URL=https://superelgato.netlify.app node scripts/sync-stripe.js"
   },
   "dependencies": {
-    "stripe": "^14.0.0"
+    "gray-matter": "^4.0.3",
+    "stripe": "^14.25.0"
   },
   "devDependencies": {
     "netlify-cli": "^23.6.0"
