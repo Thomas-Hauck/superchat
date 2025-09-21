@@ -3,6 +3,7 @@ title: Les arcadiens
 date: 2025-09-18T11:50:00.000+02:00
 thumbnail: arcadiens.webp
 alt: Risographie 4 couleurs représentant des échassiers
+description: Risographie 4 couleurs
 price: 15
 stock: 35
 size: 21 × 29.7 cm
