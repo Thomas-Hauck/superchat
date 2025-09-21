@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
       throw new Error('STRIPE_SECRET_KEY manquante');
     }
 
-    const contentPath = path.join(process.cwd(), 'content/shop');
+    const contentPath = path.join(process.cwd(), 'themes/sc/content/shop');
     console.log('📁 Chemin content:', contentPath);
     
     const files = await fs.readdir(contentPath);
