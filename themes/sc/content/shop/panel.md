@@ -7,7 +7,7 @@ price: 8
 stock: 30
 size: 21 × 29.7 cm
 active: true
-stripe_price_id: "2"
+stripe_price_id: ""
 currency: EUR
 prix: "8,00€ "
 images: []
