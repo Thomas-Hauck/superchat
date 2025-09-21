@@ -1,0 +1,4 @@
+---
+title: "Panier"
+layout: "cart"
+---

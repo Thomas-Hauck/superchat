@@ -1,0 +1,229 @@
+{{ define "main" }}
+<div class="cart-page">
+  <div class="container">
+    <h1>Votre Panier</h1>
+    
+    <div id="cart-empty" class="empty-cart" style="display: none;">
+      <p>Votre panier est vide</p>
+      <a href="/shop" class="btn btn-primary">Continuer mes achats</a>
+    </div>
+    
+    <div id="cart-content" style="display: none;">
+      <div id="cart-items"></div>
+      
+      <div class="cart-summary">
+        <div class="cart-total">
+          <strong>Total: <span id="cart-total">0.00 €</span></strong>
+        </div>
+        
+        <div class="cart-actions">
+          <button onclick="clearCart()" class="btn btn-secondary">Vider le panier</button>
+          <button onclick="checkoutCart()" class="btn btn-primary">Passer commande</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.cart-page {
+  min-height: 60vh;
+  padding: 2rem 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.item-info h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-controls input {
+  width: 60px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #2c5aa0;
+}
+
+.cart-summary {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.cart-total {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #635bff;
+  color: white;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .cart-actions {
+    flex-direction: column;
+  }
+}
+</style>
+
+<script>
+// Gestion du panier
+let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+function updateCartDisplay() {
+  const emptyDiv = document.getElementById('cart-empty');
+  const contentDiv = document.getElementById('cart-content');
+  const itemsContainer = document.getElementById('cart-items');
+  const totalElement = document.getElementById('cart-total');
+  
+  if (cart.length === 0) {
+    emptyDiv.style.display = 'block';
+    contentDiv.style.display = 'none';
+    return;
+  }
+  
+  emptyDiv.style.display = 'none';
+  contentDiv.style.display = 'block';
+  
+  let total = 0;
+  let html = '';
+  
+  cart.forEach((item, index) => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+    
+    html += `
+      <div class="cart-item">
+        <div class="item-info">
+          <h3>${item.productName}</h3>
+          <p class="item-price">${item.price.toFixed(2)} € × ${item.quantity}</p>
+        </div>
+        <div class="item-controls">
+          <input type="number" min="1" value="${item.quantity}" 
+                 onchange="updateQuantity(${index}, this.value)">
+          <span class="item-total">${itemTotal.toFixed(2)} €</span>
+          <button onclick="removeItem(${index})" class="btn btn-danger">×</button>
+        </div>
+      </div>
+    `;
+  });
+  
+  itemsContainer.innerHTML = html;
+  totalElement.textContent = total.toFixed(2) + ' €';
+}
+
+function updateQuantity(index, newQuantity) {
+  const quantity = parseInt(newQuantity);
+  if (quantity > 0) {
+    cart[index].quantity = quantity;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+  }
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartDisplay();
+}
+
+function clearCart() {
+  if (confirm('Êtes-vous sûr de vouloir vider votre panier ?')) {
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+  }
+}
+
+async function checkoutCart() {
+  if (cart.length === 0) return;
+  
+  const lineItems = cart.map(item => ({
+    priceId: item.priceId,
+    quantity: item.quantity
+  }));
+  
+  try {
+    const response = await fetch('/.netlify/functions/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        lineItems: lineItems,
+        successUrl: `${window.location.origin}/success`,
+        cancelUrl: `${window.location.origin}/cart`
+      })
+    });
+    
+    const data = await response.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert('Erreur lors de la création de la session de paiement');
+    }
+  } catch (error) {
+    console.error('Erreur:', error);
+    alert('Une erreur est survenue');
+  }
+}
+
+// Initialiser l'affichage au chargement
+document.addEventListener('DOMContentLoaded', function() {
+  updateCartDisplay();
+});
+</script>
+{{ end }}

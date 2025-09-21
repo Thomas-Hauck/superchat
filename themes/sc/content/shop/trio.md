@@ -8,13 +8,13 @@ price: 3
 stock: 10
 size: 18 × 13 cm
 active: true
-stripe_price_id: ""
+stripe_price_id: "price_1S9prTGdayjRDTP3QjO8brmo"
 currency: EUR
 prix: 3,00€
-images:
-  - image: trio_piano.webp
+images_multiple:
+  - image_multiple: trio_piano.webp
     alt_gallery: Illustration main
-  - image: trio_batterie.webp
+  - image_multiple: trio_batterie.webp
     alt_gallery: Illustration batterie
 ---
 Impression offset 4 couleurs

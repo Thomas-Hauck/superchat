@@ -8,4 +8,20 @@
       {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
     </div>
   </div>
+  <div>
+    <a href="/cart" id="cart-link">Panier (<span id="cart-count">0</span>)</a>
+  </div>
 </header>
+<script>
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  const count = cart.reduce((total, item) => total + item.quantity, 0);
+  const countElement = document.getElementById('cart-count');
+  if (countElement) {
+    countElement.textContent = count;
+  }
+}
+
+// Mettre à jour le compteur au chargement
+document.addEventListener('DOMContentLoaded', updateCartCount);
+</script>

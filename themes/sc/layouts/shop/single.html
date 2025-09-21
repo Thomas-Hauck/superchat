@@ -1,16 +1,86 @@
 {{ define "main" }}
+<style>
+/* ... vos styles existants ... */
+
+/* Toast Container */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
+}
+
+/* Toast Styles */
+.toast {
+  min-width: 300px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 0.375rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.toast-body {
+  padding: 0.75rem;
+  word-wrap: break-word;
+}
+
+.toast-success .toast-header {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.toast-error .toast-header {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  opacity: 0.5;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.toast-close:hover {
+  opacity: 0.75;
+}
+</style>
 <div class="container-xxl single-txt">
 	<div class="row g-5">
 		<div id="gallery" class="col-lg-4 partie">
 			<a data-pswp-width="900" class="border-radius" data-pswp-height="1273" target="_blank" href="/shop/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}">
       			<img src="/shop/images/{{ with .Params.thumbnail }}{{ .}}{{ end }}" class="img-fluid border-radius mb-4" alt="{{ with .Params.alt }}{{ .}}{{ end }}"/>
 			</a>
-			{{ with .Params.images}}
+			{{ with .Params.images_multiple}}
 			<div class="d-flex justify-content-start">
 				{{ range . }}
 					<div class="col-lg-3 me-4">
-						<a data-pswp-width="900" class="border-radius" data-pswp-height="1273" target="_blank" href="/shop/images/{{.image}}">
-							<img src="/shop/images/{{.image}}" class="img-fluid mb-3" style="border-radius: 8px;" alt="{{.alt_gallery}}"/>
+						<a data-pswp-width="900" class="border-radius" data-pswp-height="1273" target="_blank" href="/shop/images/{{.image_multiple}}">
+							<img src="/shop/images/{{.image_multiple}}" class="img-fluid mb-3" style="border-radius: 8px;" alt="{{.alt_gallery}}"/>
 						</a>
 						</div>
 				{{end}}
@@ -38,15 +108,28 @@
                 {{ end }}
               </select>
             </div>
-            
-            <button 
-              id="checkout-button" 
-              class="btn-global"
-              data-price-id="{{ .Params.stripe_price_id }}"
-              data-product-name="{{ .Title }}"
-            >
-              Acheter maintenant
-            </button>
+<div class="product-actions">
+              <button 
+                id="add-to-cart-btn"
+                class="btn-global"
+                data-price-id="{{ .Params.stripe_price_id }}"
+                data-product-name="{{ .Title }}"
+                data-price="{{ .Params.price }}"
+              >
+                Ajouter au panier
+              </button>
+              
+              <button 
+                id="buy-now-btn"
+                class="btn-global"
+                data-price-id="{{ .Params.stripe_price_id }}"
+                data-product-name="{{ .Title }}"
+                data-price="{{ .Params.price }}"
+              >
+                Acheter maintenant
+              </button>
+            </div>
+            <!-- <button id="checkout-button" class="btn-global" data-price-id="{{ .Params.stripe_price_id }}" data-product-name="{{ .Title }}">Acheter maintenant</button> -->
           </div>
         {{ else }}
           <p class="not-available">Produit temporairement indisponible</p>
@@ -54,70 +137,170 @@
 			<p class="price">{{ .Params.price }}{{ if .Params.currency }} {{ .Params.currency }}{{ end }}</p>
 				<a href="/checkout?shop={{ .File.BaseFileName }}" class="btn-global">Ajouter au panier</a>
 			</div>
+      <div class="toast-container" id="toast-container"></div>
 		</div>
 	</div>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const button = document.getElementById('checkout-button');
+  // Fonctions Toast
+  function createToastContainer() {
+    var container = document.getElementById('toast-container');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'toast-container';
+      container.className = 'toast-container';
+      document.body.appendChild(container);
+    }
+    return container;
+  }
+
+  function showToast(message, type) {
+    var container = createToastContainer();
+    var toastId = 'toast-' + Date.now();
+    
+    var toastHtml = '<div id="' + toastId + '" class="toast toast-' + type + '">' +
+      '<div class="toast-header">' +
+        '<strong class="me-auto">' + (type === 'success' ? '✓ Succès' : '⚠ Erreur') + '</strong>' +
+        '<button type="button" class="toast-close" onclick="hideToast(\'' + toastId + '\')">&times;</button>' +
+      '</div>' +
+      '<div class="toast-body">' + message + '</div>' +
+    '</div>';
+    
+    container.insertAdjacentHTML('beforeend', toastHtml);
+    
+    var toast = document.getElementById(toastId);
+    
+    setTimeout(function() {
+      toast.classList.add('show');
+    }, 100);
+    
+    setTimeout(function() {
+      hideToast(toastId);
+    }, 3000);
+  }
+
+  window.hideToast = function(toastId) {
+    var toast = document.getElementById(toastId);
+    if (toast) {
+      toast.classList.remove('show');
+      setTimeout(function() {
+        toast.remove();
+      }, 300);
+    }
+  };
+
+  // Bouton Ajouter au panier (CORRIGÉ)
+  var addToCartBtn = document.getElementById('add-to-cart-btn');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', function(e) {
+      var priceId = e.target.getAttribute('data-price-id');
+      var productName = e.target.getAttribute('data-product-name');
+      var price = parseFloat(e.target.getAttribute('data-price'));
+      
+      // Récupérer la quantité sélectionnée
+      var quantitySelect = document.getElementById('quantity');
+      var selectedQuantity = quantitySelect ? parseInt(quantitySelect.value) : 1;
+      
+      if (!priceId) {
+        showToast('Erreur: Produit non configuré', 'error');
+        return;
+      }
+      
+      var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      var existingItem = null;
+      
+      for (var i = 0; i < cart.length; i++) {
+        if (cart[i].priceId === priceId) {
+          existingItem = cart[i];
+          break;
+        }
+      }
+      
+      if (existingItem) {
+        existingItem.quantity += selectedQuantity;
+      } else {
+        cart.push({
+          priceId: priceId,
+          productName: productName,
+          price: price,
+          quantity: selectedQuantity
+        });
+      }
+      
+      localStorage.setItem('cart', JSON.stringify(cart));
+      showToast(productName + ' (' + selectedQuantity + ') ajouté au panier !', 'success');
+      updateCartCount();
+    });
+  }
   
-  if (button) {
-    button.addEventListener('click', async function(e) {
-      console.log('🛒 Clic sur acheter');
-      
-      const priceId = e.target.dataset.priceId;
-      const productName = e.target.dataset.productName;
-      
-      console.log('📦 Price ID:', priceId);
+  // Bouton Acheter maintenant
+  var buyNowBtn = document.getElementById('buy-now-btn');
+  if (buyNowBtn) {
+    buyNowBtn.addEventListener('click', function(e) {
+      var priceId = e.target.getAttribute('data-price-id');
+      var productName = e.target.getAttribute('data-product-name');
       
       if (!priceId) {
         alert('Erreur: Produit non configuré');
         return;
       }
       
-      button.disabled = true;
-      button.textContent = 'Redirection...';
+      var quantitySelect = document.getElementById('quantity');
+      var quantity = quantitySelect ? parseInt(quantitySelect.value) : 1;
       
-      try {
-        const response = await fetch('/.netlify/functions/create-checkout-session', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            priceId: priceId,
-            quantity: 1,
-            successUrl: window.location.origin + '/success?product=' + encodeURIComponent(productName),
-            cancelUrl: window.location.href
-          })
-        });
-        
-        console.log('📡 Response status:', response.status);
-        
+      e.target.disabled = true;
+      e.target.textContent = 'Redirection...';
+      
+      fetch('/.netlify/functions/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          priceId: priceId,
+          quantity: quantity,
+          successUrl: window.location.origin + '/success?product=' + encodeURIComponent(productName),
+          cancelUrl: window.location.href
+        })
+      })
+      .then(function(response) {
         if (!response.ok) {
-          const errorText = await response.text();
-          console.error('❌ Erreur HTTP:', errorText);
-          throw new Error(`HTTP ${response.status}: ${errorText}`);
+          throw new Error('Erreur HTTP: ' + response.status);
         }
-        
-        const data = await response.json();
-        console.log('📦 Data:', data);
-        
+        return response.json();
+      })
+      .then(function(data) {
         if (data.url) {
-          console.log('✅ Redirection vers Stripe');
           window.location.href = data.url;
         } else {
-          throw new Error('Pas d\'URL de paiement reçue');
+          throw new Error('URL de paiement non reçue');
         }
-        
-      } catch (error) {
-        console.error('🚨 Erreur:', error);
-        alert('Erreur: ' + error.message);
-        button.disabled = false;
-        button.textContent = 'Acheter maintenant';
-      }
+      })
+      .catch(function(error) {
+        console.error('Erreur:', error);
+        alert('Une erreur est survenue: ' + error.message);
+        e.target.disabled = false;
+        e.target.textContent = 'Acheter maintenant';
+      });
     });
   }
+  
+  // Fonction pour mettre à jour le compteur du panier
+  function updateCartCount() {
+    var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    var count = 0;
+    for (var i = 0; i < cart.length; i++) {
+      count += cart[i].quantity;
+    }
+    var countElement = document.getElementById('cart-count');
+    if (countElement) {
+      countElement.textContent = count;
+    }
+  }
+  
+  // Initialiser le compteur
+  updateCartCount();
 });
 </script>
 {{ end }}
