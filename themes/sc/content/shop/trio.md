@@ -3,6 +3,7 @@ title: Trio
 date: 2025-09-18T15:46:00.000+02:00
 thumbnail: trio_bassiste.webp
 alt: Trio. Illustration d’un contrebassiste
+description: Impression offset 4 couleurs
 price: 3
 stock: 10
 size: 18 × 13 cm
