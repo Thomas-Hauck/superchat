@@ -6,7 +6,7 @@
 				{{ $currentPage := . -}}
 				{{ range where site.RegularPages "Section" "txt" }}
 					<li {{ if eq $currentPage . }} class="active"{{end}}>
-							<a href="{{.Permalink}}">{{.Title}}</a>
+							<a href="{{.RelPermalink }}">{{.Title}}</a>
 					</li>
 					{{ end }}
 			</ul>

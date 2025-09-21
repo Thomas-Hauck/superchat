@@ -1,24 +1,23 @@
 {{ define "main" }}
 <div class="cart-page">
-  <div class="container">
-    <h1>Votre Panier</h1>
+  <div class="container-xxl single-txt">
+    <h1 class="mb-5">Votre Panier</h1>
     
     <div id="cart-empty" class="empty-cart" style="display: none;">
-      <p>Votre panier est vide</p>
-      <a href="/shop" class="btn btn-primary">Continuer mes achats</a>
+      <p class="border-top-custom">Votre panier est vide</p>
+      <a href="/shop" class="btn-global mt-5">Continuer mes achats</a>
     </div>
     
     <div id="cart-content" style="display: none;">
       <div id="cart-items"></div>
       
-      <div class="cart-summary">
-        <div class="cart-total">
+      <div class="cart-summary d-flex justify-content-end align-items-center">
+        <div class="cart-total me-5">
           <strong>Total: <span id="cart-total">0.00 €</span></strong>
         </div>
-        
         <div class="cart-actions">
-          <button onclick="clearCart()" class="btn btn-secondary">Vider le panier</button>
-          <button onclick="checkoutCart()" class="btn btn-primary">Passer commande</button>
+          <button onclick="clearCart()" class="btn-global-secondary">Vider le panier</button>
+          <button onclick="checkoutCart()" class="btn-global">Passer commande</button>
         </div>
       </div>
     </div>
@@ -35,11 +34,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px dashed #000;
   margin-bottom: 1rem;
 }
-
+.cart-item .btn-danger {
+    font-size: 2rem;
+}
+.btn-global-secondary{
+    background-color: #727b77 ;
+	color: #000 !important;
+	padding: 3px 16px !important;
+    border: none;
+}
 .item-info h3 {
   margin: 0 0 0.5rem 0;
 }
@@ -58,20 +64,13 @@
 }
 
 .item-price {
-  font-weight: bold;
-  color: #2c5aa0;
+  font-weight: 400;
+  color: #000;
+  padding-bottom: 1rem !important;
 }
 
 .cart-summary {
-  background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 8px;
   margin-top: 2rem;
-}
-
-.cart-total {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .cart-actions {
@@ -79,20 +78,6 @@
   gap: 1rem;
 }
 
-.btn {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-}
-
-.btn-primary {
-  background: #635bff;
-  color: white;
-}
 
 .btn-secondary {
   background: #6c757d;
@@ -105,7 +90,9 @@
 
 .empty-cart {
   text-align: center;
-  padding: 3rem;
+}
+.empty-cart p{
+    padding-top: 16px;
 }
 
 @media (max-width: 768px) {
@@ -150,7 +137,7 @@ function updateCartDisplay() {
     html += `
       <div class="cart-item">
         <div class="item-info">
-          <h3>${item.productName}</h3>
+          <h2>${item.productName}</h2>
           <p class="item-price">${item.price.toFixed(2)} € × ${item.quantity}</p>
         </div>
         <div class="item-controls">

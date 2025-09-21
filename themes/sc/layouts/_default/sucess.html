@@ -61,7 +61,7 @@ const productName = urlParams.get('product');
 if (productName) {
   const orderInfo = document.querySelector('.order-info');
   orderInfo.innerHTML = `
-    <h3>Produit commandé : ${decodeURIComponent(productName)}</h3>
+    <h2>Produit commandé : ${decodeURIComponent(productName)}</h2>
     <p>Vous recevrez bientôt un email de confirmation avec les détails de votre commande.</p>
     <p>Si vous avez des questions, n'hésitez pas à nous contacter.</p>
   `;

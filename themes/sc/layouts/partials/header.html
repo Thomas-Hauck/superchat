@@ -1,15 +1,17 @@
 <div class="container-fluid">
 <header class="container-xxl px-lg-2 px-5">
   <div class="row">
+    <div id="cart" class="d-flex flex-row-reverse">
+      <a class="d-flex align-items-start" href="/cart" id="cart-link"><span class="d-flex align-items-center justify-content-center" id="cart-count"></span></a>
+    </div>
+  </div>
+  <div class="row">
     <div id="chat" class="ms-lg-3 col-lg-3 mx-auto col-6">
       <a href="/"><img class="img-fluid mx-auto" src="/assets/img/cursorchatAmos.svg"></a>
     </div>
     <div class="col-lg-8 mt-5 d-flex align-items-center justify-content-lg-end justify-content-center">
       {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
     </div>
-  </div>
-  <div>
-    <a href="/cart" id="cart-link">Panier (<span id="cart-count">0</span>)</a>
   </div>
 </header>
 <script>
@@ -25,3 +27,31 @@ function updateCartCount() {
 // Mettre à jour le compteur au chargement
 document.addEventListener('DOMContentLoaded', updateCartCount);
 </script>
+<style>
+/* ... vos styles existants ... */
+#cart #cart-link{
+  position: relative;
+  padding-top: 6px;
+}
+#cart #cart-link::before{
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url('/assets/img/icons_cart.svg');
+  background-size: 32px 32px;
+  display: inline-block;
+}
+
+#cart-count{
+  position: absolute;
+  bottom: -6px;
+  right: -8px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+}
+</style>

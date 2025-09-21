@@ -1,7 +1,14 @@
 {{ define "main" }}
 <style>
 /* ... vos styles existants ... */
-
+#cart #cart-link::before{
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url('assets/img/icons_cart.svg');
+  background-size: 32px 32px;
+  display: inline-block;
+}
 /* Toast Container */
 .toast-container {
   position: fixed;
@@ -96,8 +103,8 @@
 			{{ .Content | safeHTML }}
 			<div class="product-purchase">
 			{{ with .Params.price }}
-        		<p class="price border-top-custom pt-5 mt-5 mb-3">{{.}}€</p>
-      		{{ end }}
+        <p class="price border-top-custom pt-5 mt-5 mb-3">{{.}}€</p>
+      {{ end }}
 		 {{ if .Params.stripe_price_id }}
           <div class="purchase-section">
             <div class="quantity-selector">
@@ -134,8 +141,6 @@
         {{ else }}
           <p class="not-available">Produit temporairement indisponible</p>
         {{ end }}
-			<p class="price">{{ .Params.price }}{{ if .Params.currency }} {{ .Params.currency }}{{ end }}</p>
-				<a href="/checkout?shop={{ .File.BaseFileName }}" class="btn-global">Ajouter au panier</a>
 			</div>
       <div class="toast-container" id="toast-container"></div>
 		</div>
