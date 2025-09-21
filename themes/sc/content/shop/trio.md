@@ -7,7 +7,7 @@ price: 3
 stock: 10
 size: 18 × 13 cm
 active: true
-stripe_price_id: "3"
+stripe_price_id: ""
 currency: EUR
 prix: 3,00€
 images:
