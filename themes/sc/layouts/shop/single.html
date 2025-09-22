@@ -37,6 +37,7 @@
 
 .toast-header {
   display: flex;
+  font-size: 2rem;
   align-items: center;
   padding: 0.5rem 0.75rem;
   background-color: rgba(0,0,0,.03);
@@ -46,13 +47,22 @@
 }
 
 .toast-body {
-  padding: 0.75rem;
+  padding: 1.5rem 0.75rem;
   word-wrap: break-word;
+  font-size: 2rem;
+}
+.toast-body a {
+  font-size: 2rem;
+  text-decoration: underline !important;
+}
+.toast-body .p-toast {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .toast-success .toast-header {
-  background-color: #d1e7dd;
-  color: #0f5132;
+  background-color: #7CF06E;
+  color: #000;
 }
 
 .toast-error .toast-header {
@@ -63,7 +73,7 @@
 .toast-close {
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1;
   color: #000;
@@ -169,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '<strong class="me-auto">' + (type === 'success' ? '✓ Succès' : '⚠ Erreur') + '</strong>' +
         '<button type="button" class="toast-close" onclick="hideToast(\'' + toastId + '\')">&times;</button>' +
       '</div>' +
-      '<div class="toast-body">' + message + '</div>' +
+      '<div class="toast-body">' + message + '<p class="p-toast"><a href="/cart">Voir le panier</a></p></div>' +
     '</div>';
     
     container.insertAdjacentHTML('beforeend', toastHtml);
@@ -182,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setTimeout(function() {
       hideToast(toastId);
-    }, 3000);
+    }, 6000);
   }
 
   window.hideToast = function(toastId) {
