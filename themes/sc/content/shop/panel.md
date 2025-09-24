@@ -5,7 +5,7 @@ thumbnail: panel.webp
 alt: Risographie 2 couleurs
 description: Risographie 2 couleurs
 price: 8
-stock: 32
+stock: 3
 size: 21 × 29.7 cm
 active: true
 stripe_price_id: price_1S9k4VGdayjRDTP3nHAza6rs
