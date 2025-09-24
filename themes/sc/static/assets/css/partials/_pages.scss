@@ -1,0 +1,22 @@
+@use "vars";
+@use "mixin";
+
+.cart-page {
+  min-height: 60vh;
+  padding: 2rem 0;
+  .cart-actions {
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+  }
+	.cart-summary {
+  	margin-top: 2rem;
+		.cart-actions {
+			display: flex;
+			gap: 1rem;
+		}
+	}
+}
+
+
+

@@ -1,91 +1,4 @@
 {{ define "main" }}
-<style>
-/* ... vos styles existants ... */
-#cart #cart-link::before{
-  content: "";
-  width: 32px;
-  height: 32px;
-  background-image: url('assets/img/icons_cart.svg');
-  background-size: 32px 32px;
-  display: inline-block;
-}
-/* Toast Container */
-.toast-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1050;
-}
-
-/* Toast Styles */
-.toast {
-  min-width: 300px;
-  margin-bottom: 10px;
-  background-color: white;
-  border: 1px solid rgba(0,0,0,.1);
-  border-radius: 0.375rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.3s ease-in-out;
-}
-
-.toast.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.toast-header {
-  display: flex;
-  font-size: 2rem;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  background-color: rgba(0,0,0,.03);
-  border-bottom: 1px solid rgba(0,0,0,.05);
-  border-top-left-radius: calc(0.375rem - 1px);
-  border-top-right-radius: calc(0.375rem - 1px);
-}
-
-.toast-body {
-  padding: 1.5rem 0.75rem;
-  word-wrap: break-word;
-  font-size: 2rem;
-}
-.toast-body a {
-  font-size: 2rem;
-  text-decoration: underline !important;
-}
-.toast-body .p-toast {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.toast-success .toast-header {
-  background-color: #7CF06E;
-  color: #000;
-}
-
-.toast-error .toast-header {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
-.toast-close {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  opacity: 0.5;
-  margin-left: auto;
-  cursor: pointer;
-}
-
-.toast-close:hover {
-  opacity: 0.75;
-}
-</style>
 <div class="container-xxl single-txt">
 	<div class="row g-5">
 		<div id="gallery" class="col-lg-4 partie">
@@ -128,7 +41,7 @@
 <div class="product-actions">
               <button 
                 id="add-to-cart-btn"
-                class="btn-global"
+                class="btn-global mt-3"
                 data-price-id="{{ .Params.stripe_price_id }}"
                 data-product-name="{{ .Title }}"
                 data-price="{{ .Params.price }}"
@@ -138,7 +51,7 @@
               
               <button 
                 id="buy-now-btn"
-                class="btn-global"
+                class="btn-global-rose mt-3"
                 data-price-id="{{ .Params.stripe_price_id }}"
                 data-product-name="{{ .Title }}"
                 data-price="{{ .Params.price }}"

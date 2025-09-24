@@ -43,216 +43,6 @@
     </div>
   </div>
 </div>
-<style>
-.cart-page {
-  min-height: 60vh;
-  padding: 2rem 0;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px dashed #000;
-  margin-bottom: 1rem;
-}
-.cart-item .btn-danger {
-    font-size: 2rem;
-}
-.btn-global-secondary{
-    background-color: #727b77 ;
-	color: #000 !important;
-	padding: 3px 16px !important;
-    border: none;
-}
-.item-info h3 {
-  margin: 0 0 0.5rem 0;
-}
-
-.item-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.item-controls input {
-  width: 60px;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.item-price {
-  font-weight: 400;
-  color: #000;
-  padding-bottom: 1rem !important;
-}
-
-.cart-summary {
-  margin-top: 2rem;
-}
-
-.cart-actions {
-  display: flex;
-  gap: 1rem;
-}
-
-
-.btn-secondary {
-  background: #6c757d;
-  color: white;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-.empty-cart {
-  text-align: center;
-}
-.empty-cart p{
-    padding-top: 16px;
-}
-
-@media (max-width: 768px) {
-  .cart-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  
-  .cart-actions {
-    flex-direction: column;
-  }
-}
-
-/* Modal Overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.modal-overlay.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Modal Container */
-.modal-dialog {
-  background: white;
-  border-radius: 8px;
-  max-width: 400px;
-  width: 90%;
-  margin: 0 20px;
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  z-index: 10000; /* Z-index encore plus élevé */
-  position: relative; /* Important pour le z-index */
-  pointer-events: all; /* Force l'interactivité */
-}
-
-.modal-overlay.show .modal-dialog {
-  transform: scale(1);
-}
-
-/* Modal Header */
-.modal-header {
-  padding: 1.5rem 1.5rem 0.5rem;
-  border-bottom: 1px solid #e9ecef;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.modal-title {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #212529;
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #6c757d;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.modal-close:hover {
-  background-color: #f8f9fa;
-  color: #000;
-}
-
-/* Modal Body */
-.modal-body {
-  padding: 1.5rem;
-  color: #6c757d;
-  font-size: 1.97rem;
-}
-
-/* Modal Footer */
-.modal-footer {
-  padding: 1rem 1.5rem 1.5rem;
-  display: flex;
-  gap: 0.75rem;
-  justify-content: flex-end;
-}
-
-.modal-btn {
-  padding: 0.5rem 1.5rem;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.97rem;
-  transition: all 0.2s;
-  min-width: 80px;
-}
-
-.modal-btn-secondary {
-  background-color: #6c757d;
-  color: white;
-}
-
-.modal-btn-secondary:hover {
-  background-color: #5a6268;
-}
-
-.modal-btn-danger {
-  background-color: #dc3545;
-  color: white;
-}
-
-.modal-btn-danger:hover {
-  background-color: #c82333;
-}
-
-/* Animation au clic pour éviter le double-clic accidentel */
-.modal-btn:active {
-  transform: scale(0.98);
-}
-</style>
-
 <script>
 // Gestion du panier
 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
@@ -305,6 +95,7 @@ function updateQuantity(index, newQuantity) {
     cart[index].quantity = quantity;
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
+    updateCartCount();
   }
 }
 
@@ -312,6 +103,7 @@ function removeItem(index) {
   cart.splice(index, 1);
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartDisplay();
+  updateCartCount();
 }
 
 // Nouvelle fonction pour afficher la modal
@@ -337,6 +129,7 @@ function confirmClearCart() {
   cart = [];
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartDisplay();
+  updateCartCount();
   hideClearCartModal();
   
   // Optionnel : afficher une notification de succès

@@ -201,26 +201,7 @@ body.page-id-23{
 		}
 	}
 }
-#headerShop{
-	position: absolute;
-	right: -30px;
-	top: 51px;
-	.wc-block-mini-cart__badge {
-		background-color: #000;
-		color: #fff;
-	}
-	.wc-block-mini-cart__button, .wp-block-woocommerce-customer-account a{
-		font-size: 2.5rem !important;
-		padding: 0 .5em!important;
-	}
-	.is-layout-flex{
-		gap: 0 !important;
-	}
-}
 
-.wc-block-mini-cart__drawer{
-  font-size: 2.5rem !important;
-}
 .text-indent-custom{
   text-indent: 7%;
 }
@@ -231,35 +212,4 @@ hr{
 
 .border-top-custom{
 	border-top: 1px dashed #000 !important;
-}
-
-.btn-global{
-	background-color: vars.$black !important;
-	color: vars.$white !important;
-	padding: 3px 16px !important;
-	border: none;
-	&:hover{
-		color: vars.$grey-light !important;
-		text-decoration: none !important;
-	}
-}
-#cart{
-	position: relative;
-	#cart-link{
-		&::before{
-			content: "";
-			width: 32px;
-			height: 32px;
-			background-image: url('assets/img/icons_cart.svg');
-			background-size: 32px 32px;
-			display: inline-block;
-		}
-		#cart-count{
-			width: 16px;
-			height: 16px;
-			background-color: #000;
-			color: #fff;
-			font-size: 12px;
-		}
-	}
 }
