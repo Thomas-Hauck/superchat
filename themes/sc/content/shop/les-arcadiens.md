@@ -5,10 +5,10 @@ thumbnail: arcadiens.webp
 alt: Risographie 4 couleurs représentant des échassiers
 description: Risographie 4 couleurs
 price: 15
-stock: 35
+stock: 31
 size: 21 × 29.7 cm
 active: true
-stripe_price_id: "price_1S9k4UGdayjRDTP3TLrhSq42"
+stripe_price_id: price_1S9k4UGdayjRDTP3TLrhSq42
 currency: EUR
 prix: 15,00€
 ---
