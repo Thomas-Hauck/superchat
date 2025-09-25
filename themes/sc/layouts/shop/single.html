@@ -29,40 +29,48 @@
         <p class="price border-top-custom pt-5 mt-5 mb-3">{{.}}€</p>
       {{ end }}
 		 {{ if .Params.stripe_price_id }}
-          <div class="purchase-section">
+          <div class="purchase-section" 
+               data-stock="{{ .Params.stock | default 0 }}"
+               data-price-id="{{ .Params.stripe_price_id }}"
+               data-product-name="{{ .Title }}"
+               data-price="{{ .Params.price }}">
+            
+            <!-- Indicateur de stock -->
+            <div class="stock-info">
+              {{ if gt (.Params.stock | default 0) 0 }}
+                {{ if le (.Params.stock | default 0) 5 }}
+                  <span class="stock-low">Plus que {{ .Params.stock }} en stock !</span>
+                {{ else }}
+                  <span class="stock-available">{{ .Params.stock }} en stock</span>
+                {{ end }}
+              {{ else }}
+                <span class="stock-unavailable">Rupture de stock</span>
+              {{ end }}
+            </div>
+
+            <!-- Sélecteur de quantité -->
             <div class="quantity-selector">
               <label for="quantity">Quantité :</label>
               <select id="quantity" name="quantity">
-                {{ range seq 1 10 }}
-                  <option value="{{ . }}">{{ . }}</option>
-                {{ end }}
+                <!-- Options générées par JavaScript selon le stock -->
               </select>
             </div>
-<div class="product-actions">
-              <button 
-                id="add-to-cart-btn"
-                class="btn-global mt-3"
-                data-price-id="{{ .Params.stripe_price_id }}"
-                data-product-name="{{ .Title }}"
-                data-price="{{ .Params.price }}"
-              >
+            
+            <!-- Boutons d'action -->
+            <div class="product-actions">
+              <button id="add-to-cart-btn" class="btn btn-secondary">
                 Ajouter au panier
               </button>
-              
-              <button 
-                id="buy-now-btn"
-                class="btn-global-rose mt-3"
-                data-price-id="{{ .Params.stripe_price_id }}"
-                data-product-name="{{ .Title }}"
-                data-price="{{ .Params.price }}"
-              >
+              <button id="buy-now-btn" class="btn btn-primary">
                 Acheter maintenant
               </button>
             </div>
-            <!-- <button id="checkout-button" class="btn-global" data-price-id="{{ .Params.stripe_price_id }}" data-product-name="{{ .Title }}">Acheter maintenant</button> -->
           </div>
         {{ else }}
-          <p class="not-available">Produit temporairement indisponible</p>
+          <div class="not-available">
+            <p>Produit temporairement indisponible</p>
+            <p><small>Ce produit n'est pas encore synchronisé avec Stripe.</small></p>
+          </div>
         {{ end }}
 			</div>
       <div class="toast-container" id="toast-container"></div>
@@ -71,6 +79,30 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Récupérer les données depuis les attributs HTML
+  var purchaseSection = document.querySelector('.purchase-section');
+  
+  if (!purchaseSection) {
+    console.log('Section d\'achat non trouvée - produit probablement indisponible');
+    return;
+  }
+  
+  var stock = parseInt(purchaseSection.getAttribute('data-stock')) || 0;
+  var priceId = purchaseSection.getAttribute('data-price-id');
+  var productName = purchaseSection.getAttribute('data-product-name');
+  var price = parseFloat(purchaseSection.getAttribute('data-price'));
+  
+  var quantitySelect = document.getElementById('quantity');
+  var addToCartBtn = document.getElementById('add-to-cart-btn');
+  var buyNowBtn = document.getElementById('buy-now-btn');
+  
+  console.log('Initialisation produit:', {
+    name: productName,
+    stock: stock,
+    price: price,
+    priceId: priceId
+  });
+
   // Fonctions Toast
   function createToastContainer() {
     var container = document.getElementById('toast-container');
@@ -87,12 +119,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var container = createToastContainer();
     var toastId = 'toast-' + Date.now();
     
+    var iconMap = {
+      success: '✓ Succès',
+      error: '⚠ Erreur',
+      warning: '⚠ Attention'
+    };
+    
     var toastHtml = '<div id="' + toastId + '" class="toast toast-' + type + '">' +
       '<div class="toast-header">' +
-        '<strong class="me-auto">' + (type === 'success' ? '✓ Succès' : '⚠ Erreur') + '</strong>' +
+        '<strong class="me-auto">' + (iconMap[type] || '• Info') + '</strong>' +
         '<button type="button" class="toast-close" onclick="hideToast(\'' + toastId + '\')">&times;</button>' +
       '</div>' +
-      '<div class="toast-body">' + message + '<p class="p-toast"><a href="/cart">Voir le panier</a></p></div>' +
+      '<div class="toast-body">' + message + '</div>' +
     '</div>';
     
     container.insertAdjacentHTML('beforeend', toastHtml);
@@ -105,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setTimeout(function() {
       hideToast(toastId);
-    }, 6000);
+    }, 4000);
   }
 
   window.hideToast = function(toastId) {
@@ -113,28 +151,79 @@ document.addEventListener('DOMContentLoaded', function() {
     if (toast) {
       toast.classList.remove('show');
       setTimeout(function() {
-        toast.remove();
+        if (toast.parentNode) {
+          toast.remove();
+        }
       }, 300);
     }
   };
 
-  // Bouton Ajouter au panier (CORRIGÉ)
-  var addToCartBtn = document.getElementById('add-to-cart-btn');
+  // Générer les options de quantité selon le stock
+  function initializeQuantitySelector() {
+    if (!quantitySelect) return;
+    
+    quantitySelect.innerHTML = '';
+    
+    if (stock > 0) {
+      var maxQuantity = Math.min(stock, 10);
+      
+      for (var i = 1; i <= maxQuantity; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        quantitySelect.appendChild(option);
+      }
+    } else {
+      var option = document.createElement('option');
+      option.value = 0;
+      option.textContent = 'Indisponible';
+      quantitySelect.appendChild(option);
+      quantitySelect.disabled = true;
+    }
+  }
+
+  // Désactiver les boutons si pas de stock
+  function updateButtonStates() {
+    if (stock <= 0) {
+      if (addToCartBtn) {
+        addToCartBtn.disabled = true;
+        addToCartBtn.textContent = 'Rupture de stock';
+      }
+      if (buyNowBtn) {
+        buyNowBtn.disabled = true;
+        buyNowBtn.textContent = 'Indisponible';
+      }
+      return false;
+    }
+    return true;
+  }
+
+  // Initialiser l'interface
+  initializeQuantitySelector();
+  var buttonsEnabled = updateButtonStates();
+
+  if (!buttonsEnabled) {
+    return; // Arrêter ici si pas de stock
+  }
+
+  // Bouton Ajouter au panier avec vérification stock
   if (addToCartBtn) {
     addToCartBtn.addEventListener('click', function(e) {
-      var priceId = e.target.getAttribute('data-price-id');
-      var productName = e.target.getAttribute('data-product-name');
-      var price = parseFloat(e.target.getAttribute('data-price'));
+      e.preventDefault();
       
-      // Récupérer la quantité sélectionnée
-      var quantitySelect = document.getElementById('quantity');
       var selectedQuantity = quantitySelect ? parseInt(quantitySelect.value) : 1;
       
       if (!priceId) {
-        showToast('Erreur: Produit non configuré', 'error');
+        showToast('Erreur: Produit non configuré dans Stripe', 'error');
         return;
       }
       
+      if (selectedQuantity <= 0 || selectedQuantity > stock) {
+        showToast('Quantité invalide (stock disponible: ' + stock + ')', 'error');
+        return;
+      }
+      
+      // Vérifier le stock dans le panier existant
       var cart = JSON.parse(localStorage.getItem('cart') || '[]');
       var existingItem = null;
       
@@ -145,6 +234,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
+      var totalInCart = existingItem ? existingItem.quantity : 0;
+      
+      if (totalInCart + selectedQuantity > stock) {
+        var available = stock - totalInCart;
+        if (available <= 0) {
+          showToast('Ce produit est déjà dans votre panier (stock épuisé)', 'error');
+        } else {
+          showToast('Stock insuffisant. Vous pouvez encore ajouter ' + available + ' exemplaire(s)', 'warning');
+        }
+        return;
+      }
+      
+      // Ajouter au panier si stock OK
       if (existingItem) {
         existingItem.quantity += selectedQuantity;
       } else {
@@ -157,29 +259,40 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       localStorage.setItem('cart', JSON.stringify(cart));
-      showToast(productName + ' (' + selectedQuantity + ') ajouté au panier !', 'success');
-      updateCartCount();
+      
+      var quantityText = selectedQuantity === 1 ? '' : ' (' + selectedQuantity + ')';
+      showToast(productName + quantityText + ' ajouté au panier !', 'success');
+      
+      // Mettre à jour le compteur global
+      if (typeof updateCartCount === 'function') {
+        updateCartCount();
+      }
     });
   }
-  
+
   // Bouton Acheter maintenant
-  var buyNowBtn = document.getElementById('buy-now-btn');
   if (buyNowBtn) {
     buyNowBtn.addEventListener('click', function(e) {
-      var priceId = e.target.getAttribute('data-price-id');
-      var productName = e.target.getAttribute('data-product-name');
+      e.preventDefault();
+      
+      var selectedQuantity = quantitySelect ? parseInt(quantitySelect.value) : 1;
       
       if (!priceId) {
-        alert('Erreur: Produit non configuré');
+        showToast('Erreur: Produit non configuré dans Stripe', 'error');
         return;
       }
       
-      var quantitySelect = document.getElementById('quantity');
-      var quantity = quantitySelect ? parseInt(quantitySelect.value) : 1;
+      if (selectedQuantity <= 0 || selectedQuantity > stock) {
+        showToast('Quantité invalide (stock disponible: ' + stock + ')', 'error');
+        return;
+      }
       
+      // Désactiver le bouton pendant le traitement
       e.target.disabled = true;
-      e.target.textContent = 'Redirection...';
+      var originalText = e.target.textContent;
+      e.target.textContent = 'Redirection vers Stripe...';
       
+      // Créer la session de paiement
       fetch('/.netlify/functions/create-checkout-session', {
         method: 'POST',
         headers: {
@@ -187,48 +300,42 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         body: JSON.stringify({
           priceId: priceId,
-          quantity: quantity,
+          quantity: selectedQuantity,
           successUrl: window.location.origin + '/success?product=' + encodeURIComponent(productName),
           cancelUrl: window.location.href
         })
       })
       .then(function(response) {
         if (!response.ok) {
-          throw new Error('Erreur HTTP: ' + response.status);
+          throw new Error('Erreur réseau: ' + response.status);
         }
         return response.json();
       })
       .then(function(data) {
         if (data.url) {
+          // Rediriger vers Stripe
           window.location.href = data.url;
+        } else if (data.error) {
+          throw new Error(data.error);
         } else {
           throw new Error('URL de paiement non reçue');
         }
       })
       .catch(function(error) {
-        console.error('Erreur:', error);
-        alert('Une erreur est survenue: ' + error.message);
+        console.error('Erreur achat direct:', error);
+        showToast('Erreur: ' + error.message, 'error');
+        
+        // Réactiver le bouton
         e.target.disabled = false;
-        e.target.textContent = 'Acheter maintenant';
+        e.target.textContent = originalText;
       });
     });
   }
-  
-  // Fonction pour mettre à jour le compteur du panier
-  function updateCartCount() {
-    var cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    var count = 0;
-    for (var i = 0; i < cart.length; i++) {
-      count += cart[i].quantity;
-    }
-    var countElement = document.getElementById('cart-count');
-    if (countElement) {
-      countElement.textContent = count;
-    }
+
+  // Initialiser le compteur de panier si la fonction existe
+  if (typeof updateCartCount === 'function') {
+    updateCartCount();
   }
-  
-  // Initialiser le compteur
-  updateCartCount();
 });
 </script>
 {{ end }}

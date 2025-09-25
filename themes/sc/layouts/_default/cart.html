@@ -1,52 +1,171 @@
 {{ define "main" }}
 <div class="cart-page">
-  <div class="container-xxl single-txt">
-    <h1 class="mb-5">Votre Panier</h1>
+  <div class="container">
+    <h1>Votre Panier</h1>
     
     <div id="cart-empty" class="empty-cart" style="display: none;">
-      <p class="border-top-custom">Votre panier est vide</p>
-      <a href="/shop" class="btn-global mt-5">Continuer mes achats</a>
+      <p>Votre panier est vide</p>
+      <a href="/shop" class="btn btn-primary">Continuer mes achats</a>
     </div>
     
     <div id="cart-content" style="display: none;">
       <div id="cart-items"></div>
       
-      <div class="cart-summary d-flex justify-content-end align-items-center">
-        <div class="cart-total me-5">
+      <div class="cart-summary">
+        <div class="cart-total">
           <strong>Total: <span id="cart-total">0.00 €</span></strong>
         </div>
+        
         <div class="cart-actions">
-          <button onclick="showClearCartModal()" class="btn-global-secondary">Vider le panier</button>
-          <button onclick="checkoutCart()" class="btn-global">Passer commande</button>
+          <button onclick="showClearCartModal()" class="btn btn-secondary">Vider le panier</button>
+          <button onclick="checkoutCart()" class="btn btn-primary" id="checkout-btn">Passer commande</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <!-- Modal de confirmation pour vider le panier -->
 <div id="clearCartModal" class="modal-overlay">
   <div class="modal-dialog">
     <div class="modal-header">
-      <h2 class="modal-title">Confirmer la suppression</h2>
+      <h5 class="modal-title">Confirmer la suppression</h5>
       <button type="button" class="modal-close" onclick="hideClearCartModal()">&times;</button>
     </div>
     <div class="modal-body">
       <p>Êtes-vous sûr de vouloir vider votre panier ? Cette action est irréversible.</p>
     </div>
     <div class="modal-footer">
-      <button type="button" class="modal-btn btn-global-secondary modal-btn-secondary" onclick="hideClearCartModal()">
+      <button type="button" class="modal-btn modal-btn-secondary" onclick="hideClearCartModal()">
         Annuler
       </button>
-      <button type="button" class="modal-btn btn-global modal-btn-danger" onclick="confirmClearCart()">
+      <button type="button" class="modal-btn modal-btn-danger" onclick="confirmClearCart()">
         Vider le panier
       </button>
     </div>
   </div>
 </div>
+
+<!-- Container pour les toasts -->
+<div class="toast-container" id="toast-container"></div>
 <script>
-// Gestion du panier
+// Variables globales
 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
+// Fonctions Toast
+function createToastContainer() {
+  var container = document.getElementById('toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toast-container';
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+  return container;
+}
+
+function showToast(message, type) {
+  var container = createToastContainer();
+  var toastId = 'toast-' + Date.now();
+  
+  var toastHtml = '<div id="' + toastId + '" class="toast toast-' + type + '">' +
+    '<div class="toast-header">' +
+      '<strong class="me-auto">' + (type === 'success' ? '✓ Succès' : '⚠ ' + (type === 'error' ? 'Erreur' : 'Info')) + '</strong>' +
+      '<button type="button" class="toast-close" onclick="hideToast(\'' + toastId + '\')">&times;</button>' +
+    '</div>' +
+    '<div class="toast-body">' + message + '</div>' +
+  '</div>';
+  
+  container.insertAdjacentHTML('beforeend', toastHtml);
+  
+  var toast = document.getElementById(toastId);
+  
+  setTimeout(function() {
+    toast.classList.add('show');
+  }, 100);
+  
+  setTimeout(function() {
+    hideToast(toastId);
+  }, 5000);
+}
+
+function hideToast(toastId) {
+  var toast = document.getElementById(toastId);
+  if (toast) {
+    toast.classList.remove('show');
+    setTimeout(function() {
+      toast.remove();
+    }, 300);
+  }
+}
+
+// Fonction pour vérifier les stocks
+async function checkStockAvailability() {
+  if (cart.length === 0) return true;
+  
+  const priceIds = cart.map(function(item) { return item.priceId; });
+  
+  try {
+    const response = await fetch('/.netlify/functions/get-stock', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ priceIds })
+    });
+    
+    const data = await response.json();
+    
+    if (!data.stockInfo) {
+      console.error('Impossible de vérifier les stocks');
+      return false;
+    }
+    
+    let hasStockIssues = false;
+    let itemsToRemove = [];
+    
+    cart.forEach(function(item, index) {
+      const stockData = data.stockInfo[item.priceId];
+      
+      if (!stockData) {
+        console.warn('Stock non trouvé pour:', item.productName);
+        return;
+      }
+      
+      const availableStock = stockData.stock;
+      
+      if (availableStock <= 0) {
+        // Produit en rupture de stock
+        showToast('Produit en rupture: ' + item.productName, 'error');
+        itemsToRemove.push(index);
+        hasStockIssues = true;
+      } else if (item.quantity > availableStock) {
+        // Quantité supérieure au stock
+        showToast('Stock insuffisant pour ' + item.productName + '. Ajusté à ' + availableStock, 'warning');
+        item.quantity = availableStock;
+        hasStockIssues = true;
+      }
+    });
+    
+    // Supprimer les items en rupture de stock (en ordre inverse pour préserver les index)
+    itemsToRemove.reverse().forEach(function(index) {
+      cart.splice(index, 1);
+    });
+    
+    if (hasStockIssues) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartDisplay();
+      updateCartCount();
+    }
+    
+    return !hasStockIssues;
+    
+  } catch (error) {
+    console.error('Erreur vérification stock:', error);
+    showToast('Impossible de vérifier les stocks', 'error');
+    return false;
+  }
+}
+
+// Fonction d'affichage du panier
 function updateCartDisplay() {
   const emptyDiv = document.getElementById('cart-empty');
   const contentDiv = document.getElementById('cart-content');
@@ -65,103 +184,139 @@ function updateCartDisplay() {
   let total = 0;
   let html = '';
   
-  cart.forEach((item, index) => {
+  cart.forEach(function(item, index) {
     const itemTotal = item.price * item.quantity;
     total += itemTotal;
     
-    html += `
-      <div class="cart-item">
-        <div class="item-info">
-          <h2>${item.productName}</h2>
-          <p class="item-price">${item.price.toFixed(2)} € × ${item.quantity}</p>
-        </div>
-        <div class="item-controls">
-          <input type="number" min="1" value="${item.quantity}" 
-                 onchange="updateQuantity(${index}, this.value)">
-          <span class="item-total">${itemTotal.toFixed(2)} €</span>
-          <button onclick="removeItem(${index})" class="btn btn-danger">×</button>
-        </div>
-      </div>
-    `;
+    html += '<div class="cart-item" id="cart-item-' + index + '">' +
+      '<div class="item-info">' +
+        '<h3>' + item.productName + '</h3>' +
+        '<p class="item-price">' + item.price.toFixed(2) + ' € × ' + item.quantity + '</p>' +
+        '<div class="stock-warning" id="stock-warning-' + index + '" style="display: none;">' +
+          '<small class="text-warning">⚠ Vérification du stock en cours...</small>' +
+        '</div>' +
+      '</div>' +
+      '<div class="item-controls">' +
+        '<input type="number" min="1" max="99" value="' + item.quantity + '" ' +
+               'onchange="updateQuantity(' + index + ', this.value)" ' +
+               'id="quantity-' + index + '">' +
+        '<span class="item-total">' + itemTotal.toFixed(2) + ' €</span>' +
+        '<button onclick="removeItem(' + index + ')" class="btn btn-danger">×</button>' +
+      '</div>' +
+    '</div>';
   });
   
   itemsContainer.innerHTML = html;
   totalElement.textContent = total.toFixed(2) + ' €';
 }
 
+// Fonction de mise à jour de quantité avec vérification stock
 function updateQuantity(index, newQuantity) {
-  const quantity = parseInt(newQuantity);
-  if (quantity > 0) {
-    cart[index].quantity = quantity;
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay();
-    updateCartCount();
+  var quantity = parseInt(newQuantity);
+  
+  if (quantity <= 0) {
+    removeItem(index);
+    return;
   }
+  
+  var item = cart[index];
+  
+  // Vérification basique côté client d'abord
+  if (quantity === item.quantity) {
+    return; // Pas de changement
+  }
+  
+  // Mise à jour immédiate de l'affichage pour une meilleure UX
+  var oldQuantity = item.quantity;
+  cart[index].quantity = quantity;
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartDisplay();
+  updateCartCount();
+  
+  // Vérification du stock en arrière-plan
+  verifyStockForItem(index, quantity, oldQuantity);
 }
 
+
+// Fonction de suppression d'item
 function removeItem(index) {
+  console.log('Suppression item index:', index);
   cart.splice(index, 1);
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartDisplay();
   updateCartCount();
+  showToast('Produit supprimé du panier', 'success');
 }
 
-// Nouvelle fonction pour afficher la modal
+// Fonctions modal
 function showClearCartModal() {
+  console.log('Ouverture de la modal clearCart');
   var modal = document.getElementById('clearCartModal');
-  modal.classList.add('show');
   
-  // Empêcher le scroll de la page en arrière-plan
+  if (!modal) {
+    console.error('Modal clearCartModal non trouvée !');
+    return;
+  }
+  
+  modal.classList.add('show');
   document.body.style.overflow = 'hidden';
 }
 
-// Fonction pour masquer la modal
 function hideClearCartModal() {
+  console.log('Fermeture de la modal clearCart');
   var modal = document.getElementById('clearCartModal');
-  modal.classList.remove('show');
   
-  // Réactiver le scroll
+  if (!modal) {
+    console.error('Modal clearCartModal non trouvée !');
+    return;
+  }
+  
+  modal.classList.remove('show');
   document.body.style.overflow = '';
 }
 
-// Fonction de confirmation pour vider le panier
 function confirmClearCart() {
+  console.log('Confirmation: vider le panier');
   cart = [];
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartDisplay();
   updateCartCount();
   hideClearCartModal();
-  
-  // Optionnel : afficher une notification de succès
   showToast('Panier vidé avec succès', 'success');
 }
 
-// Fermeture de la modal en cliquant sur l'overlay
-document.addEventListener('DOMContentLoaded', function() {
-  var modal = document.getElementById('clearCartModal');
-  if (modal) {
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        hideClearCartModal();
-      }
-    });
-  }
-  
-  // Fermeture avec la touche Échap
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      hideClearCartModal();
-    }
-  });
-});
-
+// Fonction de checkout avec vérification stocks
 async function checkoutCart() {
   if (cart.length === 0) return;
   
-  const lineItems = cart.map(item => ({
-    priceId: item.priceId,
-    quantity: item.quantity
-  }));
+  const checkoutBtn = document.getElementById('checkout-btn');
+  checkoutBtn.disabled = true;
+  checkoutBtn.textContent = 'Vérification...';
+  
+  // Vérifier les stocks avant checkout
+  var stockOk = await checkStockAvailability();
+  
+  if (!stockOk) {
+    showToast('Veuillez vérifier les stocks avant de continuer', 'error');
+    checkoutBtn.disabled = false;
+    checkoutBtn.textContent = 'Passer commande';
+    return;
+  }
+  
+  if (cart.length === 0) {
+    checkoutBtn.disabled = false;
+    checkoutBtn.textContent = 'Passer commande';
+    return;
+  }
+  
+  checkoutBtn.textContent = 'Redirection...';
+  
+  const lineItems = cart.map(function(item) {
+    return {
+      priceId: item.priceId,
+      quantity: item.quantity
+    };
+  });
   
   try {
     const response = await fetch('/.netlify/functions/create-checkout-session', {
@@ -169,8 +324,8 @@ async function checkoutCart() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         lineItems: lineItems,
-        successUrl: `${window.location.origin}/success`,
-        cancelUrl: `${window.location.origin}/cart`
+        successUrl: window.location.origin + '/success',
+        cancelUrl: window.location.origin + '/cart'
       })
     });
     
@@ -178,17 +333,49 @@ async function checkoutCart() {
     if (data.url) {
       window.location.href = data.url;
     } else {
-      alert('Erreur lors de la création de la session de paiement');
+      throw new Error('URL de paiement non reçue');
     }
   } catch (error) {
     console.error('Erreur:', error);
-    alert('Une erreur est survenue');
+    showToast('Une erreur est survenue: ' + error.message, 'error');
+    checkoutBtn.disabled = false;
+    checkoutBtn.textContent = 'Passer commande';
   }
 }
 
-// Initialiser l'affichage au chargement
+// Initialisation
 document.addEventListener('DOMContentLoaded', function() {
   updateCartDisplay();
+  
+  // Configuration des événements de la modal
+  var modal = document.getElementById('clearCartModal');
+  
+  if (modal) {
+    // Clic sur l'overlay pour fermer
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        hideClearCartModal();
+      }
+    });
+  }
+  
+  // Fermeture avec Échap
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      var modal = document.getElementById('clearCartModal');
+      if (modal && modal.classList.contains('show')) {
+        hideClearCartModal();
+      }
+    }
+  });
+  
+  // Vérifier les stocks après un délai
+  setTimeout(function() {
+    if (cart.length > 0) {
+      showToast('Vérification des stocks en cours...', 'info');
+      checkStockAvailability();
+    }
+  }, 1500);
 });
 </script>
 {{ end }}
