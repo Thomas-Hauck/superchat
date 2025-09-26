@@ -39,12 +39,12 @@
             <div class="stock-info">
               {{ if gt (.Params.stock | default 0) 0 }}
                 {{ if le (.Params.stock | default 0) 5 }}
-                  <span class="stock-low">Plus que {{ .Params.stock }} en stock !</span>
+                  <!-- <span class="stock-low">Plus que {{ .Params.stock }} en stock !</span> -->
                 {{ else }}
-                  <span class="stock-available">{{ .Params.stock }} en stock</span>
+                  <!-- <span class="stock-available">{{ .Params.stock }} en stock</span> -->
                 {{ end }}
               {{ else }}
-                <span class="stock-unavailable">Rupture de stock</span>
+                <span class="stock-unavailable">Épuisé</span>
               {{ end }}
             </div>
 
@@ -57,12 +57,12 @@
             </div>
             
             <!-- Boutons d'action -->
-            <div class="product-actions">
-              <button id="add-to-cart-btn" class="btn btn-secondary">
+            <div class="product-actions mt-4">
+              <button id="add-to-cart-btn" class="btn-global-secondary me-2">
                 Ajouter au panier
               </button>
-              <button id="buy-now-btn" class="btn btn-primary">
-                Acheter maintenant
+              <button id="buy-now-btn" class="btn-global">
+                Acheter
               </button>
             </div>
           </div>
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setTimeout(function() {
       hideToast(toastId);
-    }, 4000);
+    }, 40000);
   }
 
   window.hideToast = function(toastId) {
@@ -182,12 +182,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Vérifier le stock disponible dans le panier existant
+  function getAvailableStock() {
+    var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    var usedStock = 0;
+    
+    for (var i = 0; i < cart.length; i++) {
+      if (cart[i].priceId === priceId) {
+        usedStock = cart[i].quantity;
+        break;
+      }
+    }
+    
+    return stock - usedStock;
+  }
+
   // Désactiver les boutons si pas de stock
   function updateButtonStates() {
-    if (stock <= 0) {
+    var availableStock = getAvailableStock();
+    
+    if (stock <= 0 || availableStock <= 0) {
       if (addToCartBtn) {
         addToCartBtn.disabled = true;
-        addToCartBtn.textContent = 'Rupture de stock';
+        addToCartBtn.textContent = availableStock <= 0 && stock > 0 ? 'Déjà dans le panier' : 'Rupture de stock';
       }
       if (buyNowBtn) {
         buyNowBtn.disabled = true;
@@ -206,62 +223,74 @@ document.addEventListener('DOMContentLoaded', function() {
     return; // Arrêter ici si pas de stock
   }
 
-  // Bouton Ajouter au panier avec vérification stock
+  // Bouton Ajouter au panier avec vérification stock côté client
   if (addToCartBtn) {
     addToCartBtn.addEventListener('click', function(e) {
       e.preventDefault();
       
       var selectedQuantity = quantitySelect ? parseInt(quantitySelect.value) : 1;
+      var availableStock = getAvailableStock();
+      
+      console.log('Tentative ajout panier:', {
+        selected: selectedQuantity,
+        stock: stock,
+        available: availableStock,
+        priceId: priceId
+      });
       
       if (!priceId) {
         showToast('Erreur: Produit non configuré dans Stripe', 'error');
         return;
       }
       
-      if (selectedQuantity <= 0 || selectedQuantity > stock) {
-        showToast('Quantité invalide (stock disponible: ' + stock + ')', 'error');
+      if (selectedQuantity <= 0) {
+        showToast('Quantité invalide', 'error');
         return;
       }
       
-      // Vérifier le stock dans le panier existant
+      if (selectedQuantity > availableStock) {
+        if (availableStock <= 0) {
+          showToast('Ce produit est déjà dans votre panier (stock: ' + stock + ')', 'error');
+        } else {
+          showToast('Stock insuffisant. Disponible: ' + availableStock + ' (total: ' + stock + ')', 'error');
+        }
+        return;
+      }
+      
+      // Récupérer le panier existant
       var cart = JSON.parse(localStorage.getItem('cart') || '[]');
       var existingItem = null;
+      var existingIndex = -1;
       
       for (var i = 0; i < cart.length; i++) {
         if (cart[i].priceId === priceId) {
           existingItem = cart[i];
+          existingIndex = i;
           break;
         }
       }
       
-      var totalInCart = existingItem ? existingItem.quantity : 0;
-      
-      if (totalInCart + selectedQuantity > stock) {
-        var available = stock - totalInCart;
-        if (available <= 0) {
-          showToast('Ce produit est déjà dans votre panier (stock épuisé)', 'error');
-        } else {
-          showToast('Stock insuffisant. Vous pouvez encore ajouter ' + available + ' exemplaire(s)', 'warning');
-        }
-        return;
-      }
-      
-      // Ajouter au panier si stock OK
+      // Ajouter au panier avec stock maximal
       if (existingItem) {
-        existingItem.quantity += selectedQuantity;
+        cart[existingIndex].quantity += selectedQuantity;
+        cart[existingIndex].maxStock = stock; // Mettre à jour le stock max
       } else {
         cart.push({
           priceId: priceId,
           productName: productName,
           price: price,
-          quantity: selectedQuantity
+          quantity: selectedQuantity,
+          maxStock: stock // Stocker le stock maximum
         });
       }
       
       localStorage.setItem('cart', JSON.stringify(cart));
       
       var quantityText = selectedQuantity === 1 ? '' : ' (' + selectedQuantity + ')';
-      showToast(productName + quantityText + ' ajouté au panier !', 'success');
+      showToast(productName + quantityText + ' ajouté au panier !<br /><a href="/cart">Voir le panier</a>', 'success');
+      
+      // Mettre à jour l'interface
+      updateButtonStates();
       
       // Mettre à jour le compteur global
       if (typeof updateCartCount === 'function') {
@@ -270,12 +299,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Bouton Acheter maintenant
+  // Bouton Acheter maintenant avec vérification stock
   if (buyNowBtn) {
     buyNowBtn.addEventListener('click', function(e) {
       e.preventDefault();
       
       var selectedQuantity = quantitySelect ? parseInt(quantitySelect.value) : 1;
+      
+      console.log('Tentative achat direct:', {
+        selected: selectedQuantity,
+        stock: stock,
+        priceId: priceId
+      });
       
       if (!priceId) {
         showToast('Erreur: Produit non configuré dans Stripe', 'error');

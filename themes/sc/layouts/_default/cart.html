@@ -1,24 +1,24 @@
 {{ define "main" }}
-<div class="cart-page">
+<div class="cart-page single-txt">
   <div class="container">
-    <h1>Votre Panier</h1>
+    <h1 class="border-bottom-custom pb-3">Votre Panier</h1>
     
     <div id="cart-empty" class="empty-cart" style="display: none;">
       <p>Votre panier est vide</p>
-      <a href="/shop" class="btn btn-primary">Continuer mes achats</a>
+      <a href="/shop" class="btn-global">Continuer mes achats</a>
     </div>
     
     <div id="cart-content" style="display: none;">
       <div id="cart-items"></div>
       
-      <div class="cart-summary">
+      <div class="cart-summary d-flex flex-row-reverse align-items-center mt-5">
         <div class="cart-total">
           <strong>Total: <span id="cart-total">0.00 €</span></strong>
         </div>
         
         <div class="cart-actions">
-          <button onclick="showClearCartModal()" class="btn btn-secondary">Vider le panier</button>
-          <button onclick="checkoutCart()" class="btn btn-primary" id="checkout-btn">Passer commande</button>
+          <button onclick="showClearCartModal()" class="btn-global-secondary me-2">Vider le panier</button>
+          <button onclick="checkoutCart()" class="btn-global me-4" id="checkout-btn">Passer commande</button>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@
 <div id="clearCartModal" class="modal-overlay">
   <div class="modal-dialog">
     <div class="modal-header">
-      <h5 class="modal-title">Confirmer la suppression</h5>
+      <h2 class="modal-title">Confirmer la suppression</h2>
       <button type="button" class="modal-close" onclick="hideClearCartModal()">&times;</button>
     </div>
     <div class="modal-body">
@@ -99,74 +99,27 @@ function hideToast(toastId) {
   }
 }
 
-// Fonction pour vérifier les stocks
-async function checkStockAvailability() {
-  if (cart.length === 0) return true;
+// Fonction de nettoyage du panier - retire les items sans maxStock ou avec des données invalides
+function cleanupCart() {
+  var originalLength = cart.length;
+  cart = cart.filter(function(item) {
+    return item.priceId && 
+           item.productName && 
+           typeof item.price === 'number' && 
+           typeof item.quantity === 'number' && 
+           item.quantity > 0;
+  });
   
-  const priceIds = cart.map(function(item) { return item.priceId; });
-  
-  try {
-    const response = await fetch('/.netlify/functions/get-stock', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ priceIds })
-    });
-    
-    const data = await response.json();
-    
-    if (!data.stockInfo) {
-      console.error('Impossible de vérifier les stocks');
-      return false;
-    }
-    
-    let hasStockIssues = false;
-    let itemsToRemove = [];
-    
-    cart.forEach(function(item, index) {
-      const stockData = data.stockInfo[item.priceId];
-      
-      if (!stockData) {
-        console.warn('Stock non trouvé pour:', item.productName);
-        return;
-      }
-      
-      const availableStock = stockData.stock;
-      
-      if (availableStock <= 0) {
-        // Produit en rupture de stock
-        showToast('Produit en rupture: ' + item.productName, 'error');
-        itemsToRemove.push(index);
-        hasStockIssues = true;
-      } else if (item.quantity > availableStock) {
-        // Quantité supérieure au stock
-        showToast('Stock insuffisant pour ' + item.productName + '. Ajusté à ' + availableStock, 'warning');
-        item.quantity = availableStock;
-        hasStockIssues = true;
-      }
-    });
-    
-    // Supprimer les items en rupture de stock (en ordre inverse pour préserver les index)
-    itemsToRemove.reverse().forEach(function(index) {
-      cart.splice(index, 1);
-    });
-    
-    if (hasStockIssues) {
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCartDisplay();
-      updateCartCount();
-    }
-    
-    return !hasStockIssues;
-    
-  } catch (error) {
-    console.error('Erreur vérification stock:', error);
-    showToast('Impossible de vérifier les stocks', 'error');
-    return false;
+  if (cart.length !== originalLength) {
+    console.log('Panier nettoyé:', originalLength, '->', cart.length);
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
 }
 
 // Fonction d'affichage du panier
 function updateCartDisplay() {
+  cleanupCart(); // Nettoyer d'abord
+  
   const emptyDiv = document.getElementById('cart-empty');
   const contentDiv = document.getElementById('cart-content');
   const itemsContainer = document.getElementById('cart-items');
@@ -188,16 +141,30 @@ function updateCartDisplay() {
     const itemTotal = item.price * item.quantity;
     total += itemTotal;
     
+    // Vérifier les limites de stock
+    var stockStatus = '';
+    var inputMax = 99;
+    
+    if (item.maxStock) {
+      inputMax = item.maxStock;
+      if (item.quantity > item.maxStock) {
+        stockStatus = '<small class="text-danger">⚠ Quantité supérieure au stock (' + item.maxStock + ')</small>';
+        // Corriger automatiquement
+        item.quantity = item.maxStock;
+      } else if (item.quantity === item.maxStock) {
+        stockStatus = '<small class="text-warning">Stock maximum atteint</small>';
+      }
+    }
+    
     html += '<div class="cart-item" id="cart-item-' + index + '">' +
       '<div class="item-info">' +
         '<h3>' + item.productName + '</h3>' +
         '<p class="item-price">' + item.price.toFixed(2) + ' € × ' + item.quantity + '</p>' +
-        '<div class="stock-warning" id="stock-warning-' + index + '" style="display: none;">' +
-          '<small class="text-warning">⚠ Vérification du stock en cours...</small>' +
-        '</div>' +
+        // (item.maxStock ? '<small class="text-muted">Stock disponible: ' + item.maxStock + '</small>' : '') +
+        (stockStatus ? '<div class="stock-status">' + stockStatus + '</div>' : '') +
       '</div>' +
       '<div class="item-controls">' +
-        '<input type="number" min="1" max="99" value="' + item.quantity + '" ' +
+        '<input type="number" min="1" max="' + inputMax + '" value="' + item.quantity + '" ' +
                'onchange="updateQuantity(' + index + ', this.value)" ' +
                'id="quantity-' + index + '">' +
         '<span class="item-total">' + itemTotal.toFixed(2) + ' €</span>' +
@@ -210,42 +177,59 @@ function updateCartDisplay() {
   totalElement.textContent = total.toFixed(2) + ' €';
 }
 
-// Fonction de mise à jour de quantité avec vérification stock
+// Fonction de mise à jour de quantité avec vérification stock côté client
 function updateQuantity(index, newQuantity) {
   var quantity = parseInt(newQuantity);
+  var item = cart[index];
+  
+  console.log('Modification quantité:', {
+    item: item.productName,
+    oldQuantity: item.quantity,
+    newQuantity: quantity,
+    maxStock: item.maxStock
+  });
   
   if (quantity <= 0) {
     removeItem(index);
     return;
   }
   
-  var item = cart[index];
-  
-  // Vérification basique côté client d'abord
-  if (quantity === item.quantity) {
-    return; // Pas de changement
+  // Vérifier le stock maximum si disponible
+  if (item.maxStock && quantity > item.maxStock) {
+    showToast('Stock insuffisant pour ' + item.productName + '. Maximum: ' + item.maxStock, 'error');
+    // Remettre la valeur précédente dans l'input
+    document.getElementById('quantity-' + index).value = item.quantity;
+    return;
   }
   
-  // Mise à jour immédiate de l'affichage pour une meilleure UX
-  var oldQuantity = item.quantity;
+  if (quantity > 99) {
+    showToast('Quantité maximum: 99', 'warning');
+    document.getElementById('quantity-' + index).value = item.quantity;
+    return;
+  }
+  
+  // Mise à jour de la quantité
   cart[index].quantity = quantity;
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartDisplay();
   updateCartCount();
   
-  // Vérification du stock en arrière-plan
-  verifyStockForItem(index, quantity, oldQuantity);
+  // Notification si on atteint le stock max
+  if (item.maxStock && quantity === item.maxStock) {
+    showToast('Stock maximum atteint pour ' + item.productName, 'warning');
+  }
 }
-
 
 // Fonction de suppression d'item
 function removeItem(index) {
-  console.log('Suppression item index:', index);
+  var itemName = cart[index].productName;
+  console.log('Suppression item:', itemName);
+  
   cart.splice(index, 1);
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartDisplay();
   updateCartCount();
-  showToast('Produit supprimé du panier', 'success');
+  showToast(itemName + ' supprimé du panier', 'success');
 }
 
 // Fonctions modal
@@ -285,31 +269,76 @@ function confirmClearCart() {
   showToast('Panier vidé avec succès', 'success');
 }
 
-// Fonction de checkout avec vérification stocks
+// Fonction de vérification des stocks avant checkout
+function validateCartStock() {
+  var hasIssues = false;
+  var correctedItems = [];
+  
+  cart.forEach(function(item, index) {
+    if (item.maxStock) {
+      if (item.quantity > item.maxStock) {
+        // Corriger automatiquement
+        var oldQuantity = item.quantity;
+        item.quantity = item.maxStock;
+        correctedItems.push({
+          name: item.productName,
+          from: oldQuantity,
+          to: item.maxStock
+        });
+        hasIssues = true;
+      }
+      
+      if (item.maxStock <= 0) {
+        // Produit en rupture de stock
+        showToast('Produit en rupture: ' + item.productName, 'error');
+        cart.splice(index, 1);
+        hasIssues = true;
+      }
+    }
+  });
+  
+  if (correctedItems.length > 0) {
+    correctedItems.forEach(function(correction) {
+      showToast('Quantité ajustée pour ' + correction.name + ': ' + correction.from + ' → ' + correction.to, 'warning');
+    });
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    updateCartCount();
+  }
+  
+  return !hasIssues;
+}
+
+// Fonction de checkout avec vérification des stocks
 async function checkoutCart() {
-  if (cart.length === 0) return;
+  if (cart.length === 0) {
+    showToast('Votre panier est vide', 'warning');
+    return;
+  }
   
   const checkoutBtn = document.getElementById('checkout-btn');
   checkoutBtn.disabled = true;
   checkoutBtn.textContent = 'Vérification...';
   
-  // Vérifier les stocks avant checkout
-  var stockOk = await checkStockAvailability();
+  // Validation des stocks côté client
+  var stockValid = validateCartStock();
   
-  if (!stockOk) {
-    showToast('Veuillez vérifier les stocks avant de continuer', 'error');
+  if (!stockValid) {
+    showToast('Veuillez vérifier votre panier avant de continuer', 'error');
     checkoutBtn.disabled = false;
     checkoutBtn.textContent = 'Passer commande';
     return;
   }
   
   if (cart.length === 0) {
+    // Le panier peut être vide après nettoyage
     checkoutBtn.disabled = false;
     checkoutBtn.textContent = 'Passer commande';
     return;
   }
   
-  checkoutBtn.textContent = 'Redirection...';
+  checkoutBtn.textContent = 'Préparation de la commande...';
   
   const lineItems = cart.map(function(item) {
     return {
@@ -317,6 +346,8 @@ async function checkoutCart() {
       quantity: item.quantity
     };
   });
+  
+  console.log('Checkout avec:', lineItems);
   
   try {
     const response = await fetch('/.netlify/functions/create-checkout-session', {
@@ -329,22 +360,55 @@ async function checkoutCart() {
       })
     });
     
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error('Erreur serveur: ' + response.status + ' - ' + errorText);
+    }
+    
     const data = await response.json();
+    
     if (data.url) {
+      checkoutBtn.textContent = 'Redirection vers Stripe...';
       window.location.href = data.url;
     } else {
-      throw new Error('URL de paiement non reçue');
+      throw new Error(data.error || 'URL de paiement non reçue');
     }
+    
   } catch (error) {
-    console.error('Erreur:', error);
-    showToast('Une erreur est survenue: ' + error.message, 'error');
+    console.error('Erreur checkout:', error);
+    showToast('Erreur lors de la commande: ' + error.message, 'error');
     checkoutBtn.disabled = false;
     checkoutBtn.textContent = 'Passer commande';
   }
 }
 
+// Fonction pour migrer les anciens items du panier sans maxStock
+function migrateOldCartItems() {
+  var needsMigration = false;
+  
+  cart.forEach(function(item) {
+    if (!item.hasOwnProperty('maxStock')) {
+      // Définir un stock par défaut pour les anciens items
+      item.maxStock = 99;
+      needsMigration = true;
+      console.log('Migration item:', item.productName, 'stock par défaut: 99');
+    }
+  });
+  
+  if (needsMigration) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    showToast('Panier mis à jour avec la gestion des stocks', 'info');
+  }
+}
+
 // Initialisation
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('Initialisation panier avec', cart.length, 'items');
+  
+  // Migration des anciens items
+  migrateOldCartItems();
+  
+  // Affichage initial
   updateCartDisplay();
   
   // Configuration des événements de la modal
@@ -369,13 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Vérifier les stocks après un délai
-  setTimeout(function() {
-    if (cart.length > 0) {
-      showToast('Vérification des stocks en cours...', 'info');
-      checkStockAvailability();
-    }
-  }, 1500);
+  console.log('Panier initialisé');
 });
 </script>
 {{ end }}

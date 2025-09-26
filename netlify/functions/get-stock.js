@@ -1,8 +1,6 @@
-const fs = require('fs').promises;
-const path = require('path');
-const matter = require('gray-matter');
-
 exports.handler = async (event, context) => {
+  console.log('get-stock appelée');
+  
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
@@ -15,35 +13,18 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const { priceIds } = JSON.parse(event.body || '{}');
-    
-    const contentPath = path.join(process.cwd(), 'content/shop');
-    const files = await fs.readdir(contentPath);
-    
-    const stockInfo = {};
-    
-    for (const file of files) {
-      if (!file.endsWith('.md')) continue;
-      
-      const filePath = path.join(contentPath, file);
-      const fileContent = await fs.readFile(filePath, 'utf-8');
-      const { data: frontmatter } = matter(fileContent);
-      
-      if (frontmatter.stripe_price_id && priceIds.includes(frontmatter.stripe_price_id)) {
-        stockInfo[frontmatter.stripe_price_id] = {
-          stock: frontmatter.stock || 0,
-          title: frontmatter.title
-        };
-      }
-    }
-    
+    // Version de test qui renvoie toujours du stock disponible
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ stockInfo })
+      body: JSON.stringify({ 
+        stockInfo: {},
+        message: 'Vérification stock désactivée temporairement'
+      })
     };
     
   } catch (error) {
+    console.error('Erreur get-stock:', error);
     return {
       statusCode: 500,
       headers,

@@ -11,12 +11,20 @@
 		color: vars.$grey-light !important;
 		text-decoration: none !important;
 	}
+	&:disabled{
+		opacity: .5;
+		border: none;
+	}
 }
 .btn-global-secondary{
   background-color: #727b77 ;
 	color: #000 !important;
 	padding: 3px 16px !important;
-  border: none;
+  	border: none;
+	&:disabled{
+		opacity: .5;
+		border: none;
+	}
 }
 
 .btn-global-rose{
@@ -119,11 +127,16 @@
 		&.toast-error{
 			.toast-header {
 				background-color: #f8d7da;
-  			color: #721c24;
+  				color: #721c24;
+			}
+		}
+		&.toast-warning{
+			.toast-header {
+				background-color: vars.$blue;
+  				color: vars.$grey-dark;
 			}
 		}
 	}
-	
 }
 
 
@@ -228,9 +241,9 @@
 			justify-content: space-between;
 			.modal-title {
 				margin: 0;
-				font-size: 1.25rem;
 				font-weight: 600;
 				color: #212529;
+				font-size: 1.97rem !important;
 			}
 			.modal-close {
 				background: none;
@@ -280,6 +293,7 @@
 			.modal-btn-secondary {
   			background-color: #6c757d;
   			color: white;
+			border: none;
 				&:hover{
 					background-color: #5a6268;
 				}
@@ -287,6 +301,7 @@
 			.modal-btn-danger {
 				background-color: #dc3545;
 				color: white;
+				border: none;
 				&:hover{
 					background-color: #c82333;
 				}
